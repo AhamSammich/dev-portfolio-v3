@@ -1,0 +1,19 @@
+main {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+}
+
+img {
+    outline: 1px solid black;
+}
+
+.page {
+    min-height: 100vh;
+    height: max-content;
+    width: 100%;
+    padding: 3rem 2rem;
+    position: relative;
+    scroll-snap-align: start start;
+}
