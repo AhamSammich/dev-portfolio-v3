@@ -1,7 +1,7 @@
 <template>
     <Header />
 
-    <main ref="mainRef" class="grid motion-safe:scroll-smooth" :style="style">
+    <main ref="mainRef" class="grid motion-safe:scroll-smooth">
         <section id="hero" ref="heroRef" class="page flex items-center justify-around">
             <div class="z-[1] px-8">
                 <h1 class="text-3xl font-bold text-near-black">
@@ -23,7 +23,7 @@
                 <h1 class="text-3xl font-bold">This is the About Section</h1>
             </div>
             <div id="about-image" class="h-full">
-                <img src="" alt="This is a professional headshot" class="object-contain"/>
+                <img src="" alt="This is a professional headshot" class="object-contain" />
             </div>
         </section>
 
@@ -59,17 +59,8 @@
 <script setup lang="ts">
 const { x, y } = useMouse();
 
-const mainRef: Ref<Element | null> = ref(null);
+const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
-
-const style = computed(() => ({
-    'background': `radial-gradient(
-        circle at ${x.value / window.innerWidth * 100}% ${y.value / window.innerHeight * 100}%, 
-        white, 
-        lightsteelblue 25% 75%,
-        lightgray
-        )`
-}))
 
 const scrollAtTop = useState("scrollAtTop", () => true);
 
@@ -79,6 +70,15 @@ onMounted(() => {
         mainScroll.value = mainRef.value.scrollTop;
         scrollAtTop.value = (mainScroll.value === 0);
     }, { passive: true });
+
+    watchEffect(() => (
+        mainRef.value?.style.setProperty('background', `radial-gradient(
+            circle at ${x.value / window.innerWidth * 100}% ${y.value / window.innerHeight * 100}%, 
+            white, 
+            lightsteelblue 25% 75%,
+            lightgray
+            )`)
+    ))
 })
 </script>
 
@@ -94,5 +94,4 @@ onMounted(() => {
     mask-image: var(--img-url);
     mask-size: contain;
 }
-
 </style>

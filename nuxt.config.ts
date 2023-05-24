@@ -9,6 +9,13 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ["@/assets/css/global.css"],
+	devServer: {
+		https: {
+			key: "./ssl/localhost+2-key.pem",
+			cert: "./ssl/localhost+2.pem",
+		},
+		port: 2305,
+	},
 	modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
 	tailwindcss: {
 		viewer: false,
