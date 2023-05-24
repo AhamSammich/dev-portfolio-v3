@@ -1,43 +1,34 @@
 <template>
-    <header class="z-[999] fixed left-0 right-0 top-0 flex h-[100px] items-center justify-between p-8">
-        <div class="gap-4 flex items-center ">
-            <img src="https://a-us.storyblok.com/f/1014509/1002x1004/bb1b48b4d5/alh-logo-web.png" alt="My Logo" width="80"
-                height="80" />
-            <h1 class="text-3xl font-bold">Andre L Hammons</h1>
-        </div>
+    <Header />
 
-        <nav>
-            <ul class="flex gap-8">
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="grid justify-center">
-        <section id="hero" class="page flex items-center justify-around">
-            <div class="px-8">
+    <main ref="mainRef" class="grid motion-safe:scroll-smooth" :style="style">
+        <section id="hero" ref="heroRef" class="page flex items-center justify-around">
+            <div class="z-[1] px-8">
                 <h1 class="text-3xl font-bold text-near-black">
                     This is the Hero Section
                 </h1>
                 <p class="text-xl">This is a description</p>
             </div>
-            <img src="https://a-us.storyblok.com/f/1014509/1002x1004/bb1b48b4d5/alh-logo-web.png"
-                alt="This is the Hero Image" width="300" height="300" />
-            <!-- <div ref="circleRef" :style="{ ...style }"
-                class="relative w-[300px] h-[300px] bg-gradient-to-r from-transparent to-near-black rounded-full">
-                <div ref="innerCircleRef" :style="{ 'rotate': `-${angle || 0}deg` }"
-                    class="absolute inset-0 m-auto w-[250px] h-[250px] overflow-hidden bg-gradient-to-t from-transparent to-near-black rounded-full">
-                    <img src="https://a-us.storyblok.com/f/1014509/1002x1004/bb1b48b4d5/alh-logo-web.png" alt="My Logo"
-                        class="object-cover absolute inset-0 m-auto" />
-                </div>
-            </div> -->
-            <Icon name="ic:round-arrow-downward" class="absolute bottom-4 mx-auto w-full text-5xl animate-bounce" />
+            <div id="hero-image" class="fixed z-0 w-[40vw] left-1/2 right-0 aspect-square pointer-events-none"
+                :style="`transform: translateY(-${mainScroll / 20}px);`">
+            </div>
+            <Icon name="ic:round-arrow-downward" :class="{
+                'absolute bottom-4 mx-auto w-full text-5xl animate-bounce transition-all duration-1000 origin-bottom': true,
+                'opacity-0': !scrollAtTop,
+            }" />
+        </section>
+
+        <section id="about" class="page fixed top-0 left-0 flex justify-around items-center">
+            <div class="grid gap-4 p-8">
+                <h1 class="text-3xl font-bold">This is the About Section</h1>
+            </div>
+            <div id="about-image" class="h-full">
+                <img src="" alt="This is a professional headshot" class="object-contain"/>
+            </div>
         </section>
 
         <section id="projects" class="page flex flex-col items-center gap-20">
-            <h1 class="text-3xl font-bold">This is the Projects Section</h1>
+            <h1 class="text-3xl font-bold">Projects</h1>
             <ProjectGrid />
         </section>
 
@@ -66,23 +57,42 @@
 </template>
 
 <script setup lang="ts">
-// const circleRef: Ref<HTMLElement | null> = ref(null);
-// const { x, y } = useMouse()
+const { x, y } = useMouse();
 
-// const previousAngle = ref(0);
+const mainRef: Ref<Element | null> = ref(null);
+const mainScroll = ref(0);
 
-// const angle = computed((): number => {
-//     const distanceX = x.value - (window.innerWidth / 2);
-//     const distanceY = y.value - (window.innerHeight / 2);
-//     const theta = toDegrees(Math.atan2(distanceY, distanceX));
-//     console.log({ theta, distanceX, distanceY });
-//     if (!isNaN(theta)) previousAngle.value = theta;
-//     return theta;
-// })
+const style = computed(() => ({
+    'background': `radial-gradient(
+        circle at ${x.value / window.innerWidth * 100}% ${y.value / window.innerHeight * 100}%, 
+        white, 
+        lightsteelblue 25% 75%,
+        lightgray
+        )`
+}))
 
-// const style = computed(() => ({ rotate: `${angle.value }deg` }))
+const scrollAtTop = useState("scrollAtTop", () => true);
 
 onMounted(() => {
-
+    mainRef.value?.addEventListener("scroll", () => {
+        if (!mainRef.value) return;
+        mainScroll.value = mainRef.value.scrollTop;
+        scrollAtTop.value = (mainScroll.value === 0);
+    }, { passive: true });
 })
 </script>
+
+<style scoped lang="postcss">
+#hero-image {
+    --img-url: url("https://a-us.storyblok.com/f/1014509/1000x1000/d7ee635410/alh-logo-web-dark-transformed.png/m/filters:format(webp)");
+    background:
+        var(--img-url),
+        lightsteelblue;
+    background-blend-mode: lighten;
+    background-size: contain;
+    border-radius: 50%;
+    mask-image: var(--img-url);
+    mask-size: contain;
+}
+
+</style>

@@ -1,2 +1,7 @@
-export const toDegrees = (radians: number) =>
-	Math.floor(radians * (180 / Math.PI));
+export const toDegrees = (radians: number) => {
+	return Math.floor(radians * (180 / Math.PI));
+};
+
+export const normalize = (n: number, max = 1, min = 0) => {
+	return (n - min) / (max - min);
+};

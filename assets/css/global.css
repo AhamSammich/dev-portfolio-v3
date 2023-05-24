@@ -1,13 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --pri-color: #EEE;
+    --sec-color: #333;
+    --accent-color: lightgray;
+}
+
 main {
+    color: var(--sec-color);
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
-img {
+/* img {
     outline: 1px solid black;
-}
+} */
 
 .page {
     min-height: 100vh;
@@ -16,4 +27,14 @@ img {
     padding: 3rem 2rem;
     position: relative;
     scroll-snap-align: start start;
+
+    &:nth-child(2n) {
+        background-color: #333333aa;
+        color: var(--pri-color);
+        @apply shadow-lg;
+    }
+}
+
+.hidden {
+    display: none;
 }

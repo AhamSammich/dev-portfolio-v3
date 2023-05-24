@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				"near-black": "#333",
+				"near-white": "#EEE",
 			},
 		},
 	},
