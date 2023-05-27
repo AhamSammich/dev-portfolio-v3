@@ -81,7 +81,7 @@ onMounted(() => {
 
   &.menu-open {
     /* & .bar {
-      background-color: var(--color1);
+      background-color: white;
     } */
 
     & .middle {

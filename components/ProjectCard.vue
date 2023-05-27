@@ -1,29 +1,24 @@
 <template>
-    <div class="project-card flex w-1/2 min-w-max flex-col gap-4 p-8">
-        <img :src="image.src" alt="Project Image" width="300" height="150" class="mx-auto" />
-        <div>
-            <h2 class="text-2xl font-bold">{{ title }}</h2>
-            <p class="text-xl w-[45ch]">{{ description }}</p>
+    <div class="project-card group flex w-full flex-col gap-4 relative rounded-sm overflow-hidden">
+        <img :src="image.url" alt="Project Image" width="1850" height="885" class="object-cover" />
+        <div
+            class="z-10 absolute flex flex-col justify-center items-center gap-4 w-full h-full bg-blue-950 bg-opacity-80 text-white text-center opacity-0 transition-opacity group-hover:opacity-100">
+            <h2 class="z-20 text-center text-2xl font-bold group-hover:text-white">{{ title }}</h2>
+            <p class="text-xl max-w-[45ch] mx-auto">{{ description }}</p>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{
+defineProps<{
     title: string
     description: string
+    link: string,
     image: {
-        src: string
-        alt: string
+        url: string
+        alt?: string
     }
-}>(), {
-    title: "Project Title",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolorem eveniet quasi dolor laborum, delectus sapiente officia qui ipsam consequatur dolorum perspiciatis?",
-    image: {
-        src: "https://a-us.storyblok.com/f/1014509/1002x1004/bb1b48b4d5/alh-logo-web.png",
-        alt: "Project Image"
-    },
-})
+}>()
 </script>
 
 <style scoped></style>

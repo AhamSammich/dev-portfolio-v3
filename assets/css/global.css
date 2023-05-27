@@ -6,6 +6,11 @@
     --pri-color: #EEE;
     --sec-color: #333;
     --accent-color: lightgray;
+    font-family: Rubik, san-serif;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 main {
@@ -28,10 +33,10 @@ main {
     position: relative;
     scroll-snap-align: start start;
 
-    &:nth-child(2n) {
-        background-color: #333333aa;
+    &:nth-of-type(2n) {
+        /* background-color: #333333aa; */
         color: var(--pri-color);
-        @apply shadow-lg;
+        @apply shadow-lg bg-gradient-to-b from-transparent to-blue-950 bg-opacity-80;
     }
 }
 

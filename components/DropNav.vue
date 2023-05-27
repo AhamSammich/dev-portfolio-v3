@@ -4,8 +4,8 @@
             <MenuButton @pointerup="toggleMenu" :force-state="menuIsOpen" />
         </div>
         <div :class="{
-            'z-[99999] h-max absolute inset-0 py-4 mx-auto origin-right transition-all bg-accent shadow-lg': true,
-            '-translate-y-full opacity-0': !menuIsOpen
+            'z-[99999] h-max absolute inset-0 py-4 mx-auto origin-top transition-all bg-near-white shadow-lg': true,
+            'scale-y-0 opacity-0': !menuIsOpen
         }">
             <Nav :flex-col="true" />
         </div>
