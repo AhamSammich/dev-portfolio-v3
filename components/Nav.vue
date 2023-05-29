@@ -6,8 +6,8 @@ defineProps<{
 </script>
 <template>
     <ul :class="{
-        'w-full flex justify-around px-8 py-[0.5em] sm:text-lg md:text-2xl xl:text-4xl font-thin drop-shadow-lg': true,
-        'flex-col gap-[1em] h-max pb-4 items-center': flexCol,
+        'w-full flex justify-end gap-[1em] py-[0.5em] sm:text-lg md:text-xl lg:text-2xl font-thin drop-shadow-lg': true,
+        'flex-col h-max pb-4 items-center': flexCol,
     }">
         <li>
             <a href="#about">

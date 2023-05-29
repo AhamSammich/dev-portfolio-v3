@@ -1,13 +1,22 @@
 <template>
-    <section id="hero" class="page flex items-center justify-around">
-        <div class="z-[1] px-8 grid gap-4">
-            <h1 class="text-5xl font-bold text-near-black">
-                My name is Andre Hammons
+    <section id="hero" class="page flex max-sm:flex-col max-sm:gap-8 items-center justify-center">
+        <div class="z-[1] px-8 grid">
+            <p class="hidden">
+                <a href="https://storyset.com/data">Data illustrations by Storyset</a>
+            </p>
+            <h1 class="font-bold text-near-black text-2xl">
+                My name is 
+                <span class="block">
+                Andre Hammons
+                </span>
             </h1>
-            <p class="text-3xl">I am a
+            <p class="">I am a
                 <span class="font-bold">web developer</span> and I am
                 <span class="font-bold">here to help!</span>
             </p>
+        </div>
+        <div class="w-3/4 sm:w-1/3">
+            <HeroSvg fill-color="#172554" />
         </div>
     </section>
 </template>

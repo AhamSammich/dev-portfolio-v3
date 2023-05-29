@@ -1,15 +1,15 @@
 <template>
-    <header class="z-[999] fixed left-0 right-0 top-0 flex h-[100px] items-center justify-between px-8">
+    <header class="z-[999] fixed left-0 right-0 top-0 flex items-start justify-between py-4 px-8">
         <div class="flex items-center">
             <img src="https://a-us.storyblok.com/f/1014509/1000x1000/d7ee635410/alh-logo-web-dark-transformed.png/m/filters:format(webp)"
-                alt="My Logo" width="64" height="64" :class="{
+                alt="My Logo" width="24" height="24" :class="{
                     'absolute top-6 left-8 transition-all origin-right outline-none': true,
                     'scale-x-0 opacity-0': !scrollAtTop,
                 }" />
-            <h1 :class="{
-                'relative ml-4 text-2xl font-bold transition-all origin-left': true,
+            <!-- <h1 :class="{
+                'relative font-bold transition-all origin-left whitespace-nowrap': true,
                 'scale-x-0 opacity-0': scrollAtTop,
-            }">Andre <span class="font-thin">L</span> Hammons</h1>
+            }">Andre <span class="font-thin">L</span> Hammons</h1> -->
         </div>
 
         <nav :class="{

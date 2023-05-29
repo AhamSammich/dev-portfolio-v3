@@ -1,16 +1,16 @@
 <template>
   <div :class="{ 'btn-container w-12 h-12 xl:w-16 xl:h-16 opacity-80': true, 'menu-open': menuOpen }"
     @pointerup="handleClick()">
-    <div :class="{
+    <!-- <div :class="{
       'absolute inset-0 m-auto transition-all origin-center duration-300': true,
       'scale-y-0 opacity-0': !menuOpen,
-    }">
+    }"> -->
     <div class="top bar shadow-sm"></div>
-      <div class="middle bar shadow-sm"></div>
-      <div class="bottom bar shadow-sm"></div>
-    </div>
+    <div class="middle bar shadow-sm"></div>
+    <div class="bottom bar shadow-sm"></div>
+    <!-- </div> -->
 
-    <div :class="{
+    <!-- <div :class="{
       'group absolute inset-0 m-auto transition-all origin-center': true,
       'scale-y-0 opacity-0': menuOpen,
       'delay-300': !menuOpen,
@@ -18,7 +18,7 @@
       <div class="circle group-hover:scale-[2] group-hover:opacity-0"></div>
       <div class="circle outer group-hover:rotate-90"></div>
       <div class="circle inner group-hover:rotate-180"></div>
-    </div>
+    </div> -->
 
   </div>
 </template>
@@ -107,9 +107,9 @@ onMounted(() => {
 
     }
 
-    .bottom {
+    /* .bottom {
       opacity: 0;
-    }
+    } */
   }
 }
 
@@ -163,10 +163,10 @@ onMounted(() => {
   }
 
 
-  &:not(.outer, .inner) {
-    /* border-top: none;
-    border-right: none; */
-  }
+  /* &:not(.outer, .inner) {
+    border-top: none;
+    border-right: none;
+  } */
 
   &.outer {
     width: 100%;

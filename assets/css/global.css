@@ -1,24 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-    --pri-color: #EEE;
-    --sec-color: #333;
-    --accent-color: lightgray;
-    font-family: Rubik, san-serif;
+	--pri-color: #eee;
+	--sec-color: #333;
+	--accent-color: lightgray;
+	font-family: Rubik, san-serif;
 }
 
 body {
-    overflow-x: hidden;
+	overflow: hidden;
 }
 
 main {
-    color: var(--sec-color);
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
+	color: var(--sec-color);
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	/* scroll-snap-type: y mandatory; */
+
+	&::-webkit-scrollbar {
+		width: 0.3rem;
+		@apply bg-blue-950 bg-opacity-90;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		@apply bg-near-white bg-opacity-90;
+	}
 }
 
 /* img {
@@ -26,20 +31,19 @@ main {
 } */
 
 .page {
-    min-height: 100vh;
-    height: max-content;
-    width: 100%;
-    padding: 3rem 2rem;
-    position: relative;
-    scroll-snap-align: start start;
+	height: max-content;
+	min-height: 100svh;
+	width: 100%;
+	max-width: 100vw;
+	padding: 3rem 0;
+	position: relative;
+	scroll-snap-align: start start;
 
-    &:nth-of-type(2n) {
-        /* background-color: #333333aa; */
-        color: var(--pri-color);
-        @apply shadow-lg bg-gradient-to-b from-transparent to-blue-950 bg-opacity-80;
-    }
+	&:nth-of-type(2n) {
+		/* @apply bg-opacity-80 bg-gradient-to-b from-transparent to-blue-950 shadow-lg; */
+	}
 }
 
 .hidden {
-    display: none;
+	display: none;
 }

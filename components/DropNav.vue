@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="absolute top-8 right-8 z-[9999999]">
+        <div class="absolute top-4 right-4 z-[9999999]">
             <MenuButton @pointerup="toggleMenu" :force-state="menuIsOpen" />
         </div>
         <div :class="{
