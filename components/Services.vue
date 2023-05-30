@@ -2,10 +2,10 @@
     <section id="services" class="page flex flex-col gap-8 justify-center items-center pt-[100px] h-max w-full">
         <h1 class="text-3xl font-bold hidden">What I can do for you</h1>
         <!-- <div class="flex max-md:flex-col justify-center gap-4 flex-wrap"> -->
-        <PaginatedWrapper @prev-page="handlePrev" @next-page="handleNext">
+        <PaginatedWrapper :num-of-pages="3" :active-page="page" @go-to-page="(pageNum) => page = pageNum"
+            @prev-page="handlePrev" @next-page="handleNext">
             <HoverBlock v-show="page === 1" headline="Need a website?" icon-name="mdi:web"
-                :body-text="`Whether you're looking to grow your online business or just looking for a sweet custom personal landing page, I can help!\nI would love to help you create a fast and responsive website to provide your audience with a unique online experience on any device.
-                You can bring your own design or we can work together to discover your style. Either way, together we can build something awesome!`" />
+                :body-text="`Whether you're looking to grow your online business or just looking for a sweet custom personal landing page, I can help!\nI would love to help you create a fast and responsive website to provide your audience with a unique online experience on any device. Bring your own design or we can work together to discover your style.`" />
             <HoverBlock v-show="page === 2" headline="Building a project?" icon-name="mdi:github-box"
                 :body-text="`Are you a fellow developer with an idea you're looking to build out? I'm here for you! Maybe CSS gives you a headache or you're not quite sure how to JavaScript
                 Whether it's style or functionality, I'd be happy to tackle those challenges for you. Let's collaborate to bring your project to life!`" />

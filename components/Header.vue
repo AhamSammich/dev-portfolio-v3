@@ -1,11 +1,13 @@
 <template>
     <header class="z-[999] fixed left-0 right-0 top-0 flex items-start justify-between py-4 px-8">
         <div class="flex items-center">
-            <img src="https://a-us.storyblok.com/f/1014509/1000x1000/d7ee635410/alh-logo-web-dark-transformed.png/m/filters:format(webp)"
-                alt="My Logo" width="24" height="24" :class="{
-                    'absolute top-6 left-8 transition-all origin-right outline-none': true,
+            <div :class="{
+                    'absolute top-6 left-8 transition-all origin-right outline-none w-8 xl:w-12': true,
                     'scale-x-0 opacity-0': !scrollAtTop,
-                }" />
+                }">
+            <img src="https://a-us.storyblok.com/f/1014509/1002x1004/78ee65ecbf/alh-logo-web-transformed.png/m/filters:format(webp)"
+                alt="My Logo" width="64" height="64" class="object-cover object-center" />
+            </div>
             <!-- <h1 :class="{
                 'relative font-bold transition-all origin-left whitespace-nowrap': true,
                 'scale-x-0 opacity-0': scrollAtTop,

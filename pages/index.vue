@@ -2,16 +2,18 @@
     <Header />
 
     <main ref="mainRef" class="grid motion-safe:scroll-smooth">
-        <div id="main-background" class="fixed z-0 w-[40vw] h-full top-[30%] left-1/2 right-0 aspect-square pointer-events-none"
-            :style="`transform: translateY(-${mainScroll / 20}px);`">
+        <div id="main-background" class="opacity-50 fixed z-0 w-[30vw] top-4 left-4 right-1/2 aspect-square pointer-events-none"
+            :style="`transform: translateY(${mainScroll / 20}px) translateX(${mainScroll / 20}%);`">
         </div>
 
         <Hero />
 
         <Icon name="solar:double-alt-arrow-down-bold-duotone" :class="{
-            'absolute bottom-4 mx-auto w-full text-near-white drop-shadow-md drop-shadow-white transition-all duration-500 origin-bottom': true,
+            'absolute text-4xl lg:text-6xl motion-safe:animate-bounce bottom-4 mx-auto w-full text-near-white drop-shadow-md drop-shadow-white transition-all duration-500 origin-bottom': true,
             'opacity-0': !scrollAtTop,
         }" />
+
+        <Skills />
         
         <Services />
 
@@ -58,13 +60,13 @@ onMounted(() => {
     mainRef.value?.addEventListener("scroll", () => {
         if (!mainRef.value) return;
         mainScroll.value = mainRef.value.scrollTop;
-        scrollAtTop.value = (mainScroll.value < window.innerHeight);
+        scrollAtTop.value = (mainScroll.value === 0);
     }, { passive: true });
 
     watchEffect(() => (
         mainRef.value?.style.setProperty('background', `radial-gradient(
             circle at ${x.value / window.innerWidth * 100}% ${y.value / window.innerHeight * 100}%, 
-            white, 
+            #EEE, 
             lightsteelblue 50%
             )`)
     ))
@@ -79,8 +81,10 @@ onMounted(() => {
         lightsteelblue;
     background-blend-mode: lighten;
     background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 50%;
     mask-image: var(--img-url);
     mask-size: contain;
+    mask-repeat: no-repeat;
 }
 </style>

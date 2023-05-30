@@ -28,8 +28,8 @@ export default defineNuxtConfig({
 	appConfig: {
 		nuxtIcon: {
 			aliases: {
-				"js": "devicon-plain:javascript",
-				"ts": "devicon-plain:typescript",
+				"javascript": "devicon-plain:javascript",
+				"typescript": "devicon-plain:typescript",
 				"html": "devicon-plain:html5",
 				"css": "devicon-plain:css3",
 				"vue": "devicon-plain:vuejs",

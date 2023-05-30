@@ -1,9 +1,9 @@
 <template>
     <div
-        class="group relative p-16 flex flex-col gap-4 rounded-md md:min-h-[50svh] bg-gradient-to-b from-[#EEEEEE95] to-near-white shadow-md transition-all">
+        class="group relative mt-8 p-12 flex flex-col gap-4 rounded-xl min-h-[50svh] bg-gradient-to-b from-[#EEEEEE95] to-near-white shadow-md transition-all">
         <div
-            class="w-20 h-20 bg-blue-950 text-white flex justify-center items-center rounded-full shadow-md absolute -top-12 inset-x-0 mx-auto">
-            <Icon :name="iconName" class="text-5xl mx-auto" />
+            class="w-16 lg:w-20 aspect-square bg-blue-950 text-white flex justify-center items-center rounded-full absolute -top-8 inset-x-0 mx-auto">
+            <Icon :name="iconName" class="text-4xl lg:text-5xl mx-auto" />
         </div>
         <h2 class="font-bold text-xl xl:text-2xl text-center">{{ headline }}</h2>
         <p
