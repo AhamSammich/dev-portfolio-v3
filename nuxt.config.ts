@@ -28,16 +28,16 @@ export default defineNuxtConfig({
 	appConfig: {
 		nuxtIcon: {
 			aliases: {
-				"javascript": "devicon-plain:javascript",
-				"typescript": "devicon-plain:typescript",
-				"html": "devicon-plain:html5",
-				"css": "devicon-plain:css3",
-				"vue": "devicon-plain:vuejs",
-				"nuxt": "devicon-plain:nuxtjs",
-				"astro": "devicon-plain:astro",
-				"git": "devicon-plain:git",
-				"vscode": "devicon-plain:vscode",
-				"react": "simple-icons:react"
+				javascript: "devicon-plain:javascript",
+				typescript: "devicon-plain:typescript",
+				html: "devicon-plain:html5",
+				css: "devicon-plain:css3",
+				vue: "devicon-plain:vuejs",
+				nuxt: "devicon-plain:nuxtjs",
+				astro: "devicon-plain:astro",
+				git: "devicon-plain:git",
+				vscode: "devicon-plain:vscode",
+				react: "simple-icons:react",
 			},
 		},
 	},
