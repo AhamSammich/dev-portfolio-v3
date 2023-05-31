@@ -2,7 +2,8 @@
   <section id="projects" class="page flex flex-col items-center gap-12">
     <Icon
       name="mdi:source-repository-multiple"
-      class="text-[40vw] text-blue-950 opacity-20 absolute bottom-8 left-0"
+      class="text-[40vw] opacity-20 absolute bottom-8 left-0"
+      :style="{ color: usePrimaryColor().value }"
     />
     <h1 class="text-near-white text-xl md:text-2xl xl:text-4xl font-bold">Projects</h1>
     <div class="flex flex-wrap justify-center gap-2">

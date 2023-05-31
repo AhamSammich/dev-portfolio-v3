@@ -8,9 +8,10 @@
         <input
           type="radio"
           name="page"
+          :style="useColorStyle().secondary()"
           :class="{
-            'h-3 w-3 cursor-pointer appearance-none rounded-full bg-blue-950 opacity-80': true,
-            'scale-90 border border-blue-950 bg-transparent': index === activePage - 1,
+            'h-3 w-3 cursor-pointer appearance-none rounded-full border opacity-80': true,
+            'scale-75': index === activePage - 1,
           }"
           @pointerdown="() => $emit('go-to-page', index + 1)"
         />

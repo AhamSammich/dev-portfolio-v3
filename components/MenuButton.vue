@@ -6,9 +6,9 @@
     }"
     @pointerup="handleClick()"
   >
-    <div class="top bar shadow-sm"></div>
-    <div class="middle bar shadow-sm"></div>
-    <div class="bottom bar shadow-sm"></div>
+    <div class="top bar shadow-sm" :style="secondary()"></div>
+    <div class="middle bar shadow-sm" :style="secondary()"></div>
+    <div class="bottom bar shadow-sm" :style="secondary()"></div>
   </div>
 </template>
 
@@ -46,6 +46,10 @@ function handleForceState() {
   menuOpen.value = props.forceState;
   props.forceState ? emits("open-menu") : emits("close-menu");
 }
+
+const { primary, secondary } = useColorStyle();
+const primaryColor = usePrimaryColor();
+const secondaryColor = useSecondaryColor();
 
 onMounted(() => {
   watchEffect(() => {
@@ -96,8 +100,7 @@ onMounted(() => {
 .bar {
   width: 80%;
   height: 2px;
-  border-bottom: 1px solid var(--color1);
-  background-color: var(--color2);
+  border-bottom-width: 1px;
   position: absolute;
   top: 46%;
   left: 10%;

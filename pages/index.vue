@@ -47,6 +47,8 @@ const { x, y } = useMouse();
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
 
+const primaryColor = usePrimaryColor();
+
 const scrollAtTop = useState("scrollAtTop", () => true);
 
 onMounted(() => {
@@ -89,7 +91,7 @@ onMounted(() => {
         (y.value / window.innerHeight) * 100
       }%, 
             #EEE, 
-            lightsteelblue 60%
+            ${usePrimaryColor().value} 60%
             )`
     )
   );
@@ -99,7 +101,7 @@ onMounted(() => {
 <style scoped lang="postcss">
 #main-background {
   --img-url: url("https://a-us.storyblok.com/f/1014509/1000x1000/d7ee635410/alh-logo-web-dark-transformed.png/m/filters:format(webp)");
-  background: var(--img-url), lightsteelblue;
+  background: var(--img-url), v-bind(primaryColor);
   background-blend-mode: lighten;
   background-size: contain;
   background-repeat: no-repeat;

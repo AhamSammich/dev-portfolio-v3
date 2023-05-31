@@ -7,7 +7,7 @@
       <p class="hidden">
         <a href="https://storyset.com/data">Data illustrations by Storyset</a>
       </p>
-      <h1 class="text-3xl font-bold text-near-black lg:text-4xl xl:text-6xl">
+      <h1 class="text-3xl font-bold lg:text-4xl xl:text-6xl">
         <span class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl"
           >My name is
         </span>
@@ -23,11 +23,13 @@
       </p>
     </div>
     <div class="w-3/4 sm:w-1/3">
-      <HeroSvg fill-color="#172554" />
+      <HeroSvg :fill-color="fillColor" />
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const fillColor = useSecondaryColor();
+</script>
 
 <style scoped></style>

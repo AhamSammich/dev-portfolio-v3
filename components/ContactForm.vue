@@ -20,6 +20,7 @@
           placeholder=" "
           required
           autocomplete="given-name"
+          :style="inputColorStyle"
         />
       </div>
       <div data-field="last name" class="">
@@ -31,6 +32,7 @@
           placeholder=" "
           required
           autocomplete="family-name"
+          :style="inputColorStyle"
         />
         <Icon
           name="mdi:account"
@@ -46,6 +48,7 @@
           placeholder=" "
           required
           autocomplete="email"
+          :style="inputColorStyle"
         />
         <Icon
           name="mdi:email"
@@ -59,6 +62,7 @@
           name="message"
           class="input peer"
           placeholder=" "
+          :style="inputColorStyle"
         ></textarea>
         <Icon
           name="mdi:message"
@@ -68,7 +72,7 @@
     </fieldset>
     <button
       type="submit"
-      class="group shadow-lg my-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 bg-blue-950 border bg-opacity-90 text-white hover:bg-near-white hover:text-black hover:border-blue-950"
+      class="group shadow-lg my-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 bg-near-black border border-near-black text-near-white hover:bg-near-white hover:text-black"
     >
       Send
       <Icon
@@ -79,11 +83,18 @@
   </form>
 </template>
 
+<script setup lang="ts">
+const primaryColor = ref(usePrimaryColor().value);
+const secondaryColor = ref(useSecondaryColor().value);
+
+const inputColorStyle = computed(() => useColorStyle().light());
+</script>
+
 <style scoped lang="postcss">
 form {
   --bg-color: #eee;
   --txt-color: #333;
-  --input-color: rgb(23 37 84);
+  --input-color: v-bind(secondaryColor);
   --border-w: 0.1rem;
   width: 90%;
   max-width: 600px;
@@ -111,7 +122,8 @@ fieldset > div {
 .input {
   outline: none;
   max-width: 100%;
-  border: 1px solid var(--input-color);
+  border-width: 1px;
+  /* border-color: v-bind(secondaryColor); */
   border-radius: 0.75rem;
   background: var(--bg-color);
   color: inherit;
@@ -150,7 +162,7 @@ div:has(.input:focus)::after {
   transform: translate(0, -125%) scale(0.6);
   padding: 0 0.5rem;
   background: transparent;
-  color: var(--txt-color);
+  /* color: v-bind(secondaryColor); */
   opacity: 1;
   letter-spacing: 0.05rem;
   font-size: medium;
