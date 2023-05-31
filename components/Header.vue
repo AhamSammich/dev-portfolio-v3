@@ -5,7 +5,7 @@
     <div class="flex items-center">
       <div
         :class="{
-          'absolute left-4 top-2 w-8 origin-right outline-none transition-all xl:w-12': true,
+          'absolute left-4 top-4 w-8 origin-right outline-none transition-all xl:w-12': true,
         }"
       >
         <a href="#hero">

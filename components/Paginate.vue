@@ -42,7 +42,7 @@
 const { numOfPages = 1, activePage = 1 } = defineProps(["numOfPages", "activePage"]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
 const iconClass = {
-  "cursor-pointer text-4xl drop-shadow-md text-blue-950": true,
+  "cursor-pointer text-5xl drop-shadow-md text-blue-950": true,
 };
 </script>
 

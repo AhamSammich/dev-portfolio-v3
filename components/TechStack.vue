@@ -1,6 +1,6 @@
 <template>
   <div class="m-2 h-max w-max">
-    <h2 v-if="title" class="mb-2 text-center text-xl lg:text-2xl font-bold">
+    <h2 v-if="title" class="mb-2 text-xl lg:text-2xl font-bold">
       {{ title }}
     </h2>
     <div class="flex w-full gap-4">

@@ -1,6 +1,6 @@
 <template>
   <a :href="url" target="_blank" :title="label">
-    <Icon v-if="iconName" :name="iconName" class="text-[2em] mb-1 mr-2" />
+    <Icon v-if="iconName" :name="iconName" class="text-[1.5em] mb-1 mr-2" />
     <span :class="{ 'visually-hidden': hideLabel }">
       {{ label }}
     </span>

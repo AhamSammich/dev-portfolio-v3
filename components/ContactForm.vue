@@ -85,9 +85,8 @@ form {
   --txt-color: #333;
   --input-color: rgb(23 37 84);
   --border-w: 0.1rem;
-  height: 100%;
   width: 90%;
-  max-width: 700px;
+  max-width: 600px;
   color: var(--txt-color);
   display: flex;
   flex-direction: column;

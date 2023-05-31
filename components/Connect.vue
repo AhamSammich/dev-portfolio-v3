@@ -1,12 +1,12 @@
 <template>
   <section
     id="connect"
-    class="page flex max-sm:flex-col items-center justify-center gap-16 text-near-white bg-blue-950 bg-opacity-90"
+    class="page flex max-sm:flex-col items-center justify-center gap-4 lg:gap-16 text-near-white bg-blue-950 bg-opacity-90"
   >
     <ContactForm />
-    <div class="flex flex-col max-sm:items-center justify-center gap-12">
+    <div class="flex flex-col basis-[20%] max-sm:items-center justify-center gap-4 mx-4">
       <h1 class="text-xl md:text-2xl xl:text-4xl font-bold">Let's Connect!</h1>
-      <ul class="flex flex-col gap-8 xl:text-xl">
+      <ul class="w-max flex flex-col gap-4 max-md:text-xs xl:text-xl">
         <li>
           <ContactLink
             url="mailto:connect@ahammons.me"
