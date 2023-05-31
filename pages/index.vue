@@ -37,33 +37,7 @@
 
     <About />
 
-    <section
-      id="connect"
-      class="page flex max-sm:flex-col items-center justify-center gap-16 text-near-white bg-blue-950 bg-opacity-90"
-    >
-      <ContactForm />
-      <div class="flex flex-col max-sm:items-center justify-center gap-12">
-        <h1 class="text-xl md:text-2xl xl:text-4xl font-bold">Let's Connect!</h1>
-        <ul class="flex flex-col gap-8 xl:text-xl">
-          <li>
-            <Icon name="mdi:email" class="text-[2em] mb-1 mr-1" />
-            connect@ahammons.me
-          </li>
-          <li>
-            <Icon name="mdi:linkedin" class="text-[2em] mb-1 mr-1" />
-            /in/mynameisandre
-          </li>
-          <li>
-            <Icon name="mdi:github" class="text-[2em] mb-1 mr-1" />
-            AhamSammich
-          </li>
-          <li>
-            <Icon name="mdi:twitter" class="text-[2em] mb-1 mr-1" />
-            hammons_dev
-          </li>
-        </ul>
-      </div>
-    </section>
+    <Connect />
   </main>
 </template>
 
