@@ -1,14 +1,12 @@
 <template>
 	<div>
-		<div class="absolute right-4 top-4 z-[9999999]">
+		<div class="absolute right-4 top-2 z-[9999]">
 			<MenuButton @pointerup="toggleMenu" :force-state="menuIsOpen" />
 		</div>
-		<div
-			:class="{
-				'absolute inset-0 z-[99999] mx-auto h-max origin-top bg-near-white py-4 shadow-lg transition-all': true,
-				'scale-y-0 opacity-0': !menuIsOpen,
-			}"
-		>
+		<div :class="{
+			'absolute inset-0 mx-auto h-max origin-top bg-near-white py-4 shadow-lg transition-all': true,
+			'scale-y-0 opacity-0': !menuIsOpen,
+		}">
 			<Nav :flex-col="true" />
 		</div>
 	</div>

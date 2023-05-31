@@ -32,6 +32,7 @@ export default defineNuxtConfig({
 				typescript: "devicon-plain:typescript",
 				html: "devicon-plain:html5",
 				css: "devicon-plain:css3",
+				tailwind: "mdi:tailwind",
 				vue: "devicon-plain:vuejs",
 				nuxt: "devicon-plain:nuxtjs",
 				astro: "devicon-plain:astro",
