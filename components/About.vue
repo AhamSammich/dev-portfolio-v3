@@ -16,13 +16,13 @@
       >
         <InfoBlock
           v-show="page === 1"
-          headline="Professionally"
+          headline="Professional"
           icon-name="mdi:certificate"
-          :body-text="`I served as a submarine electronics technician in the United States Navy for 8 years, where I grew into a seasoned problem solver and an adept learner of new technologies and systems. I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuously developing new skills!`"
+          :body-text="`I served as a submarine electronics technician in the United States Navy for 8 years, where I grew into a seasoned problem solver and an adept learner of new technologies and systems. I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuous developing new skills!`"
         />
         <InfoBlock
           v-show="page === 2"
-          headline="Personally"
+          headline="Personal"
           icon-name="mdi:heart"
           :body-text="`I am a proud father and husband who just cannot resist a great dad joke! I love board game nights and karaoke with good friends. I also enjoy spending time reading about and learning new tech online for inspiration.`"
         />

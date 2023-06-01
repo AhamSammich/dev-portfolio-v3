@@ -92,8 +92,8 @@ const inputColorStyle = computed(() => useColorStyle().light());
 
 <style scoped lang="postcss">
 form {
-  --bg-color: #eee;
-  --txt-color: #333;
+  --bg-color: var(--near-white);
+  --txt-color: var(--near-black);
   --input-color: v-bind(secondaryColor);
   --border-w: 0.1rem;
   width: 90%;

@@ -11,7 +11,12 @@
         <span class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl"
           >My name is
         </span>
-        <span class="block whitespace-nowrap"> Andre Hammons </span>
+        <span
+          class="block whitespace-nowrap"
+          :style="{ color: useSecondaryColor().value }"
+        >
+          Andre Hammons
+        </span>
       </h1>
       <p class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl">
         I am a
@@ -29,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-const fillColor = useSecondaryColor();
+const fillColor = useAccentColor();
 </script>
 
 <style scoped></style>

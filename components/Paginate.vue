@@ -22,17 +22,19 @@
       <Icon
         name="solar:double-alt-arrow-left-bold-duotone"
         :class="{
-          ...iconClass,
+          ...arrowClass,
           'pointer-events-none opacity-0': activePage === 1,
         }"
+        :style="arrowStyle"
         @pointerdown="$emit('prev-page')"
       />
       <Icon
         name="solar:double-alt-arrow-right-bold-duotone"
         :class="{
-          ...iconClass,
+          ...arrowClass,
           'pointer-events-none opacity-0': activePage === numOfPages,
         }"
+        :style="arrowStyle"
         @pointerdown="$emit('next-page')"
       />
     </div>
@@ -42,9 +44,12 @@
 <script setup lang="ts">
 const { numOfPages = 1, activePage = 1 } = defineProps(["numOfPages", "activePage"]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
-const iconClass = {
-  "cursor-pointer text-5xl drop-shadow-md text-blue-950": true,
+
+const arrowStyle = computed(() => ({ color: useAccentColor().value }));
+const arrowClass = {
+  "cursor-pointer text-5xl drop-shadow-md": true,
 };
+const inputStyle = computed(() => useColorStyle().secondary());
 </script>
 
 <style scoped lang="postcss">
@@ -54,11 +59,8 @@ const iconClass = {
   top: 25%;
   padding: 0 2rem;
   display: none;
-
-  @media (height < 400px) {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons {

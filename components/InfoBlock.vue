@@ -4,7 +4,7 @@
   >
     <div
       class="absolute inset-x-0 -top-8 mx-auto flex aspect-square w-16 items-center justify-center rounded-full lg:w-20"
-      :style="useColorStyle().secondary()"
+      :style="useColorStyle().dark()"
     >
       <Icon :name="iconName" class="mx-auto text-4xl lg:text-5xl" />
     </div>
