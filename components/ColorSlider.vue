@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 const slideRef: Ref<HTMLElement | null> = ref(null);
-const inputHue = ref(214);
+const inputHue = ref(226);
 
 const emits = defineEmits(["color-change"]);
 
@@ -25,6 +25,12 @@ function emitColor() {
 }
 
 onMounted(() => {
+  // const main = document.querySelector("main");
+  // main?.addEventListener("scroll", () => {
+  //   inputHue.value = Math.round(normalize(main.scrollTop, main.scrollHeight) * 360);
+  //   emitColor();
+  // });
+
   watchEffect(() => {
     slideRef.value?.style.setProperty(
       "background-color",

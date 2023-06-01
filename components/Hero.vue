@@ -7,7 +7,7 @@
       <p class="hidden">
         <a href="https://storyset.com/data">Data illustrations by Storyset</a>
       </p>
-      <h1 class="text-3xl font-bold lg:text-4xl xl:text-6xl">
+      <h1 class="text-4xl font-bold lg:text-4xl xl:text-6xl">
         <span class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl"
           >My name is
         </span>

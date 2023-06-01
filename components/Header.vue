@@ -8,16 +8,13 @@
           'absolute left-4 top-4 w-8 origin-right outline-none transition-all xl:w-12': true,
         }"
       >
-        <a href="#hero">
-          <img
-            src="https://a-us.storyblok.com/f/1014509/1002x1004/78ee65ecbf/alh-logo-web-transformed.png/m/filters:format(webp)"
-            alt="My Logo"
-            width="64"
-            height="64"
-            class="object-cover object-center"
-          />
-          <span class="visually-hidden">Back To Top</span>
-        </a>
+        <img
+          src="https://a-us.storyblok.com/f/1014509/1002x1004/78ee65ecbf/alh-logo-web-transformed.png/m/filters:format(webp)"
+          alt="My Logo"
+          width="64"
+          height="64"
+          class="object-cover object-center"
+        />
       </div>
       <!-- <h1 :class="{
                 'relative font-bold transition-all origin-left whitespace-nowrap': true,

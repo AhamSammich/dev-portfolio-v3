@@ -5,14 +5,16 @@ function getComplement(hueValue: number): number {
 
 export function getColorPalette(hueValue: number) {
 	return {
-		primary: `hsl(${hueValue} 25% 80%)`,
-		secondary: `hsl(${hueValue} 75% 30%)`,
-		accent: `hsl(${getComplement(hueValue)} 50% 50%)`,
+		primary: `hsl(${hueValue} 25% 70%)`,
+		secondary: `hsl(${hueValue} 60% 30%)`,
+		accent: `hsl(${getComplement(hueValue)} 75% 50%)`,
 	};
 }
 
-const INITIAL_HUE = 226;
+const INITIAL_HUE = 214;
 const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
+const WHITE = "#EEE";
+const BLACK = "#333";
 
 export const usePrimaryColor = () =>
 	useState("primary", () => INITIAL_PALETTE.primary);
@@ -23,23 +25,19 @@ export const useAccentColor = () =>
 
 export const useColorStyle = () => ({
 	primary: () => ({
-		"background-color": usePrimaryColor().value,
-		color: "#333",
-		"border-color": useSecondaryColor().value,
+		backgroundColor: usePrimaryColor().value,
+		color: BLACK,
 	}),
 	secondary: () => ({
-		"background-color": useSecondaryColor().value,
-		color: "#EEE",
-		"border-color": usePrimaryColor().value,
+		backgroundColor: useSecondaryColor().value,
+		color: WHITE,
 	}),
 	light: () => ({
-		"background-color": "#EEE",
-		color: useAccentColor().value,
-		"border-color": useSecondaryColor().value,
+		backgroundColor: usePrimaryColor().value,
+		color: BLACK,
 	}),
 	dark: () => ({
-		"background-color": useAccentColor().value,
-		color: "#EEE",
-		"border-color": usePrimaryColor().value,
+		backgroundColor: useSecondaryColor().value,
+		color: WHITE,
 	}),
 });

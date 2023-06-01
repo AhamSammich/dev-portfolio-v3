@@ -42,7 +42,6 @@ export default defineNuxtConfig({
 			},
 		},
 	},
-	css: ["@/assets/css/global.css"],
 	devServer: {
 		https: {
 			key: "./ssl/localhost+2-key.pem",

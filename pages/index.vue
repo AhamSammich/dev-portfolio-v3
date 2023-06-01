@@ -8,7 +8,7 @@
 			background: radial-gradient(
             circle at 0% 0%, 
             #EEE, 
-            lightsteelblue 50%
+            ${primaryColor} 50%
             );`"
   >
     <div
@@ -47,9 +47,29 @@ const { x, y } = useMouse();
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
 
+const spotlightMaxSize = 60;
+const spotlightSize = ref(spotlightMaxSize);
+
 const primaryColor = usePrimaryColor();
 
 const scrollAtTop = useState("scrollAtTop", () => true);
+
+// function handleTouchstart(ev: Event) {
+//   if (!(ev.target instanceof Element)) return;
+//   console.log("down");
+//   ev.target.classList.add("touch");
+// }
+
+// function handleTouchmove(ev: Event) {
+//   if (!(ev.target instanceof Element)) return;
+//   // console.log({ x: x.value, y: y.value });
+// }
+
+// function handleTouchend(ev: Event) {
+//   if (!(ev.target instanceof Element)) return;
+//   console.log("up");
+//   ev.target.classList.remove("touch");
+// }
 
 onMounted(() => {
   mainRef.value?.addEventListener(
@@ -91,7 +111,7 @@ onMounted(() => {
         (y.value / window.innerHeight) * 100
       }%, 
             #EEE, 
-            ${usePrimaryColor().value} 60%
+            ${primaryColor.value} ${spotlightSize.value}%
             )`
     )
   );

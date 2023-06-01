@@ -25,7 +25,6 @@
           ...arrowClass,
           'pointer-events-none opacity-0': activePage === 1,
         }"
-        :style="arrowStyle"
         @pointerdown="$emit('prev-page')"
       />
       <Icon
@@ -34,7 +33,6 @@
           ...arrowClass,
           'pointer-events-none opacity-0': activePage === numOfPages,
         }"
-        :style="arrowStyle"
         @pointerdown="$emit('next-page')"
       />
     </div>
@@ -45,22 +43,22 @@
 const { numOfPages = 1, activePage = 1 } = defineProps(["numOfPages", "activePage"]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
 
-const arrowStyle = computed(() => ({ color: useAccentColor().value }));
+const accentColor = computed(() => useAccentColor().value);
 const arrowClass = {
-  "cursor-pointer text-5xl drop-shadow-md": true,
+  "cursor-pointer text-5xl drop-shadow-sm": true,
 };
-const inputStyle = computed(() => useColorStyle().secondary());
 </script>
 
 <style scoped lang="postcss">
 .arrows {
   width: 100%;
   position: absolute;
-  top: 25%;
+  top: 1rem;
   padding: 0 2rem;
   display: none;
   display: flex;
   justify-content: space-between;
+  color: v-bind(accentColor);
 }
 
 .buttons {

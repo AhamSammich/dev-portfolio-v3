@@ -20,7 +20,6 @@
           placeholder=" "
           required
           autocomplete="given-name"
-          :style="inputColorStyle"
         />
       </div>
       <div data-field="last name" class="">
@@ -32,7 +31,6 @@
           placeholder=" "
           required
           autocomplete="family-name"
-          :style="inputColorStyle"
         />
         <Icon
           name="mdi:account"
@@ -48,7 +46,6 @@
           placeholder=" "
           required
           autocomplete="email"
-          :style="inputColorStyle"
         />
         <Icon
           name="mdi:email"
@@ -62,7 +59,6 @@
           name="message"
           class="input peer"
           placeholder=" "
-          :style="inputColorStyle"
         ></textarea>
         <Icon
           name="mdi:message"
@@ -72,7 +68,8 @@
     </fieldset>
     <button
       type="submit"
-      class="group shadow-lg my-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 bg-near-black border border-near-black text-near-white hover:bg-near-white hover:text-black"
+      class="group shadow-lg mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 text-near-white hover:bg-near-white hover:text-black"
+      :style="useColorStyle().dark()"
     >
       Send
       <Icon
@@ -84,24 +81,24 @@
 </template>
 
 <script setup lang="ts">
-const primaryColor = ref(usePrimaryColor().value);
-const secondaryColor = ref(useSecondaryColor().value);
-
-const inputColorStyle = computed(() => useColorStyle().light());
+const primaryColor = computed(() => usePrimaryColor().value);
+const secondaryColor = computed(() => useSecondaryColor().value);
+const accentColor = computed(() => useAccentColor().value);
 </script>
 
 <style scoped lang="postcss">
 form {
   --bg-color: var(--near-white);
   --txt-color: var(--near-black);
-  --input-color: v-bind(secondaryColor);
+  --input-color: v-bind(accentColor);
   --border-w: 0.1rem;
+  background-color: v-bind(primaryColor);
   width: 90%;
   max-width: 600px;
   color: var(--txt-color);
   display: flex;
   flex-direction: column;
-  @apply bg-gradient-to-b from-[#EEEEEE95] to-near-white p-4 sm:p-12 shadow-md rounded-xl;
+  @apply p-4 sm:p-8 shadow-md rounded-xl;
 }
 
 button {
@@ -117,6 +114,10 @@ fieldset > div {
   height: 2rem;
   display: flex;
   align-items: center;
+
+  & .icon {
+    color: v-bind(secondaryColor);
+  }
 }
 
 .input {
@@ -162,7 +163,7 @@ div:has(.input:focus)::after {
   transform: translate(0, -125%) scale(0.6);
   padding: 0 0.5rem;
   background: transparent;
-  /* color: v-bind(secondaryColor); */
+  color: v-bind(secondaryColor);
   opacity: 1;
   letter-spacing: 0.05rem;
   font-size: medium;

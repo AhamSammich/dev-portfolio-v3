@@ -8,11 +8,11 @@
     >
       <Icon :name="iconName" class="mx-auto text-4xl lg:text-5xl" />
     </div>
-    <h2 class="text-center text-xl font-bold xl:text-2xl mt-2">{{ headline }}</h2>
+    <h2 class="text-left text-xl font-bold xl:text-2xl mt-2">{{ headline }}</h2>
     <p
       v-for="(line, index) in splitText"
       :key="index"
-      class="max-w-[48ch] text-left font-thin max-sm:text-sm xl:text-xl"
+      class="max-w-[48ch] text-left xl:text-xl"
     >
       {{ line }}
     </p>
