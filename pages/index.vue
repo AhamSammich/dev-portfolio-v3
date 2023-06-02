@@ -3,7 +3,7 @@
 
   <main
     ref="mainRef"
-    class="grid motion-safe:scroll-smooth relative"
+    class="grid motion-safe:scroll-smooth"
     :style="`
 			background: radial-gradient(
             circle at 0% 0%, 
@@ -25,7 +25,7 @@
     <Icon
       name="solar:double-alt-arrow-down-bold-duotone"
       :class="{
-        'drop-shadow-white absolute bottom-4 mx-auto w-full origin-bottom text-4xl text-near-white drop-shadow-md transition-all lg:text-8xl': true,
+        'absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-8xl drop-shadow-md transition-opacity': true,
         'opacity-0': !scrollAtTop,
       }"
       :style="{ color: secondaryColor }"
@@ -40,6 +40,18 @@
     <About />
 
     <Connect />
+
+    <button ref="toTop" @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
+      <Icon
+        name="solar:double-alt-arrow-up-bold-duotone"
+        :class="{
+          'absolute bottom-4 right-8 text-4xl lg:text-8xl drop-shadow-md transition-opacity': true,
+          'opacity-0': scrollAtTop,
+        }"
+        :style="{ color: primaryColor, stroke: secondaryColor, strokeWidth: '0.5px' }"
+      />
+      <span class="visually-hidden">Back To Top</span>
+    </button>
   </main>
 </template>
 
@@ -55,6 +67,8 @@ const spotlightSize = ref(spotlightMaxSize);
 const { primaryColor, secondaryColor } = useColors();
 
 const scrollAtTop = useState("scrollAtTop", () => true);
+
+const resetMainScroll = () => mainRef.value?.scrollTo(0, 0);
 
 function handleScroll() {
   if (!mainRef.value) return;
