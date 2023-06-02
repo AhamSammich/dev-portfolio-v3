@@ -6,12 +6,14 @@
     }"
     :style="`${expanded ? 'flex-basis: 100%' : ''}`"
   >
-    <img
+    <NuxtImg
       :src="image.url"
-      alt="Project Image"
-      width="1850"
-      height="885"
+      :alt="title"
+      width="1280"
+      height="0"
+      sizes="sm:100vw 50vw"
       class="object-cover"
+      placeholder
     />
     <div
       :class="{

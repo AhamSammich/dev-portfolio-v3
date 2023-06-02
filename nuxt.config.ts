@@ -53,12 +53,25 @@ export default defineNuxtConfig({
 		},
 		port: 2305,
 	},
+	image: {
+		presets: {
+			screenshot: {
+				provider: "storyblok",
+				modifiers: {
+					width: 1280,
+					height: 0,
+					format: "webp",
+				}
+			}
+		}
+	},
 	modules: [
 		"@nuxtjs/tailwindcss",
 		"nuxt-icon",
 		"@vueuse/nuxt",
 		"nuxt-simple-robots",
 		"nuxt-simple-sitemap",
+		"@nuxt/image-edge",
 	],
 	nitro: {
 		prerender: {
