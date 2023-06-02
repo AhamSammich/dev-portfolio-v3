@@ -17,14 +17,16 @@ export default defineNuxtConfig({
 					crossorigin: "",
 				},
 				{
-					rel: "stylesheet",
+					rel: "preload",
 					href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap",
+					as: "style",
+					onload: "() => this.rel = 'stylesheet'",
 				},
 				{
 					rel: "icon",
 					href: "/alh-logo-1000.svg",
 					type: "image/svg+xml",
-				}
+				},
 			],
 		},
 	},
@@ -61,9 +63,9 @@ export default defineNuxtConfig({
 					width: 1280,
 					height: 0,
 					format: "webp",
-				}
-			}
-		}
+				},
+			},
+		},
 	},
 	modules: [
 		"@nuxtjs/tailwindcss",

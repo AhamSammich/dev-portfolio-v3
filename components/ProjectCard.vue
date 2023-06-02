@@ -13,6 +13,7 @@
       height="0"
       sizes="sm:100vw 50vw"
       class="object-cover"
+      preset="screenshot"
       placeholder
     />
     <div
