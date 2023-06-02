@@ -24,4 +24,29 @@
 defineProps<{
   flexCol?: boolean;
 }>();
+
+const { accentColor } = useColors();
 </script>
+
+<style scoped lang="postcss">
+.flex-col li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 1em;
+
+  &:not(:first-child) {
+    border-top: 1px solid v-bind(accentColor);
+  }
+}
+
+li:is(:hover, :focus-visible) {
+  color: v-bind(accentColor);
+
+  &:not(.flex-col li) {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
+}
+</style>

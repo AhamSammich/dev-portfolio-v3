@@ -20,32 +20,10 @@
 
 <script setup lang="ts">
 const menuIsOpen = ref(false);
-const toggleMenu = () => {
-  menuIsOpen.value = !menuIsOpen.value;
-};
 
 const openMenu = () => (menuIsOpen.value = true);
+
 const closeMenu = () => (menuIsOpen.value = false);
 
 const scrollAtTop: Ref<boolean> = useState("scrollAtTop");
-
-// watchEffect(() => {
-//   if (scrollAtTop.value && menuIsOpen.value) closeMenu();
-// });
 </script>
-
-<style scoped lang="postcss">
-ul {
-  padding-top: 1rem;
-}
-
-li {
-  z-index: 49;
-  padding: 1rem 0;
-  width: 50%;
-
-  &:not(:first-child) {
-    border-top: 1px solid var(--sec-color);
-  }
-}
-</style>
