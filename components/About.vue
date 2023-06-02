@@ -6,6 +6,7 @@
     <div class="bg-opacity-85 grid max-sm:gap-12 sm:gap-4 p-4 w-full">
       <h1 class="text-center">Who Am I?</h1>
       <Paginate
+        id="about"
         :num-of-pages="numOfPages"
         :active-page="page"
         @go-to-page="(pageNum) => (page = pageNum)"

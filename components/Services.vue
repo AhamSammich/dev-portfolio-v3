@@ -6,6 +6,7 @@
     <h1>How Can I Help?</h1>
     <!-- <div class="flex max-md:flex-col justify-center gap-4 flex-wrap"> -->
     <Paginate
+      id="services"
       :num-of-pages="numOfPages"
       :active-page="page"
       @go-to-page="(pageNum) => (page = pageNum)"

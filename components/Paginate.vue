@@ -1,10 +1,12 @@
 <template>
   <div class="group relative flex flex-col items-center w-full">
     <div class="buttons">
-      <div v-for="(_, index) in Array(numOfPages)" :key="index">
+      <div v-for="(pg, index) in pages" :key="pg">
         <input
+          :id="pg"
+          :title="pg"
           type="radio"
-          name="page"
+          :name="id"
           :style="useColorStyle().secondary()"
           :class="{
             'h-3 w-3 cursor-pointer appearance-none rounded-full opacity-80': true,
@@ -12,7 +14,7 @@
           }"
           @change="$emit('go-to-page', index + 1)"
         />
-        <label class="visually-hidden">Page {{ index + 1 }}</label>
+        <label :for="pg" class="visually-hidden">{{ pg }}</label>
       </div>
     </div>
     <slot />
@@ -40,8 +42,14 @@
 </template>
 
 <script setup lang="ts">
-const { numOfPages = 1, activePage = 1 } = defineProps(["numOfPages", "activePage"]);
+const { id, numOfPages = 1, activePage = 1 } = defineProps([
+  "id",
+  "numOfPages",
+  "activePage",
+]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
+
+const pages = reactive(Array(numOfPages).map((_, index) => `${id}-pg${index + 1}`));
 
 const accentColor = computed(() => useAccentColor().value);
 const arrowClass = {
