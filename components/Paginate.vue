@@ -49,7 +49,7 @@ const { id, numOfPages = 1, activePage = 1 } = defineProps([
 ]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
 
-const pages = reactive(Array(numOfPages).map((_, index) => `${id}-pg${index + 1}`));
+const pages = [...Array(numOfPages)].map((_, index) => `${id}-pg${index + 1}`);
 
 const accentColor = computed(() => useAccentColor().value);
 const arrowClass = {
