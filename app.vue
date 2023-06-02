@@ -5,13 +5,24 @@
 </template>
 
 <script setup lang="ts">
-const { secondaryColor } = useColors();
+const { primaryColor, secondaryColor } = useColors();
 
 useServerSeoMeta({
   title: "Andre Hammons | Web Developer",
   ogTitle: "Andre Hammons | Web Developer",
   ogDescription:
     "My name is Andre Hammons. Whether you're looking to grow your online business or just looking for a sweet custom personal landing page, I can help!",
+});
+
+onMounted(() => {
+  useHeadSafe({
+    meta: [
+      {
+        name: "theme-color",
+        content: primaryColor,
+      },
+    ],
+  });
 });
 </script>
 

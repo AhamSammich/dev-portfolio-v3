@@ -20,6 +20,11 @@ export default defineNuxtConfig({
 					rel: "stylesheet",
 					href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap",
 				},
+				{
+					rel: "icon",
+					href: "/alh-logo-1000.svg",
+					type: "image/svg+xml",
+				}
 			],
 		},
 	},
@@ -60,6 +65,7 @@ export default defineNuxtConfig({
 			crawlLinks: true,
 			routes: ["/"],
 		},
+		preset: "netlify",
 	},
 	runtimeConfig: {
 		public: {
