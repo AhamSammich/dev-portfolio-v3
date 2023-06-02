@@ -1,6 +1,6 @@
 <template>
   <div
-    class="group relative mt-8 flex min-h-[50svh] flex-col gap-4 rounded-xl bg-gradient-to-b from-[#EEEEEE95] to-near-white p-12 shadow-md transition-all"
+    class="group relative mt-8 flex min-h-[50svh] flex-col gap-4 rounded-xl bg-near-white p-12 shadow-md transition-all"
   >
     <div
       class="absolute inset-x-0 -top-8 mx-auto flex aspect-square w-16 items-center justify-center rounded-full lg:w-20"

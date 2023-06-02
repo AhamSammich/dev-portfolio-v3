@@ -19,8 +19,6 @@ export default defineNuxtConfig({
 				{
 					rel: "stylesheet",
 					href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap",
-					// as: "style",
-					// onload: "() => this.rel = stylesheet",
 				},
 			],
 		},
@@ -42,6 +40,7 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+	css: ["@/assets/css/observer.css"],
 	devServer: {
 		https: {
 			key: "./ssl/localhost+2-key.pem",
@@ -49,8 +48,24 @@ export default defineNuxtConfig({
 		},
 		port: 2305,
 	},
-	modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
-
+	modules: [
+		"@nuxtjs/tailwindcss",
+		"nuxt-icon",
+		"@vueuse/nuxt",
+		"nuxt-simple-robots",
+		"nuxt-simple-sitemap",
+	],
+	nitro: {
+		prerender: {
+			crawlLinks: true,
+			routes: ["/"],
+		},
+	},
+	runtimeConfig: {
+		public: {
+			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://andrehammons.dev",
+		},
+	},
 	tailwindcss: {
 		viewer: false,
 	},

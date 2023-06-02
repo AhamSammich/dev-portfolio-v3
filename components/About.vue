@@ -1,12 +1,10 @@
 <template>
   <section
     id="about"
-    class="page fixed left-0 top-0 flex items-center justify-center gap-4 flex-col"
+    class="page content fixed left-0 top-0 flex items-center justify-center gap-4 flex-col"
   >
     <div class="bg-opacity-85 grid max-sm:gap-12 sm:gap-4 p-4 w-full">
-      <h1 class="text-center text-xl md:text-2xl xl:text-4xl text-near-black font-bold">
-        Who Am I?
-      </h1>
+      <h1 class="text-center">Who Am I?</h1>
       <Paginate
         :num-of-pages="numOfPages"
         :active-page="page"

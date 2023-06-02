@@ -1,9 +1,9 @@
 <template>
   <section
     id="services"
-    class="page flex h-max w-full flex-col items-center justify-center gap-8"
+    class="page content flex h-max w-full flex-col items-center justify-center gap-8"
   >
-    <h1 class="text-xl md:text-2xl xl:text-4xl font-bold">How Can I Help?</h1>
+    <h1>How Can I Help?</h1>
     <!-- <div class="flex max-md:flex-col justify-center gap-4 flex-wrap"> -->
     <Paginate
       :num-of-pages="numOfPages"

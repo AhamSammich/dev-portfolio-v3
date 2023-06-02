@@ -3,17 +3,18 @@
 
   <main
     ref="mainRef"
-    class="grid motion-safe:scroll-smooth"
+    class="grid motion-safe:scroll-smooth relative"
     :style="`
 			background: radial-gradient(
             circle at 0% 0%, 
             #EEE, 
-            ${primaryColor} 50%
+            ${primaryColor} ${spotlightSize}%
             );`"
+    @scroll.passive="handleScroll"
   >
     <div
       id="main-background"
-      class="pointer-events-none fixed left-4 right-1/2 top-4 z-0 aspect-square w-[30vw] opacity-75"
+      class="pointer-events-none fixed left-4 right-1/2 top-4 z-0 aspect-square w-[30vw]"
       :style="`transform: translateY(${mainScroll / 20}px) translateX(${
         mainScroll / 20
       }%);`"
@@ -24,9 +25,10 @@
     <Icon
       name="solar:double-alt-arrow-down-bold-duotone"
       :class="{
-        'drop-shadow-white absolute bottom-4 mx-auto w-full origin-bottom text-4xl text-near-white drop-shadow-md transition-all duration-500 motion-safe:animate-bounce lg:text-6xl': true,
+        'drop-shadow-white absolute bottom-4 mx-auto w-full origin-bottom text-4xl text-near-white drop-shadow-md transition-all lg:text-8xl': true,
         'opacity-0': !scrollAtTop,
       }"
+      :style="{ color: secondaryColor }"
     />
 
     <Skills />
@@ -47,61 +49,21 @@ const { x, y } = useMouse();
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
 
-const spotlightMaxSize = 60;
+const spotlightMaxSize = 40;
 const spotlightSize = ref(spotlightMaxSize);
 
-const primaryColor = usePrimaryColor();
+const { primaryColor, secondaryColor } = useColors();
 
 const scrollAtTop = useState("scrollAtTop", () => true);
 
-// function handleTouchstart(ev: Event) {
-//   if (!(ev.target instanceof Element)) return;
-//   console.log("down");
-//   ev.target.classList.add("touch");
-// }
-
-// function handleTouchmove(ev: Event) {
-//   if (!(ev.target instanceof Element)) return;
-//   // console.log({ x: x.value, y: y.value });
-// }
-
-// function handleTouchend(ev: Event) {
-//   if (!(ev.target instanceof Element)) return;
-//   console.log("up");
-//   ev.target.classList.remove("touch");
-// }
+function handleScroll() {
+  if (!mainRef.value) return;
+  mainScroll.value = mainRef.value.scrollTop;
+  scrollAtTop.value = mainScroll.value === 0;
+}
 
 onMounted(() => {
-  mainRef.value?.addEventListener(
-    "scroll",
-    () => {
-      if (!mainRef.value) return;
-      mainScroll.value = mainRef.value.scrollTop;
-      scrollAtTop.value = mainScroll.value === 0;
-    },
-    { passive: true }
-  );
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (!entry.isIntersecting) {
-  //           entry.target.style = "transition: color 500ms; color: lightsteelblue;";
-  //         } else {
-  //           entry.target.style = "";
-  //         }
-  //       });
-  //     },
-  //     {
-  //       threshold: 0,
-  //       root: document.querySelector("main"),
-  //       rootMargin: "-50px 0px 0px 0px",
-  //     }
-  //   );
-
-  //   document.querySelectorAll(".page h1.observe").forEach((target) => {
-  //     observer.observe(target);
-  //   });
+  useObserver({ root: mainRef.value, unobserve: true });
 
   watchEffect(() =>
     mainRef.value?.style.setProperty(

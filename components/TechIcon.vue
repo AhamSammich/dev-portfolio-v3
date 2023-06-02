@@ -12,6 +12,8 @@ defineProps<{
   iconName: string;
   label?: string;
 }>();
+
+const { accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
@@ -31,7 +33,13 @@ defineProps<{
   font-size: smaller;
 }
 
-.icon-box:hover::after {
-  opacity: 1;
+.icon-box:hover {
+  &::after {
+    opacity: 1;
+  }
+
+  & .icon {
+    color: v-bind(accentColor);
+  }
 }
 </style>

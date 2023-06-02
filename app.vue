@@ -1,24 +1,18 @@
 <template>
   <div>
-    <ColorSlider
-      class="absolute top-4 left-20 rounded-md w-max z-[9999]"
-      @color-change="(color) => changeColor(color)"
-    />
     <NuxtPage />
   </div>
 </template>
 
 <script setup lang="ts">
-const primaryColor = usePrimaryColor();
-const secondaryColor = useSecondaryColor();
-const accentColor = useAccentColor();
+const { secondaryColor } = useColors();
 
-function changeColor(color: { hue: number }) {
-  const { primary, secondary, accent } = getColorPalette(color.hue);
-  primaryColor.value = primary;
-  secondaryColor.value = secondary;
-  accentColor.value = accent;
-}
+useServerSeoMeta({
+  title: "Andre Hammons | Web Developer",
+  ogTitle: "Andre Hammons | Web Developer",
+  ogDescription:
+    "My name is Andre Hammons. Whether you're looking to grow your online business or just looking for a sweet custom personal landing page, I can help!",
+});
 </script>
 
 <style lang="postcss">
@@ -32,6 +26,20 @@ function changeColor(color: { hue: number }) {
 body {
   font-family: Rubik, san-serif;
   overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  @apply text-3xl md:text-3xl xl:text-4xl;
+}
+
+h2 {
+  @apply text-xl lg:text-2xl xl:text-3xl;
 }
 
 main {
@@ -51,10 +59,6 @@ main {
   }
 }
 
-:is(button, a) .icon {
-  color: v-bind(accentColor);
-}
-
 .page {
   height: max-content;
   min-height: 100vh;
@@ -65,6 +69,7 @@ main {
   scroll-snap-align: start start;
 
   &:nth-of-type(2n) {
+    color: var(--near-white);
     background-color: v-bind(secondaryColor);
     @apply shadow-md;
   }

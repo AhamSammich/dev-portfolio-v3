@@ -68,8 +68,7 @@
     </fieldset>
     <button
       type="submit"
-      class="group shadow-lg mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 text-near-white hover:bg-near-white hover:text-black"
-      :style="useColorStyle().dark()"
+      class="group text-xl font-bold tracking-wider shadow-md mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2"
     >
       Send
       <Icon
@@ -81,9 +80,7 @@
 </template>
 
 <script setup lang="ts">
-const primaryColor = computed(() => usePrimaryColor().value);
-const secondaryColor = computed(() => useSecondaryColor().value);
-const accentColor = computed(() => useAccentColor().value);
+const { primaryColor, secondaryColor, accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
@@ -102,8 +99,8 @@ form {
 }
 
 button {
-  font-weight: bold;
-  letter-spacing: 0.05rem;
+  color: var(--near-white);
+  background-color: v-bind(accentColor);
 }
 
 fieldset > div {
@@ -124,7 +121,7 @@ fieldset > div {
   outline: none;
   max-width: 100%;
   border-width: 1px;
-  /* border-color: v-bind(secondaryColor); */
+  border-color: v-bind(secondaryColor);
   border-radius: 0.75rem;
   background: var(--bg-color);
   color: inherit;

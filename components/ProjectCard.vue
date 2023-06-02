@@ -16,13 +16,17 @@
     <div
       :class="{
         'absolute z-10 h-full w-full flex flex-col justify-center items-center bg-near-white bg-opacity-95 text-center text-near-black': true,
-        'pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 transition-opacity': true,
+        'pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity': true,
       }"
       :style="`${
         expanded ? 'opacity: 1; justify-content: flex-start; padding: 2rem;' : ''
       }`"
     >
-      <button class="absolute top-2 right-2" @pointerdown="() => (expanded = !expanded)">
+      <button
+        class="absolute top-2 right-2"
+        @pointerup="() => (expanded = !expanded)"
+        @keyup.enter="() => (expanded = !expanded)"
+      >
         <template v-if="expanded">
           <Icon name="system-uicons:close" class="text-5xl" />
           <span class="visually-hidden">Close Project Card</span>
@@ -35,8 +39,7 @@
       <div class="flex flex-col items-center justify-center gap-4">
         <h2
           :class="{
-            'z-20 text-center font-bold': true,
-            'text-xl md:text-2xl xl:text-4xl': expanded,
+            'z-20 text-center': true,
           }"
         >
           {{ title }}
@@ -59,8 +62,7 @@
             v-for="(line, index) in longDescription"
             :key="index"
             :class="{
-              'mx-auto max-w-[48ch] px-2 text-sm font-thin': true,
-              'max-sm:text-sm lg:text-lg': expanded,
+              'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
             }"
           >
             {{ line }}
@@ -69,8 +71,7 @@
         <p
           v-else
           :class="{
-            'mx-auto max-w-[48ch] px-2 text-sm font-thin': true,
-            'max-sm:text-sm lg:text-lg': expanded,
+            'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
           }"
         >
           {{ description }}
@@ -101,6 +102,12 @@ defineProps<{
 }>();
 
 const expanded = ref(false);
+
+const { accentColor } = useColors();
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+a .icon {
+  color: v-bind(accentColor);
+}
+</style>

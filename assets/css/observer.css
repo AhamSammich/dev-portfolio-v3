@@ -1,0 +1,45 @@
+@media (prefers-reduced-motion: no-preference) {
+  .content {
+    transition: opacity 1s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    filter: blur();
+
+    @media (min-width: 640px) {
+      & img {
+        transition: transform 0.5s ease-out;
+        opacity: 0;
+      }
+    }
+  }
+
+  .content:nth-child(2n + 1) {
+    transform: translateY(5%);
+
+    & img {
+      transform: translateX(5%);
+    }
+  }
+
+  .content:nth-child(2n) {
+    transform: translateY(5%);
+
+    & img {
+      transform: translateX(-5%);
+    }
+  }
+
+  .content.revealed,
+  .content.revealed img {
+    transform: none;
+    opacity: 1;
+  }
+
+  .product {
+    transition: transform 5s;
+    transform: scale(1);
+  }
+  
+  .product.visible {
+    transform: scale(1.25);
+  }
+}

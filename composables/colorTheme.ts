@@ -5,9 +5,9 @@ function getComplement(hueValue: number): number {
 
 export function getColorPalette(hueValue: number) {
 	return {
-		primary: `hsl(${hueValue} 25% 70%)`,
+		primary: `hsl(${hueValue} 25% 85%)`,
 		secondary: `hsl(${hueValue} 60% 30%)`,
-		accent: `hsl(${getComplement(hueValue)} 75% 50%)`,
+		accent: `hsl(${getComplement(hueValue)} 75% 45%)`,
 	};
 }
 
@@ -22,6 +22,12 @@ export const useSecondaryColor = () =>
 	useState("secondary", () => INITIAL_PALETTE.secondary);
 export const useAccentColor = () =>
 	useState("accent", () => INITIAL_PALETTE.accent);
+
+export const useColors = () => ({
+	primaryColor: usePrimaryColor(),
+	secondaryColor: useSecondaryColor(),
+	accentColor: useAccentColor(),
+});
 
 export const useColorStyle = () => ({
 	primary: () => ({

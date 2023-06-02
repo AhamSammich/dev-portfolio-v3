@@ -1,24 +1,27 @@
 <template>
-  <div
+  <button
     :class="{
       'btn-container h-12 w-12 opacity-80 xl:h-16 xl:w-16': true,
-      'menu-open': menuOpen,
+      'menu-open': menuOpen && !scrollAtTop,
     }"
-    @pointerup="handleClick()"
+    @pointerup="handleClick"
+    @keyup.enter="handleClick"
   >
-    <div class="top bar shadow-sm" :style="secondary()"></div>
-    <div class="middle bar shadow-sm" :style="secondary()"></div>
-    <div class="bottom bar shadow-sm" :style="secondary()"></div>
-  </div>
+    <div class="top bar"></div>
+    <div class="middle bar"></div>
+    <div class="bottom bar"></div>
+    <span class="visually-hidden">{{ buttonName }}</span>
+  </button>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    forceState?: boolean | null;
+    buttonName?: string;
+    forceClose?: boolean;
     closeOnly?: boolean;
   }>(),
-  { forceState: null, closeOnly: false }
+  { buttonName: "menu", forceClose: false, closeOnly: false }
 );
 const emits = defineEmits(["open-menu", "close-menu"]);
 
@@ -30,6 +33,7 @@ function toggleBtn() {
 }
 
 function closeMenu() {
+  menuOpen.value = false;
   emits("close-menu");
 }
 
@@ -41,21 +45,12 @@ function handleClick() {
   }
 }
 
-function handleForceState() {
-  if (props.forceState === null) return;
-  menuOpen.value = props.forceState;
-  props.forceState ? emits("open-menu") : emits("close-menu");
-}
+const scrollAtTop = useState("scroll");
 
-const { primary, secondary } = useColorStyle();
-const primaryColor = usePrimaryColor();
-const secondaryColor = useSecondaryColor();
+const { secondaryColor } = useColors();
 
-onMounted(() => {
-  watchEffect(() => {
-    if (menuOpen.value === props.forceState) return;
-    handleForceState();
-  });
+watchEffect(() => {
+  if (props.forceClose) closeMenu();
 });
 </script>
 
@@ -69,7 +64,8 @@ onMounted(() => {
 
   &.menu-open {
     & .bar {
-      border-color: transparent;
+      border: transparent;
+      background-color: v-bind(secondaryColor);
       height: 1px;
     }
 
@@ -100,7 +96,8 @@ onMounted(() => {
 .bar {
   width: 80%;
   height: 2px;
-  border-bottom-width: 1px;
+  background: var(--color1);
+  border-bottom: 1px solid v-bind(secondaryColor);
   position: absolute;
   top: 46%;
   left: 10%;

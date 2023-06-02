@@ -1,12 +1,12 @@
 <template>
-  <section id="projects" class="page flex flex-col items-center gap-12">
+  <section id="projects" class="page content flex flex-col items-center gap-12">
     <Icon
-      name="mdi:source-repository-multiple"
-      class="text-[40vw] opacity-20 absolute bottom-8 left-0"
-      :style="{ color: usePrimaryColor().value }"
+      name="fa6-solid:laptop-code"
+      class="text-[40vw] opacity-10 absolute bottom-8 left-4"
+      :style="{ color: primaryColor }"
     />
-    <h1 class="text-near-white text-xl md:text-2xl xl:text-4xl font-bold">Projects</h1>
-    <div class="flex flex-wrap justify-center gap-2">
+    <h1>Projects</h1>
+    <div class="flex flex-wrap justify-center items-center gap-2">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"
@@ -23,6 +23,8 @@
 </template>
 
 <script setup lang="ts">
+const { primaryColor } = useColors();
+
 const projects = [
   {
     title: "Shop Lindsay Nicole",
@@ -55,5 +57,3 @@ const projects = [
   },
 ];
 </script>
-
-<style scoped></style>
