@@ -8,6 +8,11 @@
   >
     <fieldset class="grid grid-cols-2 grid-rows-3 gap-2 xl:gap-4">
       <input type="hidden" name="form-name" value="contact" />
+      <input
+        type="hidden"
+        name="subject"
+        value="You've got a new connection request! (%{submissionId})"
+      />
       <p class="hidden">
         <label> Are we human, or are we spammer?: <input name="bot-catcher" /> </label>
       </p>
