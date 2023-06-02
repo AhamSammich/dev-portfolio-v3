@@ -10,8 +10,8 @@
       :src="image.url"
       :alt="title"
       width="1280"
-      height="0"
-      sizes="sm:100vw 50vw"
+      height="600"
+      sizes="xs:100vw sm:50vw"
       class="object-cover"
       preset="screenshot"
       placeholder

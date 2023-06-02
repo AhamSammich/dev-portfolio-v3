@@ -24,7 +24,11 @@ export default defineNuxtConfig({
 					rel: "icon",
 					href: "/alh-logo-1000.svg",
 					type: "image/svg+xml",
-				}
+				},
+				{
+					rel: "preconnect",
+					href: "https://a-us.storyblok.com",
+				},
 			],
 		},
 	},
@@ -54,15 +58,19 @@ export default defineNuxtConfig({
 		port: 2305,
 	},
 	image: {
+		domains: ["https://a-us.storyblok.com"],
 		presets: {
 			screenshot: {
-				provider: "storyblok",
 				modifiers: {
 					width: 1280,
-					height: 0,
+					height: 600,
 					format: "webp",
 				}
 			}
+		},
+		provider: "storyblok",
+		storyblok: {
+			baseURL: "https://a-us.storyblok.com",
 		}
 	},
 	modules: [
