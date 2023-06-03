@@ -12,7 +12,7 @@
     <div class="content flex flex-col gap-8 origin-center xl:scale-125">
       <TechStack title="Languages" :stack="['javascript', 'typescript', 'html', 'css']" />
       <TechStack title="Frameworks" :stack="['vue', 'nuxt', 'astro', 'tailwind']" />
-      <TechStack title="Tools" :stack="['git', 'vscode']" />
+      <TechStack title="Tools" :stack="['git', 'vscode', 'storyblok']" />
     </div>
   </section>
 </template>

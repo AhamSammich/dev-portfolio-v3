@@ -1,9 +1,9 @@
 <template>
   <div
     :data-name="label || iconName.toUpperCase()"
-    class="icon-box relative aspect-square w-16 p-1 sm:w-20"
+    class="icon-box relative m-4 aspect-square w-12 sm:w-16 lg:w-20"
   >
-    <Icon :name="iconName" class="absolute inset-0 m-auto h-8 w-8 sm:h-12 sm:w-12" />
+    <Icon :name="iconName" class="w-full h-full" />
   </div>
 </template>
 
@@ -12,8 +12,6 @@ defineProps<{
   iconName: string;
   label?: string;
 }>();
-
-const { accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
@@ -23,23 +21,13 @@ const { accentColor } = useColors();
   position: absolute;
   top: 100%;
   left: 50%;
+  margin-top: 0.5em;
   transform: translateX(-50%);
   width: max-content;
   height: 100%;
   text-align: center;
-  opacity: 0;
   transition: all 0.3s ease-in-out;
   font-family: Consolas, monospace, system-ui;
   font-size: smaller;
-}
-
-.icon-box:hover {
-  &::after {
-    opacity: 1;
-  }
-
-  & .icon {
-    color: v-bind(accentColor);
-  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="group relative flex flex-col items-center w-full">
+  <div class="group relative flex flex-col items-center w-full md:w-3/4 mx-auto">
     <div class="buttons">
       <div v-for="(pg, index) in pages" :key="pg">
         <input
@@ -59,24 +59,18 @@ const arrowClass = {
 
 <style scoped lang="postcss">
 .arrows {
-  width: 75%;
+  width: 100%;
   position: absolute;
-  top: 1rem;
-  padding: 0 2rem;
-  display: none;
+  top: 40vh;
   display: flex;
   justify-content: space-between;
   color: v-bind(accentColor);
 }
 
 .buttons {
-  display: none;
-
-  @media (min-height: 400px) {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 </style>
