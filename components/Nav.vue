@@ -35,6 +35,7 @@ const { accentColor } = useColors();
   align-items: center;
   width: 50%;
   padding-top: 1em;
+  color: var(--near-black);
 
   &:not(:first-child) {
     border-top: 1px solid v-bind(accentColor);

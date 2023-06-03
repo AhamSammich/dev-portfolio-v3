@@ -1,6 +1,7 @@
 <template>
   <header
     class="fixed left-0 right-0 top-0 z-[99] flex items-start justify-end px-8 py-1"
+    :style="{ color: baseColor }"
   >
     <div
       ref="logoRef"
@@ -66,6 +67,8 @@ function toggleColorSlider() {
   unclicked.value = false;
   hideColorSlider.value = !hideColorSlider.value;
 }
+
+const { baseColor } = useColors();
 </script>
 
 <style scoped lang="postcss"></style>

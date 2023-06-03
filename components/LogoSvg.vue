@@ -63,7 +63,7 @@ M697.565674,963.606689
 z"
     />
     <path
-      fill="#EEEEEE"
+      :fill="baseColor"
       opacity="1.000000"
       stroke="none"
       d="
@@ -87,7 +87,7 @@ const svgStyle = {
   backgroundSize: `${svgSize} ${svgSize}`,
 };
 
-const { primaryColor, secondaryColor, accentColor } = useColors();
+const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 </script>
 
 <style scoped lang="postcss"></style>

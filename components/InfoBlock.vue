@@ -12,7 +12,7 @@
     <p
       v-for="(line, index) in splitText"
       :key="index"
-      class="max-w-[48ch] text-left xl:text-xl"
+      class="max-w-[48ch] text-near-black text-left xl:text-xl"
     >
       {{ line }}
     </p>

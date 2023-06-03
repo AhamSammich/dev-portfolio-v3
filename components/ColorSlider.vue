@@ -14,35 +14,21 @@
 </template>
 
 <script setup lang="ts">
-const emits = defineEmits(["color-change"]);
-
 const inputHue = ref(226);
 
-const primaryColor = usePrimaryColor();
-const secondaryColor = useSecondaryColor();
-const accentColor = useAccentColor();
+const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 
 function handleChange() {
-  const color = { hue: inputHue.value };
-  emits("color-change", color);
-  changeColor(color);
+  changeColor(inputHue.value);
 }
 
-function changeColor(color: { hue: number }) {
-  const { primary, secondary, accent } = getColorPalette(color.hue);
+function changeColor(h: number, s?: number, l?: number) {
+  const { primary, secondary, accent, base } = getColorPalette(h, s, l);
   primaryColor.value = primary;
   secondaryColor.value = secondary;
   accentColor.value = accent;
+  baseColor.value = base;
 }
-
-// onMounted(() => {
-//   // Color change on scroll
-//   const main = document.querySelector("main");
-//   main?.addEventListener("scroll", () => {
-//     inputHue.value = Math.round(normalize(main.scrollTop, main.scrollHeight) * 360);
-//     emitColor();
-//   });
-// });
 </script>
 
 <style scoped lang="postcss">
