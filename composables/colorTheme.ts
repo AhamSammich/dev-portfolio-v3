@@ -61,7 +61,7 @@ export function getColorValues(color: string) {
 export function isDarkColor(color: string) {
 	// @ts-ignore
 	const { l } = getColorValues(color);
-	return l < 50;
+	return l < 60;
 }
 
 export function getColorPalette(h: number, s?: number, l?: number) {
@@ -71,13 +71,13 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 		sl = (pl + (100 - 35)) % 100;
 	let as = (ps + 50) % 100,
 		al = (pl + (100 - 40)) % 100;
-	let isDark = pl > 50;
+	let isDark = pl < 60;
 
 	const palette = {
 		primary: `hsl(${h} ${ps}% ${pl}%)`,
 		secondary: `hsl(${h} ${ss}% ${sl}%)`,
 		accent: `hsl(${getComplement(h)} ${as}% ${al}%)`,
-		base: isDark ? BLACK : WHITE,
+		base: isDark ? WHITE : BLACK,
 	};
 
 	console.log(getColorValues(palette.base));
