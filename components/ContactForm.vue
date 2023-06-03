@@ -96,7 +96,7 @@ form {
   --border-w: 0.1rem;
   background-color: v-bind(primaryColor);
   width: 100%;
-  max-width: 600px;
+  max-width: 768px;
   color: var(--txt-color);
   display: flex;
   flex-direction: column;

@@ -1,10 +1,12 @@
 <template>
   <section
     id="connect"
-    class="page content sm:flex sm:items-center justify-center gap-8 lg:gap-16"
+    class="page content md:flex md:items-center md:justify-center gap-8"
   >
-    <ContactForm />
-    <div class="basis-[20%] mx-auto w-max">
+    <div class="max-md:mx-auto w-max">
+      <ContactForm />
+    </div>
+    <div class="max-md:mx-auto w-max">
       <h1 class="my-8">Let's Connect!</h1>
       <ul class="w-max flex flex-col gap-4 xl:text-xl">
         <li>
