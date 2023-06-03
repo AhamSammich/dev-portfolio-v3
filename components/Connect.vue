@@ -3,7 +3,7 @@
     id="connect"
     class="page content md:flex md:items-center md:justify-center gap-8"
   >
-    <div class="max-md:mx-auto w-max">
+    <div class="max-md:mx-auto max-md:w-full w-max">
       <ContactForm />
     </div>
     <div class="max-md:mx-auto w-max">
@@ -39,7 +39,7 @@
         </li>
       </ul>
     </div>
-    <p class="absolute bottom-[2dvh] text-center text-sm font-thin">
+    <p class="absolute bottom-2 w-full text-center text-sm font-thin">
       &copy; {{ new Date().getFullYear() }} Andre L. Hammons
     </p>
   </section>
