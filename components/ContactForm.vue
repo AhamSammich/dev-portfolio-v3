@@ -95,7 +95,7 @@ form {
   --input-color: v-bind(accentColor);
   --border-w: 0.1rem;
   background-color: v-bind(primaryColor);
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   color: var(--txt-color);
   display: flex;
@@ -109,7 +109,7 @@ button {
 }
 
 fieldset > div {
-  margin: 1rem auto;
+  margin: 0.75em auto;
   background: inherit;
   position: relative;
   width: 100%;

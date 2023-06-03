@@ -26,7 +26,7 @@
     <Icon
       name="solar:double-alt-arrow-down-bold-duotone"
       :class="{
-        'absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-8xl drop-shadow-md transition-opacity': true,
+        'absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-md transition-opacity': true,
         'opacity-0': !scrollAtTop,
       }"
       :style="{ color: secondaryColor }"
@@ -46,7 +46,7 @@
       <Icon
         name="solar:double-alt-arrow-up-bold-duotone"
         :class="{
-          'absolute bottom-4 right-8 text-4xl lg:text-8xl drop-shadow-md transition-opacity': true,
+          'absolute bottom-[2dvh] right-6 text-4xl lg:text-6xl drop-shadow-md transition-opacity': true,
           'opacity-0': scrollAtTop,
         }"
         :style="{ color: primaryColor, stroke: secondaryColor, strokeWidth: '0.5px' }"

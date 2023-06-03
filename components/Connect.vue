@@ -1,11 +1,11 @@
 <template>
   <section
     id="connect"
-    class="page content flex max-sm:flex-col items-center justify-center gap-8 lg:gap-16 text-near-white bg-blue-950 bg-opacity-90"
+    class="page content sm:flex sm:items-center justify-center gap-8 lg:gap-16"
   >
     <ContactForm />
-    <div class="flex flex-col basis-[20%] max-sm:items-center justify-center gap-8 mx-4">
-      <h1>Let's Connect!</h1>
+    <div class="basis-[20%] mx-auto w-max">
+      <h1 class="my-8">Let's Connect!</h1>
       <ul class="w-max flex flex-col gap-4 xl:text-xl">
         <li>
           <ContactLink
@@ -37,7 +37,7 @@
         </li>
       </ul>
     </div>
-    <p class="absolute bottom-2 text-center text-sm font-thin">
+    <p class="absolute bottom-[2dvh] text-center text-sm font-thin">
       &copy; {{ new Date().getFullYear() }} Andre L. Hammons
     </p>
   </section>

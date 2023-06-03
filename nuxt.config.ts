@@ -46,15 +46,19 @@ export default defineNuxtConfig({
 				git: "devicon-plain:git",
 				vscode: "devicon-plain:vscode",
 				react: "simple-icons:react",
+				storyblok: "simple-icons:storyblok",
 			},
 		},
 	},
 	css: ["@/assets/css/observer.css"],
 	devServer: {
-		https: {
-			key: "./ssl/localhost+2-key.pem",
-			cert: "./ssl/localhost+2.pem",
-		},
+		https:
+			process.env.NODE_TLS_REJECT_UNAUTHORIZED === "0"
+				? {
+						key: "./ssl/localhost+2-key.pem",
+						cert: "./ssl/localhost+2.pem",
+				  }
+				: false,
 		port: 2305,
 	},
 	image: {
@@ -65,13 +69,13 @@ export default defineNuxtConfig({
 					width: 1280,
 					height: 600,
 					format: "webp",
-				}
-			}
+				},
+			},
 		},
 		provider: "storyblok",
 		storyblok: {
 			baseURL: "https://a-us.storyblok.com",
-		}
+		},
 	},
 	modules: [
 		"@nuxtjs/tailwindcss",
