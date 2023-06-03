@@ -6,16 +6,16 @@
     }"
   >
     <li>
-      <a href="#skills"> Skills </a>
+      <button @click="() => scrollToSection('#skills')">Skills</button>
     </li>
     <li>
-      <a href="#projects"> Projects </a>
+      <button @click="() => scrollToSection('#projects')">Projects</button>
     </li>
     <li>
-      <a href="#about"> About </a>
+      <button @click="() => scrollToSection('#about')">About</button>
     </li>
     <li>
-      <a href="#connect"> Connect </a>
+      <button @click="() => scrollToSection('#connect')">Connect</button>
     </li>
   </ul>
 </template>
@@ -26,6 +26,11 @@ defineProps<{
 }>();
 
 const { accentColor } = useColors();
+
+const scrollToSection = (selector: string) => {
+  if (!document) return;
+  document.querySelector(selector)?.scrollIntoView({ block: "start" });
+};
 </script>
 
 <style scoped lang="postcss">

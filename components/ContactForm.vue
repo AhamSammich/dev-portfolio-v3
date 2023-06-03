@@ -73,7 +73,7 @@
     </fieldset>
     <button
       type="submit"
-      class="group text-xl font-bold tracking-wider shadow-md mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2"
+      class="group text-xl font-bold tracking-wider shadow-md mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 transition-transform hover:scale-105 focus-visible:scale-105"
     >
       Send
       <Icon
