@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed left-0 right-0 top-0 z-[99] flex items-start justify-end px-8 py-1"
+    class="fixed left-0 right-0 top-0 z-[99] flex items-start justify-end px-8 py-1 pointer-events-none"
     :style="{ color: baseColor }"
   >
     <div
@@ -71,4 +71,8 @@ function toggleColorSlider() {
 const { baseColor } = useColors();
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+header > * {
+  pointer-events: auto;
+}
+</style>

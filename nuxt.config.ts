@@ -66,8 +66,8 @@ export default defineNuxtConfig({
 		presets: {
 			screenshot: {
 				modifiers: {
-					width: 1280,
-					height: 600,
+					width: 1800,
+					height: 860,
 					format: "webp",
 				},
 			},
