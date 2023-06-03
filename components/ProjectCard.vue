@@ -70,21 +70,21 @@
             <span :class="{ 'visually-hidden': !expanded }"> View source code </span>
           </a>
         </div>
-        <template v-if="longDescription && expanded">
+        <div v-if="longDescription && expanded">
           <p
             v-for="(line, index) in longDescription"
             :key="index"
             :class="{
-              'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
+              'my-2 mx-auto max-w-[48ch] lg:text-lg xl:text-xl': true,
             }"
           >
             {{ line }}
           </p>
-        </template>
+        </div>
         <p
           v-else
           :class="{
-            'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
+            'mx-auto max-w-[48ch] px-4 text-center lg:text-lg xl:text-xl': true,
           }"
         >
           {{ description }}

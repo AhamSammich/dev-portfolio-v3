@@ -40,7 +40,7 @@ const projects = [
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x884/6557c81d02/lindsaynicolepm.png",
     },
-    tech: ["typescript", "tailwind", "vue", "nuxt", "storyblok"],
+    tech: ["typescript", "tailwind", "nuxt", "storyblok"],
   },
   {
     title: "Let's Play Koi-Koi",
@@ -59,6 +59,23 @@ const projects = [
     },
     tech: ["javascript", "css", "vue", "nuxt"],
     repo: "https://www.github.com/ahamsammich/lets-play-koikoi",
+  },
+  {
+    title: "Let's Play Battleship",
+    description: "Invite a friend for a quick real-time game of Battleship.",
+    longDescription: [
+      "An early solo project to learn Vue and Express.js.",
+      "Play against a friend (or a stranger) in a quick round of Battleship.",
+      "Chat with your opponent over a real-time connection using the Socket.io library.",
+    ],
+    link: {
+      url: "https://play.battleship.up.railway.app",
+    },
+    image: {
+      url: "https://a-us.storyblok.com/f/1014509/1851x885/fd64aeeebe/2023-06-03.png",
+    },
+    tech: ["javascript", "vue", "express", "socket.io"],
+    repo: "https://www.github.com/ahamsammich/lets-play-battleship",
   },
   {
     title: "What about this site?",
