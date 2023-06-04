@@ -6,7 +6,7 @@
     <div
       ref="logoRef"
       :class="{
-        'absolute left-3 top-3 bg-gradient-to-br from-[#33333333] to-transparent rounded-full p-1 transition-all cursor-pointer origin-top-left': true,
+        'absolute left-3 top-3 bg-gradient-to-br from-[#22222250] to-transparent rounded-full p-1 transition-all cursor-pointer origin-top-left': true,
       }"
     >
       <LogoSvg :svg-size="40" @click="toggleColorSlider" />

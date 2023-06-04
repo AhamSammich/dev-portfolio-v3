@@ -20,6 +20,7 @@ const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 
 function handleChange() {
   changeColor(inputHue.value);
+  console.log({ hue: inputHue.value });
 }
 
 function changeColor(h: number, s?: number, l?: number) {

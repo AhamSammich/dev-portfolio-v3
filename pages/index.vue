@@ -4,23 +4,9 @@
   <main
     ref="mainRef"
     class="grid motion-safe:scroll-smooth"
-    :style="`
-      color: ${baseColor};
-			background: radial-gradient(
-            circle at 0% 0%, 
-            #EEE, 
-            ${primaryColor} ${spotlightSize}%
-            );`"
+    :style="{ color: baseColor, backgroundColor: primaryColor }"
     @scroll.passive="handleScroll"
   >
-    <div
-      id="main-background"
-      class="pointer-events-none fixed left-4 right-1/2 top-4 z-0 aspect-square w-[30vw] opacity-50"
-      :style="`transform: translateY(${mainScroll / 20}px) translateX(${
-        mainScroll / 20
-      }%);`"
-    ></div>
-
     <Hero />
 
     <Icon
@@ -57,13 +43,8 @@
 </template>
 
 <script setup lang="ts">
-const { x, y } = useMouse();
-
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
-
-const spotlightMaxSize = 40;
-const spotlightSize = ref(spotlightMaxSize);
 
 const { primaryColor, secondaryColor, baseColor } = useColors();
 
@@ -77,37 +58,15 @@ function handleScroll() {
   scrollAtTop.value = mainScroll.value === 0;
 }
 
-const bgBlendMode = computed(() =>
-  isDarkColor(primaryColor.value) ? "darken" : "lighten"
-);
-
 onMounted(() => {
   useObserver({ root: mainRef.value, unobserve: true });
-  watchEffect(() =>
-    mainRef.value?.style.setProperty(
-      "background",
-      `radial-gradient(
-            circle at ${(x.value / window.innerWidth) * 100}% ${
-        (y.value / window.innerHeight) * 100
-      }%, 
-            #EEE, 
-            ${primaryColor.value} ${spotlightSize.value}%
-            )`
-    )
-  );
 });
 </script>
 
 <style scoped lang="postcss">
-#main-background {
-  --img-url: url("https://a-us.storyblok.com/f/1014509/1000x1000/d7ee635410/alh-logo-web-dark-transformed.png/m/filters:format(webp)");
-  background: var(--img-url), v-bind(primaryColor);
-  background-blend-mode: v-bind(bgBlendMode);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  mask-image: var(--img-url);
-  mask-size: contain;
-  mask-repeat: no-repeat;
+main {
+  background-image: url("https://a-us.storyblok.com/f/1014509/3000x2000/e61e318abb/25134504_6985678_bw.jpg/m/filters:format(webp)");
+  background-size: cover;
+  background-blend-mode: screen;
 }
 </style>

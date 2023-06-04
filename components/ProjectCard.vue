@@ -122,9 +122,10 @@ const cardRef: Ref<HTMLElement | null> = ref(null);
 
 const expanded = ref(false);
 
-function toggleExpanded(ev: Event) {
+async function toggleExpanded(ev: Event) {
   expanded.value = !expanded.value;
-  (ev.target as HTMLElement).scrollIntoView();
+  await sleep(3000);
+  (ev.target as HTMLElement).scrollIntoView({ block: "start" });
 }
 
 const { primaryColor, accentColor } = useColors();
