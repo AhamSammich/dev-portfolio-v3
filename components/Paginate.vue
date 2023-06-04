@@ -53,7 +53,7 @@ const pages = [...Array(numOfPages)].map((_, index) => `${id}-pg${index + 1}`);
 
 const accentColor = computed(() => useAccentColor().value);
 const arrowClass = {
-  "text-5xl lg:text-7xl drop-shadow-sm": true,
+  "text-5xl lg:text-7xl drop-shadow-sm hover:scale-105 focus-visible:scale-105": true,
 };
 </script>
 

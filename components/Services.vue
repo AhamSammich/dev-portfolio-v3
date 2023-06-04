@@ -34,6 +34,7 @@
                 I would love to hear from you and share knowledge! If you're learning a language or framework I don't know yet, I hope we can learn together!`"
       />
     </Paginate>
+    <ResumeModal />
     <!-- </div> -->
   </section>
 </template>

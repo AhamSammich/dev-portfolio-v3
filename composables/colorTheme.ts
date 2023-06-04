@@ -79,8 +79,6 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 		accent: `hsl(${getComplement(h)} ${as}% ${al}%)`,
 		base: isDark ? WHITE : BLACK,
 	};
-
-	console.log(getColorValues(palette.base));
 	return palette;
 }
 
