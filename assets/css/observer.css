@@ -1,45 +1,45 @@
 @media (prefers-reduced-motion: no-preference) {
-  .content {
-    transition: opacity 1s ease-out, transform 0.5s ease-out;
-    opacity: 0;
-    filter: blur();
+	.content.revealed {
+    --duration: 1s;
+		animation: fadeIn var(--duration) ease-out forwards;
 
-    @media (min-width: 640px) {
-      & img {
-        transition: transform 0.5s ease-out;
-        opacity: 0;
-      }
-    }
-  }
+		&:has(:nth-child(2)) {
+			& > :nth-child(2n + 1) {
+				animation: fadeLeft var(--duration) ease-out forwards;
+			}
 
-  .content:nth-child(2n + 1) {
-    transform: translateY(5%);
+			& > :nth-child(2n) {
+				animation: fadeRight var(--duration) ease-out forwards;
+			}
+		}
+	}
+}
 
-    & img {
-      transform: translateX(5%);
-    }
-  }
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(5%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
-  .content:nth-child(2n) {
-    transform: translateY(5%);
+@keyframes fadeLeft {
+	from {
+		transform: translateX(-5%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
 
-    & img {
-      transform: translateX(-5%);
-    }
-  }
-
-  .content.revealed,
-  .content.revealed img {
-    transform: none;
-    opacity: 1;
-  }
-
-  .product {
-    transition: transform 5s;
-    transform: scale(1);
-  }
-  
-  .product.visible {
-    transform: scale(1.25);
-  }
+@keyframes fadeRight {
+	from {
+		transform: translateX(5%);
+	}
+	to {
+		transform: translateY(0);
+	}
 }

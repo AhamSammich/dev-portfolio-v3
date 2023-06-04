@@ -1,12 +1,12 @@
 <template>
   <section id="projects" class="page content flex flex-col items-center gap-12">
     <Icon
-      name="fa6-solid:laptop-code"
+      name="icon-park-outline:folder-code-one"
       class="text-[40vw] opacity-10 absolute bottom-8 left-4"
       :style="{ color: primaryColor }"
     />
     <h1>Projects</h1>
-    <div class="flex flex-wrap justify-center items-center gap-2">
+    <div class="flex flex-wrap justify-center items-center gap-1 h-max">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"
@@ -40,7 +40,7 @@ const projects = [
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x884/6557c81d02/lindsaynicolepm.png",
     },
-    tech: ["typescript", "tailwind", "vue", "nuxt", "storyblok"],
+    tech: ["typescript", "tailwind", "nuxt", "storyblok"],
   },
   {
     title: "Let's Play Koi-Koi",
@@ -61,6 +61,23 @@ const projects = [
     repo: "https://www.github.com/ahamsammich/lets-play-koikoi",
   },
   {
+    title: "Let's Play Battleship",
+    description: "Invite a friend for a quick real-time game of Battleship.",
+    longDescription: [
+      "An early solo project to learn Vue and Express.js.",
+      "Play against a friend (or a stranger) in a quick round of Battleship.",
+      "Chat with your opponent over a real-time connection using the Socket.io library.",
+    ],
+    link: {
+      url: "https://play.battleship.up.railway.app",
+    },
+    image: {
+      url: "https://a-us.storyblok.com/f/1014509/1851x885/fd64aeeebe/2023-06-03.png",
+    },
+    tech: ["javascript", "vue", "express", "socket.io"],
+    repo: "https://www.github.com/ahamsammich/lets-play-battleship",
+  },
+  {
     title: "What about this site?",
     description: "Check out this portfolio on GitHub!",
     tech: ["typescript", "tailwind", "vue", "nuxt"],
@@ -68,3 +85,5 @@ const projects = [
   },
 ];
 </script>
+
+<style scoped lang="postcss"></style>

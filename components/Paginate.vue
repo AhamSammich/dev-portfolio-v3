@@ -9,7 +9,7 @@
           :name="id"
           :style="useColorStyle().secondary()"
           :class="{
-            'h-3 w-3 cursor-pointer appearance-none rounded-full opacity-80': true,
+            'h-3 w-3 cursor-pointer appearance-none rounded-full opacity-80 shadow-sm': true,
             'scale-75': index === activePage - 1,
           }"
           @change="$emit('go-to-page', index + 1)"
@@ -53,7 +53,7 @@ const pages = [...Array(numOfPages)].map((_, index) => `${id}-pg${index + 1}`);
 
 const accentColor = computed(() => useAccentColor().value);
 const arrowClass = {
-  "text-5xl lg:text-7xl drop-shadow-sm": true,
+  "text-5xl lg:text-7xl drop-shadow-md hover:scale-105 focus-visible:scale-105": true,
 };
 </script>
 

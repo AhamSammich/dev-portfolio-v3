@@ -1,11 +1,11 @@
 <template>
   <div
     :class="{
-      'project-card transition-all duration-700 group relative flex flex-col w-full gap-4 overflow-hidden rounded-xl shadow-md': true,
-      'basis-full sm:basis-[48%]': !expanded,
-      'min-h-[60vh] basis-full xl:basis-3/4': expanded,
+      'project-card transition-all duration-700 group relative w-full overflow-hidden rounded-sm shadow-md': true,
+      'flex flex-col gap-4 basis-full sm:basis-[48%]': true,
     }"
   >
+    <!-- project image -->
     <NuxtImg
       v-if="image"
       :src="image.url"
@@ -17,87 +17,63 @@
       preset="screenshot"
       placeholder
     />
+
+    <!-- no project image -->
     <Icon
       v-else
       name="mdi:github-box"
       class="w-[48%] h-full p-[10%] mx-auto"
       :style="{ color: primaryColor }"
     />
+
+    <ProjectModal
+      :title="title"
+      :description="description"
+      :long-description="longDescription"
+      :image="image"
+      :link="link"
+      :tech="tech"
+      :repo="repo"
+    />
+
+    <!-- project info overlay -->
     <div
       :class="{
-        'absolute z-10 h-full w-full flex flex-col justify-center items-center bg-near-white bg-opacity-95 text-left text-near-black': true,
+        'overlay absolute z-10 h-full w-full flex flex-col justify-center items-center bg-near-white bg-opacity-95 text-left text-near-black': true,
         'pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity': true,
       }"
-      :style="`${
-        expanded ? 'opacity: 1; justify-content: flex-start; padding: 2rem;' : ''
-      }`"
     >
-      <button
-        class="absolute top-2 right-2"
-        @pointerup="() => (expanded = !expanded)"
-        @keyup.enter="() => (expanded = !expanded)"
-      >
-        <template v-if="expanded">
-          <Icon name="system-uicons:close" class="text-5xl" />
-          <span class="visually-hidden">Close Project Card</span>
-        </template>
-        <template v-else>
-          <Icon name="system-uicons:expand" class="text-3xl" />
-          <span class="visually-hidden">Expand Project Card</span>
-        </template>
-      </button>
+      <!-- project details -->
       <div class="flex flex-col items-center justify-center gap-4">
-        <h2
-          :class="{
-            'z-20 text-center': true,
-          }"
-        >
+        <h2 class="z-20 text-center">
           {{ title }}
         </h2>
-        <div class="project-links flex gap-8">
+
+        <!-- project links -->
+        <div class="project-links flex max-sm:gap-4 gap-8">
+          <!-- live site -->
           <a v-if="link" :href="link" target="_blank" title="Visit site">
             <Icon
               name="solar:link-bold-duotone"
-              :class="{ 'text-2xl lg:text-4xl xl:text-5xl mb-1': true }"
+              class="text-2xl lg:text-4xl xl:text-5xl mb-1"
             />
-            <span :class="{ 'visually-hidden': !expanded }"> Visit site </span>
+            <span class="visually-hidden"> Visit site </span>
           </a>
+
+          <!-- github repository -->
           <a v-if="repo" :href="repo" target="_blank" title="View source code">
             <Icon
               name="mdi:github"
               :class="{ 'text-2xl lg:text-4xl xl:text-5xl mb-1': true }"
             />
-            <span :class="{ 'visually-hidden': !expanded }"> View source code </span>
+            <span class="visually-hidden"> View source code </span>
           </a>
         </div>
-        <template v-if="longDescription && expanded">
-          <p
-            v-for="(line, index) in longDescription"
-            :key="index"
-            :class="{
-              'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
-            }"
-          >
-            {{ line }}
-          </p>
-        </template>
-        <p
-          v-else
-          :class="{
-            'mx-auto max-w-[48ch] px-2 lg:text-lg xl:text-xl': true,
-          }"
-        >
+
+        <!-- project description -->
+        <p class="mx-auto max-w-[48ch] px-4 text-center lg:text-lg xl:text-xl">
           {{ description }}
         </p>
-      </div>
-      <div
-        v-show="expanded"
-        :class="{
-          'py-4 transition-transform origin-top scale-75': true,
-          'scale-y-0': !expanded,
-        }"
-      >
-        <TechStack v-if="tech" :stack="tech" />
       </div>
     </div>
   </div>
@@ -117,15 +93,15 @@ defineProps<{
   repo?: string;
 }>();
 
-const expanded = ref(false);
-
 const { primaryColor, accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
 .project-card:not(:has(img)) {
   box-shadow: none;
+  background-color: var(--near-black);
 }
+
 a .icon {
   color: v-bind(accentColor);
 }

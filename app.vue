@@ -30,7 +30,7 @@ onMounted(() => {
 
 <style lang="postcss">
 :root {
-  --hsl-near-white: 0 0% 93%;
+  --hsl-near-white: 0 0% 100%;
   --hsl-near-black: 0 0% 20%;
   --near-white: hsl(var(--hsl-near-white) / 1);
   --near-black: hsl(var(--hsl-near-black) / 1);
@@ -39,6 +39,7 @@ onMounted(() => {
 body {
   font-family: Rubik, san-serif;
   overflow: hidden;
+  color: #fcfcfc;
 }
 
 h1,

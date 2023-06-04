@@ -6,14 +6,14 @@
     <div
       ref="logoRef"
       :class="{
-        'absolute left-3 top-3 bg-gradient-to-br from-[#33333333] to-transparent rounded-full p-1 transition-all cursor-pointer origin-top-left': true,
+        'absolute left-3 top-3 bg-gradient-to-br from-[#22222250] to-transparent rounded-full p-1 transition-all cursor-pointer origin-top-left': true,
       }"
     >
       <LogoSvg :svg-size="40" @click="toggleColorSlider" />
     </div>
     <ColorSlider
       :class="{
-        'absolute top-[40vh] left-9 w-[30vh] z-[9999] origin-left -rotate-90 transition-all': true,
+        'absolute top-[45vh] left-9 w-[30vh] z-[9999] origin-left -rotate-90 transition-all': true,
         'invisible pointer-events-none scale-y-0 opacity-0': hideColorSlider,
       }"
     />

@@ -47,6 +47,8 @@ export default defineNuxtConfig({
 				vscode: "devicon-plain:vscode",
 				react: "simple-icons:react",
 				storyblok: "simple-icons:storyblok",
+				'socket.io': "devicon:socketio",
+				express: "devicon:express",
 			},
 		},
 	},

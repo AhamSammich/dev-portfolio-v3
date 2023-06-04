@@ -9,7 +9,7 @@
       </p>
       <p class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl">My name is</p>
       <h1
-        class="text-4xl font-bold lg:text-4xl xl:text-6xl whitespace-nowrap mb-2 drop-shadow-md"
+        class="text-4xl font-bold lg:text-4xl xl:text-6xl whitespace-nowrap mb-2 drop-shadow-sm"
       >
         Andre Hammons
       </h1>
