@@ -1,6 +1,6 @@
-const WHITE = "#eeeeee";
+const WHITE = "#fefefe";
 const BLACK = "#222222";
-const INITIAL_HUE = 214;
+const INITIAL_HUE = 205;
 const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
 
 export type RGB = { r: number; g: number; b: number };
@@ -68,7 +68,7 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 	let ps = s ?? 25,
 		pl = l ?? 85;
 	let ss = (ps + 35) % 100,
-		sl = (pl + (100 - 35)) % 100;
+		sl = (pl + (100 - 41)) % 100;
 	let as = (ps + 50) % 100,
 		al = (pl + (100 - 40)) % 100;
 	let isDark = pl < 60;

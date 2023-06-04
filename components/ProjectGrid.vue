@@ -86,10 +86,4 @@ const projects = [
 ];
 </script>
 
-<style scoped lang="postcss">
-#projects:has(.expanded.project-card) {
-  & :not(.expanded.project-card *) {
-    pointer-events: none;
-  }
-}
-</style>
+<style scoped lang="postcss"></style>
