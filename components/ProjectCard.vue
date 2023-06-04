@@ -1,9 +1,10 @@
 <template>
   <div
+    ref="cardRef"
     :class="{
       'project-card transition-all duration-700 group relative flex flex-col w-full gap-4 overflow-hidden rounded-xl shadow-md': true,
       'basis-full sm:basis-[48%]': !expanded,
-      'min-h-[60vh] basis-full xl:basis-3/4': expanded,
+      'min-h-[60vh] basis-full xl:basis-3/4 max-sm:h-screen': expanded,
     }"
   >
     <NuxtImg
@@ -34,8 +35,8 @@
     >
       <button
         class="absolute top-2 right-2"
-        @pointerup="() => (expanded = !expanded)"
-        @keyup.enter="() => (expanded = !expanded)"
+        @pointerup="toggleExpanded"
+        @keyup.enter="toggleExpanded"
       >
         <template v-if="expanded">
           <Icon name="system-uicons:close" class="text-5xl" />
@@ -54,7 +55,7 @@
         >
           {{ title }}
         </h2>
-        <div class="project-links flex gap-8">
+        <div class="project-links flex max-sm:flex-col max-sm:gap-4 gap-8">
           <a v-if="link" :href="link" target="_blank" title="Visit site">
             <Icon
               name="solar:link-bold-duotone"
@@ -75,7 +76,7 @@
             v-for="(line, index) in longDescription"
             :key="index"
             :class="{
-              'my-2 mx-auto max-w-[48ch] lg:text-lg xl:text-xl': true,
+              'my-4 mx-auto max-w-[48ch] lg:text-lg xl:text-xl': true,
             }"
           >
             {{ line }}
@@ -117,9 +118,20 @@ defineProps<{
   repo?: string;
 }>();
 
+const cardRef: Ref<HTMLElement | null> = ref(null);
+
 const expanded = ref(false);
 
+function toggleExpanded(ev: Event) {
+  expanded.value = !expanded.value;
+  (ev.target as HTMLElement).scrollIntoView();
+}
+
 const { primaryColor, accentColor } = useColors();
+
+onMounted(() => {
+  onClickOutside(cardRef.value, () => (expanded.value = false));
+});
 </script>
 
 <style scoped lang="postcss">

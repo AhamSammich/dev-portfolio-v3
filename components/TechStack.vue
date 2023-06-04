@@ -3,14 +3,14 @@
     <h2 v-if="title" class="my-2 text-xl lg:text-2xl font-bold">
       {{ title }}
     </h2>
-    <div class="grid max-sm:grid-cols-2 sm:grid-cols-4 gap-8">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
       <TechIcon v-for="tech in stack" :key="tech" :iconName="tech" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   title?: string;
   stack: string[];
 }>();

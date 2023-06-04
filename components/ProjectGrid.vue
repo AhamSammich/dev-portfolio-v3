@@ -6,7 +6,7 @@
       :style="{ color: primaryColor }"
     />
     <h1>Projects</h1>
-    <div class="flex flex-wrap justify-center items-center gap-2">
+    <div class="flex flex-wrap justify-center items-center gap-2 h-max">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"
