@@ -1,22 +1,30 @@
 <template>
   <button @click="() => modalRef?.showModal()">My Resume</button>
   <ClientOnly>
-    <dialog
-      ref="modalRef"
-      class="rounded-xl w-full md:w-3/4 h-full max-h-[100svh] relative overflow-hidden bg-transparent backdrop:bg-near-black backdrop:opacity-90"
-    >
-      <div class="flex flex-col items-center justify-center h-full my-4 rounded-xl">
-        <iframe autofocus :src="resumeUrl" class="w-full h-[80%]"> </iframe>
-        <button
-          type="button"
-          title="Close"
-          @pointerup="() => modalRef?.close()"
-          @keyup.enter="() => modalRef?.close()"
-        >
-          Close
-        </button>
-      </div>
-    </dialog>
+    <teleport to="body">
+      <dialog
+        ref="modalRef"
+        class="w-full md:w-3/4 h-full max-h-[100svh] relative overflow-visible bg-transparent backdrop:bg-near-black backdrop:opacity-90"
+      >
+        <div class="flex flex-col items-center justify-center h-full my-4 rounded-sm">
+          <iframe
+            autofocus
+            :src="resumeUrl"
+            class="w-screen sm:w-full h-[80%]"
+            allow="fullscreen"
+          >
+          </iframe>
+          <button
+            type="button"
+            title="Close"
+            @pointerup="() => modalRef?.close()"
+            @keyup.enter="() => modalRef?.close()"
+          >
+            Close
+          </button>
+        </div>
+      </dialog>
+    </teleport>
   </ClientOnly>
 </template>
 
@@ -36,7 +44,7 @@ button {
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  border-radius: 0.75rem;
+  border-radius: 0.125rem;
 
   &:is(:hover, :focus-visible) {
     background-color: v-bind(accentColor);

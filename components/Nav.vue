@@ -16,7 +16,7 @@
     </li>
     <li>
       <button
-        class="rounded-xl px-4 py-2 shadow-sm font-bold"
+        class="rounded-sm px-4 py-2 shadow-sm font-bold"
         @click="() => scrollToSection('#connect')"
       >
         Connect
@@ -30,7 +30,7 @@ defineProps<{
   flexCol?: boolean;
 }>();
 
-const { accentColor, secondaryColor, primaryColor } = useColors();
+const { accentColor, secondaryColor } = useColors();
 
 const scrollToSection = (selector: string) => {
   if (!document) return;

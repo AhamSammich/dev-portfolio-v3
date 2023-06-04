@@ -13,7 +13,7 @@
     </div>
     <ColorSlider
       :class="{
-        'absolute top-[40vh] left-9 w-[30vh] z-[9999] origin-left -rotate-90 transition-all': true,
+        'absolute top-[45vh] left-9 w-[30vh] z-[9999] origin-left -rotate-90 transition-all': true,
         'invisible pointer-events-none scale-y-0 opacity-0': hideColorSlider,
       }"
     />

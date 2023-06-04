@@ -73,7 +73,7 @@
     </fieldset>
     <button
       type="submit"
-      class="group text-xl font-bold tracking-wider shadow-md mt-12 mx-auto w-1/2 min-w-[200px] rounded-xl px-4 py-2 transition-transform hover:scale-105 focus-visible:scale-105"
+      class="group text-xl font-bold tracking-wider shadow-md mt-12 mx-auto w-1/2 min-w-[200px] rounded-sm px-4 py-2 transition-transform hover:scale-105 focus-visible:scale-105"
     >
       Send
       <Icon
@@ -100,7 +100,7 @@ form {
   color: var(--txt-color);
   display: flex;
   flex-direction: column;
-  @apply p-4 sm:p-8 shadow-md rounded-xl;
+  @apply p-4 sm:p-8 shadow-md rounded-sm;
 }
 
 button {
@@ -127,7 +127,7 @@ fieldset > div {
   max-width: 100%;
   border-width: 1px;
   border-color: v-bind(secondaryColor);
-  border-radius: 0.75rem;
+  border-radius: 0.125rem;
   background: var(--bg-color);
   color: inherit;
   padding: 0.5rem;
