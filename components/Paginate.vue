@@ -67,6 +67,7 @@ const arrowClass = {
   display: flex;
   justify-content: space-between;
   color: v-bind(secondaryColor);
+  z-index: 20;
 }
 
 .buttons {

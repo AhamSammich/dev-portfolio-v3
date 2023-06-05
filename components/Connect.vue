@@ -8,7 +8,7 @@
       class="text-[20vw] opacity-10 absolute top-4 right-4"
       :style="{ color: primaryColor }"
     />
-    <div class="max-md:mx-auto max-md:w-full w-max">
+    <div class="max-md:mx-auto max-md:w-full w-max mt-4">
       <ContactForm />
     </div>
     <div class="max-md:mx-auto w-max">
@@ -44,17 +44,13 @@
         </li>
       </ul>
     </div>
-    <div class="absolute bottom-2 w-full text-center text-sm font-thin">
-      <p>&copy; {{ new Date().getFullYear() }} Andre L. Hammons</p>
-      <p class="text-xs">
-        <a href="https://storyset.com/data">Data illustrations by Storyset</a>
-      </p>
-    </div>
+    <p class="absolute bottom-2 w-full text-center text-xs font-thin">
+      &copy; {{ new Date().getFullYear() }} Andre L. Hammons
+      <a href="https://storyset.com/data"> | Data illustrations by Storyset</a>
+    </p>
   </section>
 </template>
 
 <script setup lang="ts">
 const { primaryColor } = useColors();
 </script>
-
-<style scoped></style>

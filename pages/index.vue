@@ -11,21 +11,21 @@
     <Icon
       name="solar:double-alt-arrow-down-bold-duotone"
       :class="{
-        'scroll-prompt absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
+        'scroll-prompt absolute bottom-2 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
         'opacity-0': !scrollAtTop,
       }"
       :style="{ color: secondaryColor, strokeWidth: '0.5px', stroke: primaryColor }"
     />
 
-    <Skills />
+    <LazySkills />
 
-    <Services />
+    <LazyServices />
 
-    <ProjectGrid />
+    <LazyProjectGrid />
 
-    <About />
+    <LazyAbout />
 
-    <Connect />
+    <LazyConnect />
 
     <button ref="toTop" @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
       <Icon

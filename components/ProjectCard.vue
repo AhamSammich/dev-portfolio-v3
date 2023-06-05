@@ -15,6 +15,7 @@
       sizes="xs:100vw sm:50vw md:50vw lg:50vw xl:50vw"
       class="object-cover"
       preset="screenshot"
+      loading="lazy"
       placeholder
     />
 
@@ -26,7 +27,7 @@
       :style="{ color: primaryColor }"
     />
 
-    <ProjectModal
+    <LazyProjectModal
       :title="title"
       :description="description"
       :long-description="longDescription"

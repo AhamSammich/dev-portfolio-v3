@@ -106,16 +106,14 @@ main {
 
 @keyframes floating {
   0% {
-    opacity: 1;
     transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 
   100% {
-    opacity: 1;
     transform: translateY(0px);
   }
 }

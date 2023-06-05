@@ -13,7 +13,7 @@
         'invisible scale-y-0 opacity-0': !menuIsOpen,
       }"
     >
-      <Nav :flex-col="true" />
+      <LazyNav :flex-col="true" />
     </menu>
   </div>
 </template>
