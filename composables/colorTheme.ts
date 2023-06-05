@@ -1,6 +1,6 @@
 const WHITE = "#ffffff";
 const BLACK = "#222222";
-const INITIAL_HUE = 210;
+const INITIAL_HUE = 208;
 const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
 
 export type RGB = { r: number; g: number; b: number };
@@ -79,6 +79,15 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 		accent: `hsl(${getComplement(h)} ${as}% ${al}%)`,
 		base: isDark ? WHITE : BLACK,
 	};
+
+	const hexPalette = {
+		primary: hslToHex(h, ps, pl),
+		secondary: hslToHex(h, ss, sl),
+		accent: hslToHex(getComplement(h), as, al),
+	};
+
+	console.log(hexPalette);
+
 	return palette;
 }
 
@@ -97,6 +106,20 @@ export const useColors = () => ({
 	accentColor: useAccentColor(),
 	baseColor: useBaseColor(),
 });
+
+// https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex
+function hslToHex(h: number, s: number, l: number) {
+	l /= 100;
+	const a = (s * Math.min(l, 1 - l)) / 100;
+	const f = (n: number) => {
+		const k = (n + h / 30) % 12;
+		const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+		return Math.round(255 * color)
+			.toString(16)
+			.padStart(2, "0"); // convert to Hex and prefix "0" if needed
+	};
+	return `#${f(0)}${f(8)}${f(4)}`;
+}
 
 // Modified from snippet by user AJ_
 // https://stackoverflow.com/questions/62390243/java-script-how-can-i-pull-the-hsl-value-when-a-colour-is-selected-from-input-t

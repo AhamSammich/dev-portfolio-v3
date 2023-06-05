@@ -60,18 +60,16 @@ const logoRef: Ref<HTMLElement | null> = ref(null);
 
 const unclicked = ref(true);
 
-const inputHue = ref(210);
+const inputHue = ref(208);
 
 const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 
 function handleChange() {
   changeColor(inputHue.value);
-  console.log({ hue: inputHue.value });
 }
 
 function changeColor(h: number, s?: number, l?: number) {
   const { primary, secondary, accent, base } = getColorPalette(h, s, l);
-  console.log({ primary, secondary, accent, base });
   primaryColor.value = primary;
   secondaryColor.value = secondary;
   accentColor.value = accent;
@@ -82,6 +80,9 @@ function toggleColorSlider() {
   unclicked.value = false;
   hideColorSlider.value = !hideColorSlider.value;
 }
+onMounted(() => {
+  changeColor(inputHue.value++);
+});
 </script>
 
 <style scoped lang="postcss">

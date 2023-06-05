@@ -6,17 +6,13 @@
     <div class="z-[1] px-8">
       <p class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl">My name is</p>
       <h1
-        class="text-4xl font-bold md:text-5xl xl:text-6xl whitespace-nowrap mb-8 drop-shadow-sm"
+        class="text-4xl font-bold md:text-5xl xl:text-6xl whitespace-nowrap mb-4 drop-shadow-sm"
       >
         Andre Hammons
       </h1>
-      <p class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl">
-        I am a
-        <span class="font-bold">web developer</span>
-        <span class="ml-28 block">
-          and I am
-          <span class="font-bold">here to help!</span>
-        </span>
+      <p class="text-right text-xl sm:text-2xl lg:text-3xl xl:text-4xl">
+        and I am a
+        <span class="font-bold">Web Developer</span>
       </p>
     </div>
     <div class="w-3/4 md:basis-1/3 lg:basis-1/4">

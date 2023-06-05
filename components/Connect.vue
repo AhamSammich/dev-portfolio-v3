@@ -44,10 +44,7 @@
         </li>
       </ul>
     </div>
-    <p class="absolute bottom-2 w-full text-center text-xs font-thin">
-      &copy; {{ new Date().getFullYear() }} Andre L. Hammons
-      <a href="https://storyset.com/data"> | Data illustrations by Storyset</a>
-    </p>
+    <Footer />
   </section>
 </template>
 
