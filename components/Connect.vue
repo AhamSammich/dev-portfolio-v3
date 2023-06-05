@@ -3,6 +3,11 @@
     id="connect"
     class="page content md:flex md:items-center md:justify-center gap-8"
   >
+    <Icon
+      name="ic:round-alternate-email"
+      class="text-[20vw] opacity-10 absolute top-4 right-4"
+      :style="{ color: primaryColor }"
+    />
     <div class="max-md:mx-auto max-md:w-full w-max">
       <ContactForm />
     </div>
@@ -45,6 +50,8 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { primaryColor } = useColors();
+</script>
 
 <style scoped></style>

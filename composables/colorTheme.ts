@@ -119,7 +119,6 @@ export const useColorStyle = () => ({
 
 // Modified from snippet by user AJ_
 // https://stackoverflow.com/questions/62390243/java-script-how-can-i-pull-the-hsl-value-when-a-colour-is-selected-from-input-t
-
 export function hexToRGB(hex: string): RGB {
 	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 	if (!result) {

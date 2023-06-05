@@ -1,7 +1,7 @@
 <template>
   <section
     id="services"
-    class="page content flex h-max w-full flex-col items-center justify-center gap-8"
+    class="page flex h-max w-full flex-col items-center justify-center gap-8"
   >
     <h1>How Can I Help?</h1>
     <!-- <div class="flex max-md:flex-col justify-center gap-4 flex-wrap"> -->

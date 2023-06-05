@@ -11,7 +11,7 @@
 
   <dialog
     ref="modalRef"
-    class="w-full sm:w-3/4 h-[90svh] sm:h-[60vh] p-8 relative overflow-hidden rounded-sm shadow-md"
+    class="w-full sm:w-3/4 h-max overflow-y-auto overflow-x-hidden p-8 relative rounded-sm shadow-md"
   >
     <button
       class="absolute top-2 right-2"
@@ -103,12 +103,27 @@ defineProps<{
 
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
 
-const { accentColor } = useColors();
+const { primaryColor, secondaryColor, accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
 a .icon {
   color: v-bind(accentColor);
+}
+
+dialog {
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+    background-color: v-bind(secondaryColor);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: v-bind(primaryColor);
+  }
+
+  &::backdrop {
+    background-color: #222;
+    opacity: 0.5;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -119,6 +134,7 @@ a .icon {
   @keyframes pullUp {
     from {
       opacity: 0;
+      translate: 0 5%;
     }
 
     to {

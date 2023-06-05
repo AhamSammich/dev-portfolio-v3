@@ -13,7 +13,7 @@
     </div>
     <ColorSlider
       :class="{
-        'absolute top-[45vh] left-9 w-[30vh] z-[9999] origin-left -rotate-90 transition-all': true,
+        'absolute top-[280px] left-9 w-[180px] z-[9999] origin-left -rotate-90 transition-all': true,
         'invisible pointer-events-none scale-y-0 opacity-0': hideColorSlider,
       }"
     />
@@ -29,8 +29,11 @@
         name="solar:double-alt-arrow-up-bold-duotone"
         :class="{ 'animate-bounce': unclicked }"
       />
-      <span v-if="unclicked" class="text-sm ml-1 pt-1">
-        Not your color?<br />Try this!
+      <span
+        v-if="unclicked"
+        class="text-sm -mt-1 rounded-sm p-1 bg-near-white bg-opacity-90"
+      >
+        Not feeling this color?<br />Try this!
       </span>
       <span v-else class="visually-hidden">Close</span>
     </button>

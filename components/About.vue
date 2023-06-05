@@ -1,10 +1,10 @@
 <template>
   <section
     id="about"
-    class="page content fixed left-0 top-0 flex items-center justify-center gap-4 flex-col"
+    class="page fixed left-0 top-0 flex items-center justify-center gap-4 flex-col"
   >
     <div class="bg-opacity-85 grid max-sm:gap-12 sm:gap-4 p-4 w-full">
-      <h1 class="text-center">Who Am I?</h1>
+      <h1 class="text-center mb-4">Who Am I?</h1>
       <Paginate
         id="about"
         :num-of-pages="numOfPages"
@@ -17,13 +17,15 @@
           v-show="page === 1"
           headline="Professional"
           icon-name="mdi:certificate"
-          :body-text="`I served as a submarine electronics technician in the United States Navy for 8 years, where I grew into a seasoned problem solver and an adept learner of new technologies and systems. I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuous developing new skills!`"
+          :body-text="`I served as a submarine electronics technician in the United States Navy for 8 years, where I grew into a seasoned problem solver and an adept learner of new technologies and systems.
+          I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuous developing new skills!`"
         />
         <InfoBlock
           v-show="page === 2"
           headline="Personal"
           icon-name="mdi:heart"
-          :body-text="`I am a proud father and husband who just cannot resist a great dad joke! I love board game nights and karaoke with good friends. I also enjoy spending time reading about and learning new tech online for inspiration.`"
+          :body-text="`I am a proud father who just cannot resist a great dad joke! When I'm not passing the hours re-binging shows with my wife, I love have board game nights and sing karaoke with good friends.
+          I also enjoy spending time reading articles about programming and web design tricks for inspiration. I whole-heartedly believe in life-long learning and using today to learn and grow just a bit more than yesterday.`"
         />
       </Paginate>
     </div>

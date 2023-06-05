@@ -1,5 +1,5 @@
 <template>
-  <div id="color-slider-container" class="flex gap-4 rounded-md">
+  <div id="color-slider-container" class="flex gap-4 rounded-md border-white shadow-sm">
     <label class="visually-hidden">Change Color:</label>
     <input
       id="color-slider"
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-const inputHue = ref(226);
+const inputHue = ref(205);
 
 const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 
@@ -34,7 +34,7 @@ function changeColor(h: number, s?: number, l?: number) {
 
 <style scoped lang="postcss">
 #color-slider-container {
-  height: 0.5rem;
+  height: 0.75rem;
   background: linear-gradient(
     90deg,
     hsl(0 50% 50%),
@@ -48,7 +48,13 @@ function changeColor(h: number, s?: number, l?: number) {
     hsl(240 50% 50%),
     hsl(270 50% 50%),
     hsl(300 50% 50%),
-    hsl(330 50% 50%)
+    hsl(330 50% 50%),
+    hsl(360 50% 50%)
   );
+
+  &::after {
+    position: absolute;
+    display: block;
+  }
 }
 </style>

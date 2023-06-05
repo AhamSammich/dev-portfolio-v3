@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{
-      'project-card transition-all duration-700 group relative w-full overflow-hidden rounded-sm shadow-md': true,
+      'project-card group relative w-full overflow-hidden rounded-sm shadow-md': true,
       'flex flex-col gap-4 basis-full sm:basis-[48%]': true,
     }"
   >

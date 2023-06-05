@@ -2,7 +2,7 @@
   <section id="projects" class="page content flex flex-col items-center gap-12">
     <Icon
       name="icon-park-outline:folder-code-one"
-      class="text-[40vw] opacity-10 absolute bottom-8 left-4"
+      class="text-[20vw] opacity-10 absolute top-4 right-4"
       :style="{ color: primaryColor }"
     />
     <h1>Projects</h1>
