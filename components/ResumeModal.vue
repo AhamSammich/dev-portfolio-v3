@@ -32,7 +32,7 @@
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
 const { secondaryColor, accentColor } = useColors();
 const resumeUrl =
-  "https://a-us.storyblok.com/f/1014509/x/c6a4c4da4a/resume-2023-development.pdf";
+  "https://a-us.storyblok.com/f/1014509/x/67dc1a5921/andre-hammons-web-developer.pdf";
 </script>
 
 <style scoped lang="postcss">
