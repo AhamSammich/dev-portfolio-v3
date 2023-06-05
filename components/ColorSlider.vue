@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-const inputHue = ref(205);
+const inputHue = ref(210);
 
 const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 
@@ -25,6 +25,7 @@ function handleChange() {
 
 function changeColor(h: number, s?: number, l?: number) {
   const { primary, secondary, accent, base } = getColorPalette(h, s, l);
+  console.log({ primary, secondary, accent, base });
   primaryColor.value = primary;
   secondaryColor.value = secondary;
   accentColor.value = accent;

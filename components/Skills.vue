@@ -9,7 +9,7 @@
       :style="{ color: usePrimaryColor().value }"
     />
     <h1>Skills</h1>
-    <div class="content flex flex-col gap-8 origin-center xl:scale-125">
+    <div class="content flex flex-col gap-8">
       <TechStack title="Languages" :stack="['javascript', 'typescript', 'html', 'css']" />
       <TechStack title="Frameworks" :stack="['vue', 'nuxt', 'astro', 'tailwind']" />
       <TechStack title="Tools" :stack="['git', 'vscode', 'storyblok']" />

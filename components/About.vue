@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="about"
-    class="page fixed left-0 top-0 flex items-center justify-center gap-4 flex-col"
-  >
+  <section id="about" class="page flex items-center justify-center gap-4 flex-col">
     <div class="bg-opacity-85 grid max-sm:gap-12 sm:gap-4 p-4 w-full">
       <h1 class="text-center mb-4">Who Am I?</h1>
       <Paginate

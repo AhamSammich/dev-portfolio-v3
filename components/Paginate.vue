@@ -1,5 +1,5 @@
 <template>
-  <div class="group relative flex flex-col items-center w-full md:w-3/4 mx-auto">
+  <div class="group content relative flex flex-col items-center w-full md:w-3/4 mx-auto">
     <div class="buttons">
       <div v-for="(pg, index) in pages" :key="pg">
         <input
@@ -7,10 +7,12 @@
           :title="pg"
           type="radio"
           :name="id"
-          :style="useColorStyle().secondary()"
           :class="{
             'h-3 w-3 cursor-pointer appearance-none rounded-full opacity-80 shadow-sm': true,
-            'scale-75': index === activePage - 1,
+            'active scale-75': index === activePage - 1,
+          }"
+          :style="{
+            backgroundColor: index === activePage - 1 ? accentColor : secondaryColor,
           }"
           @change="$emit('go-to-page', index + 1)"
         />
@@ -51,7 +53,7 @@ defineEmits(["prev-page", "next-page", "go-to-page"]);
 
 const pages = [...Array(numOfPages)].map((_, index) => `${id}-pg${index + 1}`);
 
-const accentColor = computed(() => useAccentColor().value);
+const { accentColor, secondaryColor } = useColors();
 const arrowClass = {
   "text-5xl lg:text-7xl drop-shadow-md hover:scale-105 focus-visible:scale-105": true,
 };
@@ -64,7 +66,7 @@ const arrowClass = {
   top: 40vh;
   display: flex;
   justify-content: space-between;
-  color: v-bind(accentColor);
+  color: v-bind(secondaryColor);
 }
 
 .buttons {

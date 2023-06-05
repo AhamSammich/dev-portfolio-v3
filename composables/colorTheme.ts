@@ -1,6 +1,6 @@
-const WHITE = "#fefefe";
+const WHITE = "#ffffff";
 const BLACK = "#222222";
-const INITIAL_HUE = 205;
+const INITIAL_HUE = 210;
 const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
 
 export type RGB = { r: number; g: number; b: number };
@@ -68,7 +68,7 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 	let ps = s ?? 25,
 		pl = l ?? 85;
 	let ss = (ps + 35) % 100,
-		sl = (pl + (100 - 41)) % 100;
+		sl = (pl + (100 - 45)) % 100;
 	let as = (ps + 50) % 100,
 		al = (pl + (100 - 40)) % 100;
 	let isDark = pl < 60;
@@ -96,25 +96,6 @@ export const useColors = () => ({
 	secondaryColor: useSecondaryColor(),
 	accentColor: useAccentColor(),
 	baseColor: useBaseColor(),
-});
-
-export const useColorStyle = () => ({
-	primary: () => ({
-		backgroundColor: usePrimaryColor().value,
-		color: useBaseColor().value,
-	}),
-	secondary: () => ({
-		backgroundColor: useSecondaryColor().value,
-		color: useBaseColor().value,
-	}),
-	light: () => ({
-		backgroundColor: usePrimaryColor().value,
-		color: BLACK,
-	}),
-	dark: () => ({
-		backgroundColor: useSecondaryColor().value,
-		color: WHITE,
-	}),
 });
 
 // Modified from snippet by user AJ_

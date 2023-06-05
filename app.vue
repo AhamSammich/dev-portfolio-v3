@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const { primaryColor, secondaryColor } = useColors();
+const { primaryColor, secondaryColor, baseColor } = useColors();
 
 useServerSeoMeta({
   title: "Andre Hammons | Web Developer",
@@ -57,10 +57,11 @@ h2 {
 }
 
 main {
-  color: var(--near-black);
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: v-bind(primaryColor);
+  color: v-bind(baseColor);
   /* scroll-snap-type: y proximity; */
 
   &::-webkit-scrollbar {
@@ -101,5 +102,21 @@ main {
   margin: 0;
   padding: 0;
   opacity: 0;
+}
+
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 </style>

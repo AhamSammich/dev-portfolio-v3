@@ -1,5 +1,5 @@
 <template>
-  <button @click="() => modalRef?.showModal()">My Resume</button>
+  <button class="shadow-md" @click="() => modalRef?.showModal()">My Resume</button>
   <ClientOnly>
     <teleport to="body">
       <dialog
@@ -30,14 +30,14 @@
 
 <script setup lang="ts">
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
-const { secondaryColor, accentColor } = useColors();
+const { accentColor } = useColors();
 const resumeUrl =
   "https://a-us.storyblok.com/f/1014509/x/67dc1a5921/andre-hammons-web-developer.pdf";
 </script>
 
 <style scoped lang="postcss">
 button {
-  background-color: v-bind(secondaryColor);
+  background-color: v-bind(accentColor);
   color: var(--near-white);
   margin: 1rem;
   padding: 1rem 1.5rem;

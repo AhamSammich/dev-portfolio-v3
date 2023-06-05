@@ -1778,15 +1778,15 @@
 <script setup lang="ts">
 const { fillColor, accentColor } = defineProps(["fillColor", "accentColor"]);
 const animationEnabled = ref(false);
-onMounted(() => {
-  animationEnabled.value = true;
-});
+// onMounted(() => {
+//   animationEnabled.value = true;
+// });
 </script>
 
 <style scoped lang="postcss">
-svg#freepik_stories-static-assets:not(.animated) .animable {
+/* svg#freepik_stories-static-assets:not(.animated) .animable {
   opacity: 0;
-}
+} */
 
 svg#freepik_stories-static-assets.animated #freepik--Photos--inject-13 {
   animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft;
@@ -1798,11 +1798,11 @@ svg#freepik_stories-static-assets.animated #freepik--Window--inject-13 {
   animation-delay: 0s;
 }
 
-svg#freepik_stories-static-assets.animated #freepik--Icons--inject-13 {
+/* svg#freepik_stories-static-assets.animated #freepik--Icons--inject-13 {
   animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown,
     3s Infinite linear floating;
   animation-delay: 0s, 1s;
-}
+} */
 
 @keyframes slideLeft {
   0% {
@@ -1825,22 +1825,6 @@ svg#freepik_stories-static-assets.animated #freepik--Icons--inject-13 {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes floating {
-  0% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 </style>

@@ -4,7 +4,6 @@
   <main
     ref="mainRef"
     class="grid motion-safe:scroll-smooth"
-    :style="{ color: baseColor, backgroundColor: primaryColor }"
     @scroll.passive="handleScroll"
   >
     <Hero />
@@ -12,7 +11,7 @@
     <Icon
       name="solar:double-alt-arrow-down-bold-duotone"
       :class="{
-        'absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
+        'scroll-prompt absolute bottom-4 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
         'opacity-0': !scrollAtTop,
       }"
       :style="{ color: secondaryColor, strokeWidth: '0.5px', stroke: primaryColor }"
@@ -46,7 +45,7 @@
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
 
-const { primaryColor, secondaryColor, baseColor } = useColors();
+const { primaryColor, secondaryColor } = useColors();
 
 const scrollAtTop = useState("scrollAtTop", () => true);
 
@@ -68,5 +67,11 @@ main {
   background-image: url("https://a-us.storyblok.com/f/1014509/3000x2000/e61e318abb/25134504_6985678_bw.jpg/m/filters:format(webp)");
   background-size: cover;
   background-blend-mode: screen;
+}
+
+.scroll-prompt {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown,
+    3s Infinite linear floating;
+  animation-delay: 0s, 1s;
 }
 </style>

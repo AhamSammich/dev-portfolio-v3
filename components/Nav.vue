@@ -16,7 +16,7 @@
     </li>
     <li>
       <button
-        class="rounded-sm px-4 py-2 shadow-sm font-bold"
+        class="rounded-sm px-4 py-2 shadow-md font-bold"
         @click="() => scrollToSection('#connect')"
       >
         Connect
@@ -48,31 +48,39 @@ const buttonColor = computed(() =>
   justify-content: center;
   align-items: center;
   width: 50%;
-  padding-top: 1em;
+  padding-bottom: 1em;
   color: var(--near-black);
 
-  &:not(:first-child) {
-    border-top: 1px solid v-bind(accentColor);
+  &:not(:last-child) {
+    border-bottom: 1px solid v-bind(secondaryColor);
+  }
+
+  &:is(:hover, :focus-visible) {
+    color: v-bind(accentColor);
+    border-color: v-bind(accentColor);
   }
 }
 
-li:is(:hover, :focus-visible) {
-  &:not(:last-child) {
-    color: v-bind(accentColor);
-  }
-
+li {
   &:not(.flex-col li) {
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
+    border-bottom: 1px solid transparent;
+
+    &:is(:hover, :focus-visible) {
+      border-color: v-bind(accentColor);
+
+      &:not(:last-child) {
+        color: v-bind(accentColor);
+      }
+    }
   }
 }
 
 li:last-child button {
-  background-color: v-bind(secondaryColor);
+  background-color: v-bind(accentColor);
   color: v-bind(buttonColor);
 
   &:is(:hover, :focus-visible) {
-    background-color: v-bind(accentColor);
+    scale: 1.05;
   }
 }
 </style>
