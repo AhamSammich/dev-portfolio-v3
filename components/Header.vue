@@ -3,40 +3,11 @@
     class="fixed left-0 right-0 top-0 z-[99] flex items-start justify-end px-8 py-1 pointer-events-none"
     :style="{ color: baseColor }"
   >
-    <div
-      ref="logoRef"
-      :class="{
-        'absolute left-3 top-3 bg-gradient-to-br from-[#22222250] to-transparent rounded-full p-1 transition-all cursor-pointer origin-top-left': true,
-      }"
-    >
-      <LogoSvg :svg-size="40" @click="toggleColorSlider" />
-    </div>
     <ColorSlider
       :class="{
-        'absolute top-[280px] left-9 w-[180px] z-[9999] origin-left -rotate-90 transition-all': true,
-        'invisible pointer-events-none scale-y-0 opacity-0': hideColorSlider,
+        'absolute left-2 top-2 z-[9999] transition-all': true,
       }"
     />
-    <button
-      :class="{
-        'absolute top-14 left-6 text-2xl flex flex-col transition-opacity duration-500 delay-700': true,
-        'invisible pointer-events-none opacity-0':
-          hideColorSlider && !(unclicked && !scrollAtTop),
-      }"
-      @click="toggleColorSlider"
-    >
-      <Icon
-        name="solar:double-alt-arrow-up-bold-duotone"
-        :class="{ 'animate-bounce': unclicked }"
-      />
-      <span
-        v-if="unclicked"
-        class="text-sm -mt-1 rounded-sm p-1 bg-near-white bg-opacity-90"
-      >
-        Not feeling this color?<br />Try this!
-      </span>
-      <span v-else class="visually-hidden">Close</span>
-    </button>
 
     <div
       :class="{
@@ -44,7 +15,7 @@
         hidden: scrollAtTop,
       }"
     >
-      <DropNav />
+      <LazyDropNav />
     </div>
     <nav
       :class="{
@@ -59,17 +30,6 @@
 
 <script setup lang="ts">
 const scrollAtTop = useState("scrollAtTop");
-
-const hideColorSlider = ref(true);
-
-const logoRef: Ref<HTMLElement | null> = ref(null);
-
-const unclicked = ref(true);
-
-function toggleColorSlider() {
-  unclicked.value = false;
-  hideColorSlider.value = !hideColorSlider.value;
-}
 
 const { baseColor } = useColors();
 </script>
