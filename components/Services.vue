@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="services"
-    class="page flex h-max w-full flex-col items-center justify-center gap-8"
-  >
+  <section id="services" class="page flex h-max w-full flex-col gap-8 items-center">
     <h1>How Can I Help?</h1>
     <Paginate
       id="services"
