@@ -80,9 +80,6 @@ function toggleColorSlider() {
   unclicked.value = false;
   hideColorSlider.value = !hideColorSlider.value;
 }
-onMounted(() => {
-  changeColor(inputHue.value++);
-});
 </script>
 
 <style scoped lang="postcss">
