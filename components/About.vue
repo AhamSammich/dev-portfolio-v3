@@ -20,7 +20,7 @@
         v-show="page === 2"
         headline="Personal"
         icon-name="mdi:heart"
-        :body-text="`I am a proud father who just cannot resist a great dad joke! When I'm not passing the hours re-binging shows with my wife, I love have board game nights and sing karaoke with good friends.
+        :body-text="`I am a proud father who just cannot resist a great dad joke! When I'm not passing the hours re-binging shows with my wife, I love hosting board game nights and singing karaoke with good friends.
           I also enjoy spending time reading articles about programming and web design tricks for inspiration. I whole-heartedly believe in life-long learning and using today to learn and grow just a bit more than yesterday.`"
       />
     </Paginate>
