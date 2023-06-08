@@ -17,8 +17,15 @@ export default defineNuxtConfig({
 					crossorigin: "",
 				},
 				{
+					rel: "preload",
+					href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap",
+					as: "style",
+				},
+				{
 					rel: "stylesheet",
 					href: "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap",
+					media: "print",
+					onload: "this.media='all'",
 				},
 				{
 					rel: "icon",
