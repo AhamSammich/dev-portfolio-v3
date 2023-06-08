@@ -16,6 +16,7 @@
           'opacity-0': !scrollAtTop,
         }"
       />
+      <span class="visually-hidden">Scroll Down</span>
     </button>
 
     <LazySkills />
