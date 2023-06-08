@@ -1,16 +1,16 @@
 <template>
   <section
     id="hero"
-    class="page flex items-center justify-center max-md:flex-col max-md:gap-8"
+    class="flex items-center justify-center page max-md:flex-col max-md:gap-8"
   >
     <div class="z-[1] px-8">
-      <p class="text-xl sm:text-2xl font-normal lg:text-3xl xl:text-4xl">My name is</p>
+      <p class="text-xl font-normal sm:text-2xl lg:text-3xl xl:text-4xl">My name is</p>
       <h1
-        class="text-4xl font-bold md:text-5xl xl:text-6xl whitespace-nowrap mb-4 drop-shadow-sm"
+        class="mb-4 text-4xl font-bold md:text-5xl xl:text-6xl whitespace-nowrap drop-shadow-sm"
       >
         Andre Hammons
       </h1>
-      <p class="text-right text-xl sm:text-2xl lg:text-3xl xl:text-4xl">
+      <p class="text-xl text-right sm:text-2xl lg:text-3xl xl:text-4xl">
         and I am a
         <span class="font-bold">Web Developer</span>
       </p>

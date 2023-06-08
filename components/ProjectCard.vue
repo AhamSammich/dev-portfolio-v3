@@ -1,9 +1,6 @@
 <template>
   <div
-    :class="{
-      'project-card group relative w-full overflow-hidden rounded-sm shadow-md': true,
-      'flex flex-col gap-4 basis-full sm:basis-[48%]': true,
-    }"
+    class="project-card group relative w-full overflow-hidden rounded-sm shadow-md gap-4 basis-full flex flex-col sm:basis-[48%]"
   >
     <!-- project image -->
     <NuxtImg
@@ -38,10 +35,7 @@
 
     <!-- project info overlay -->
     <div
-      :class="{
-        'overlay absolute z-10 h-full w-full flex flex-col justify-center items-center bg-near-white bg-opacity-95 text-left text-near-black': true,
-        'pointer-events-none group-hover:pointer-events-auto opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity': true,
-      }"
+      class="absolute z-10 flex flex-col items-center justify-center w-full h-full transition-opacity opacity-0 pointer-events-none bg-near-white bg-opacity-95 text-near-black group-hover:pointer-events-auto group-hover:opacity-100 focus-within:opacity-100"
     >
       <!-- project details -->
       <div class="flex flex-col items-center justify-center gap-4">
@@ -50,22 +44,19 @@
         </h2>
 
         <!-- project links -->
-        <div class="project-links flex max-sm:gap-4 gap-8">
+        <div class="flex gap-8 project-links max-sm:gap-4">
           <!-- live site -->
           <a v-if="link" :href="link" target="_blank" title="Visit site">
             <Icon
               name="solar:link-bold-duotone"
-              class="text-2xl lg:text-4xl xl:text-5xl mb-1"
+              class="mb-1 text-2xl lg:text-4xl xl:text-5xl"
             />
             <span class="visually-hidden"> Visit site </span>
           </a>
 
           <!-- github repository -->
           <a v-if="repo" :href="repo" target="_blank" title="View source code">
-            <Icon
-              name="mdi:github"
-              :class="{ 'text-2xl lg:text-4xl xl:text-5xl mb-1': true }"
-            />
+            <Icon name="mdi:github" class="mb-1 text-2xl lg:text-4xl xl:text-5xl" />
             <span class="visually-hidden"> View source code </span>
           </a>
         </div>

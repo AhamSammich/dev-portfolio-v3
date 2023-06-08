@@ -1,18 +1,18 @@
 <template>
   <section
     id="connect"
-    class="page content md:flex md:items-center md:justify-center gap-8"
+    class="gap-8 page content md:flex md:items-center md:justify-center"
   >
     <Icon
       name="ic:round-alternate-email"
       class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
-    <div class="max-md:mx-auto max-md:w-full w-max mt-4">
+    <div class="mt-4 max-md:mx-auto max-md:w-full w-max">
       <ContactForm />
     </div>
     <div class="max-md:mx-auto w-max">
       <h1 class="my-8">Let's Connect!</h1>
-      <ul class="w-max flex flex-col gap-4 xl:text-xl">
+      <ul class="flex flex-col gap-4 w-max xl:text-xl">
         <li>
           <ContactLink
             url="mailto:connect@ahammons.me"

@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="page flex flex-col gap-8 items-center">
+  <section id="about" class="flex flex-col items-center gap-8 page">
     <h1 class="text-center">Who Am I?</h1>
     <Paginate
       id="about"

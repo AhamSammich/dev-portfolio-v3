@@ -22,7 +22,7 @@
       />
       <span
         v-if="unclicked"
-        class="text-sm -mt-1 w-max rounded-sm p-1 bg-near-white bg-opacity-90 transition-opacity opacity-0 group-hover:opacity-100"
+        class="p-1 -mt-1 text-sm transition-opacity rounded-sm opacity-0 w-max bg-near-white bg-opacity-90 group-hover:opacity-100"
       >
         Not feeling this color?<br />Try this!
       </span>
@@ -62,14 +62,16 @@ const logoRef: Ref<HTMLElement | null> = ref(null);
 
 const unclicked = ref(true);
 
-const inputHue = ref(208);
+const inputHue = ref(263);
 
 function handleChange() {
   changeColor(inputHue.value);
+  storeValue();
 }
 
-function changeColor(h: number, s?: number, l?: number) {
-  const newPalette = getColorPalette(h, s, l);
+async function changeColor(h: number, s?: number, l?: number) {
+  console.info("Applying new theme...");
+  const newPalette = getColorPalette(h, s, l, { rel: "analagous" });
   const { primary, secondary, accent, base } = newPalette;
   document?.body.style.setProperty("--primary-color", primary);
   if (secondary) document?.body.style.setProperty("--secondary-color", secondary);
@@ -81,17 +83,41 @@ function changeColor(h: number, s?: number, l?: number) {
 
 function setColors(palette: ThemePalette) {
   const { primaryColor, secondaryColor, accentColor } = useColors();
-  console.log({ p: primaryColor.value, s: secondaryColor.value, a: accentColor.value });
   primaryColor.value = palette.primary;
   secondaryColor.value = palette.secondary;
   accentColor.value = palette.accent;
-  console.log({ p: primaryColor.value, s: secondaryColor.value, a: accentColor.value });
+}
+
+function storeValue() {
+  if (!localStorage) return;
+  localStorage.setItem("ah-color-theme", inputHue.value.toString());
+}
+
+function loadValue() {
+  if (!localStorage) return;
+  const hue = localStorage.getItem("ah-color-theme");
+  if (hue === null) return;
+
+  document?.addEventListener("mousemove", () => applyLoadedValue(Number(hue)), {
+    once: true,
+  });
+
+  document?.addEventListener("touchstart", () => applyLoadedValue(Number(hue)), {
+    once: true,
+  });
+}
+
+function applyLoadedValue(hueValue: number) {
+  inputHue.value = Number(hueValue);
+  changeColor(inputHue.value);
 }
 
 function toggleColorSlider() {
   unclicked.value = false;
   hideColorSlider.value = !hideColorSlider.value;
 }
+
+onMounted(async () => loadValue());
 </script>
 
 <style scoped lang="postcss">

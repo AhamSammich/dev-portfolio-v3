@@ -1,11 +1,12 @@
 const WHITE = "#ffffff";
 const BLACK = "#222222";
-const INITIAL_HUE = 208;
+const INITIAL_HUE = 263;
 const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
 
 export type RGB = { r: number; g: number; b: number };
 export type HSL = { h: number; s: number; l: number };
-export type ThemePalette = {
+export interface ThemePalette {
+	[key: string]: string | undefined;
 	primary: string;
 	secondary?: string;
 	accent?: string;
@@ -28,8 +29,36 @@ export const useColors = () => ({
 });
 
 function getComplement(hueValue: number): number {
-	const complementaryHue = (hueValue + 180) % 360;
+	const complementaryHue = (Number(hueValue) + 180) % 360;
 	return complementaryHue;
+}
+
+function getTriad(hueValue: number) {
+	const nextHue = (n: number) => (n + 120) % 360;
+	const h1 = Number(hueValue);
+	const h2 = nextHue(h1);
+	const h3 = nextHue(h2);
+
+	return [h1, h2, h3];
+}
+
+function getSplitComplementTriad(hueValue: number) {
+	const complement = getComplement(hueValue);
+	const offset = 30;
+	const h1 = Number(hueValue);
+	const h2 = complement - offset;
+	const h3 = complement + offset;
+
+	return [h1, h2, h3];
+}
+
+function getAnalagous(hueValue: number) {
+	const offset = 30;
+	const h1 = Number(hueValue);
+	const h2 = h1 - offset;
+	const h3 = h1 + offset;
+
+	return [h1, h2, h3];
 }
 
 function parseHSL(color: string) {
@@ -85,7 +114,46 @@ export function isDarkColor(color: string) {
 	return l < 60;
 }
 
-export function getColorPalette(h: number, s?: number, l?: number): ThemePalette {
+type ColorRelationship = "complement" | "triad" | "split" | "analagous";
+
+function generateHueValues(
+	baseHue: number,
+	rel: ColorRelationship
+): [number, number, number] {
+	let [h1, h2, h3] = [baseHue, baseHue, baseHue];
+	switch (rel) {
+		case "complement":
+			h3 = getComplement(baseHue);
+			break;
+
+		case "triad":
+			[h1, h2, h3] = getTriad(baseHue);
+			break;
+			
+			case "split":
+			[h1, h2, h3] = getSplitComplementTriad(baseHue);
+			break;
+			
+			case "analagous":
+			[h1, h2, h3] = getAnalagous(baseHue);
+			break;
+			
+			default:
+			break;
+	}
+
+	return [
+		h1, h2, h3
+	]
+
+}
+
+export function getColorPalette(
+	h: number,
+	s?: number,
+	l?: number,
+	options = { rel: "complement" as ColorRelationship }
+): ThemePalette {
 	let ps = s ?? 25,
 		pl = l ?? 85;
 	let ss = (ps + 35) % 100,
@@ -94,22 +162,27 @@ export function getColorPalette(h: number, s?: number, l?: number): ThemePalette
 		al = (pl + (100 - 40)) % 100;
 	let isDark = pl < 60;
 
-	const palette = {
-		primary: `hsl(${h} ${ps}% ${pl}%)`,
-		secondary: `hsl(${h} ${ss}% ${sl}%)`,
-		accent: `hsl(${getComplement(h)} ${as}% ${al}%)`,
+	const hues = generateHueValues(h, options.rel);
+
+	const palette: ThemePalette = {
+		primary: `hsl(${hues[0]} ${ps}% ${pl}%)`,
+		secondary: `hsl(${hues[1]} ${ss}% ${sl}%)`,
+		accent: `hsl(${hues[2]} ${as}% ${al}%)`,
 		base: isDark ? WHITE : BLACK,
 	};
 
-	const hexPalette = {
-		primary: hslToHex(h, ps, pl),
-		secondary: hslToHex(h, ss, sl),
-		accent: hslToHex(getComplement(h), as, al),
+	const hexPalette: ThemePalette = {
+		primary: hslToHex(hues[0], ps, pl),
+		secondary: hslToHex(hues[1], ss, sl),
+		accent: hslToHex(hues[2], as, al),
+		base: palette.base,
 	};
 
-	console.log(hexPalette);
+	for (let color in hexPalette) {
+		console.log(color, { hex: hexPalette[color], hsl: palette[color] });
+	}
 
-	return palette;
+	return hexPalette;
 }
 
 // https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex

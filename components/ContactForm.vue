@@ -39,7 +39,7 @@
         />
         <Icon
           name="mdi:account"
-          class="w-6 absolute right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full transition-all"
+          class="absolute w-6 transition-all right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full"
         />
       </div>
       <div data-field="email" class="col-span-2">
@@ -54,10 +54,10 @@
         />
         <Icon
           name="mdi:email"
-          class="w-6 absolute right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full transition-all"
+          class="absolute w-6 transition-all right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full"
         />
       </div>
-      <div data-field="message" class="translate-y-1/2 col-span-2">
+      <div data-field="message" class="col-span-2 translate-y-1/2">
         <label class="visually-hidden" for="contact-message">Message</label>
         <textarea
           id="contact-message"
@@ -67,7 +67,7 @@
         ></textarea>
         <Icon
           name="mdi:message"
-          class="w-6 absolute right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full transition-all"
+          class="absolute w-6 transition-all right-2 text-near-black peer-focus:opacity-0 peer-focus:translate-x-full"
         />
       </div>
     </fieldset>
@@ -78,7 +78,7 @@
       Send
       <Icon
         name="mdi:send"
-        class="w-6 h-max pb-1 transition-transform group-hover:translate-x-1 group-hover:scale-105"
+        class="w-6 pb-1 transition-transform h-max group-hover:translate-x-1 group-hover:scale-105"
       />
     </button>
   </form>

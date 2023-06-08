@@ -1785,6 +1785,9 @@ onMounted(() => {
 <style scoped lang="postcss">
 svg {
   --fill-color: var(--secondary-color);
+  & path {
+    transition: fill 0.5s;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

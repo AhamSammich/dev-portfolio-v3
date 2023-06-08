@@ -3,11 +3,11 @@
     class="group relative mt-8 flex min-h-[50svh] flex-col gap-4 p-12 bg-near-white rounded-sm shadow-md transition-all"
   >
     <div
-      class="icon-container absolute inset-x-0 -top-8 mx-auto flex aspect-square w-16 items-center justify-center rounded-full lg:w-20"
+      class="absolute inset-x-0 flex items-center justify-center w-16 mx-auto rounded-full icon-container -top-8 aspect-square lg:w-20"
     >
       <Icon :name="iconName" class="mx-auto text-4xl lg:text-5xl" />
     </div>
-    <h2 class="text-left text-xl font-bold xl:text-2xl mt-2">{{ headline }}</h2>
+    <h2 class="mt-2 text-xl font-bold text-left xl:text-2xl">{{ headline }}</h2>
     <p
       v-for="(line, index) in splitText"
       :key="index"

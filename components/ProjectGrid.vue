@@ -1,11 +1,11 @@
 <template>
-  <section id="projects" class="page content flex flex-col items-center gap-12">
+  <section id="projects" class="flex flex-col items-center gap-12 page content">
     <Icon
       name="icon-park-outline:folder-code-one"
       class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Projects</h1>
-    <div class="flex flex-wrap justify-center items-center gap-1 h-max">
+    <div class="flex flex-wrap items-center justify-center gap-1 h-max">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"

@@ -39,9 +39,9 @@ onMounted(() => {
 }
 
 body {
-  --primary-color: #cfd9e2;
-  --secondary-color: #2966a3;
-  --accent-color: #c91dc9;
+  --primary-color: #d4cfe2; /* hsl(255 25% 85%) */
+  --secondary-color: #4729a3; /* hsl(255 60% 40%) */
+  --accent-color: #c91dc9; /* hsl(300 75% 45%) */
   --text-color: #222222;
   font-family: Rubik, san-serif;
   overflow: hidden;
@@ -71,7 +71,7 @@ main {
 
   &::-webkit-scrollbar {
     width: 0.3rem;
-    background: var(--secondary-color);
+    background-color: var(--secondary-color);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -86,11 +86,11 @@ main {
   max-width: 100vw;
   padding: 3rem 0;
   position: relative;
-  scroll-snap-align: start start;
 
   &:nth-of-type(2n) {
     color: var(--near-white);
     background-color: var(--secondary-color);
+    transition: background-color 0.5s, color 0.5s;
     @apply shadow-md;
   }
 }

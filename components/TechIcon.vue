@@ -1,7 +1,7 @@
 <template>
   <div
     :data-name="label || iconName.toUpperCase()"
-    class="icon-box relative m-4 aspect-square w-12 sm:w-16 lg:w-20"
+    class="relative w-12 m-4 icon-box aspect-square sm:w-16 lg:w-20"
   >
     <Icon :name="iconName" class="w-full h-full" />
   </div>
