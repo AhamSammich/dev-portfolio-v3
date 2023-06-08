@@ -43,7 +43,7 @@ body {
   --secondary-color: #4729a3; /* hsl(255 60% 40%) */
   --accent-color: #c91dc9; /* hsl(300 75% 45%) */
   --text-color: #222222;
-  font-family: Rubik, san-serif;
+  font-family: Rubik, sans-serif;
   overflow: hidden;
   color: #fcfcfc;
 }
