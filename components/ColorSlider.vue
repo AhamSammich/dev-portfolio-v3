@@ -1,5 +1,5 @@
 <template>
-  <div class="group">
+  <div ref="rootRef" class="group">
     <div ref="logoRef" class="cursor-pointer p-1 rounded-full bg-[#ffffff30]">
       <LogoSvg :svg-size="40" @click="toggleColorSlider" />
     </div>
@@ -59,6 +59,7 @@ const scrollAtTop = useState("scrollAtTop");
 
 const hideColorSlider = ref(true);
 
+const rootRef: Ref<HTMLElement | null> = ref(null);
 const logoRef: Ref<HTMLElement | null> = ref(null);
 
 const unclicked = ref(true);
@@ -117,6 +118,8 @@ function toggleColorSlider() {
   unclicked.value = false;
   hideColorSlider.value = !hideColorSlider.value;
 }
+
+onClickOutside(rootRef, () => (hideColorSlider.value = true));
 
 onMounted(async () => loadValue());
 </script>

@@ -1,7 +1,7 @@
 <template>
   <ul
     :class="{
-      'flex w-full items-center justify-end gap-[1.5em] py-[0.5em] font-thin text-sm sm:text-lg md:text-xl lg:text-2xl': true,
+      'flex w-full items-center justify-end gap-3 sm:gap-[1.5em] py-[0.5em] font-thin text-sm sm:text-lg md:text-xl lg:text-2xl': true,
       'h-max flex-col pb-4': flexCol,
     }"
   >

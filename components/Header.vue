@@ -1,6 +1,6 @@
 <template>
   <header
-    class="left-0 fixed right-0 top-0 z-[99] flex items-start justify-end px-8 py-1 pointer-events-none"
+    class="left-0 fixed right-0 top-0 z-[99] flex items-start justify-end px-3 py-1 pointer-events-none"
   >
     <ColorSlider class="z-[9999] absolute left-2 top-2 transition-all" />
 
