@@ -19,5 +19,3 @@ defineProps<{
   hideLabel?: boolean;
 }>();
 </script>
-
-<style scoped></style>

@@ -2,8 +2,7 @@
   <section id="projects" class="page content flex flex-col items-center gap-12">
     <Icon
       name="icon-park-outline:folder-code-one"
-      class="text-[20vw] opacity-10 absolute top-4 right-4"
-      :style="{ color: primaryColor }"
+      class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Projects</h1>
     <div class="flex flex-wrap justify-center items-center gap-1 h-max">
@@ -23,8 +22,6 @@
 </template>
 
 <script setup lang="ts">
-const { primaryColor } = useColors();
-
 const projects = [
   {
     title: "Shop Lindsay Nicole",

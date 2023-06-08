@@ -11,9 +11,6 @@
             'h-3 w-3 cursor-pointer appearance-none rounded-full opacity-80 shadow-sm': true,
             'active scale-75': index === activePage - 1,
           }"
-          :style="{
-            backgroundColor: index === activePage - 1 ? accentColor : secondaryColor,
-          }"
           @change="$emit('go-to-page', index + 1)"
         />
         <label :for="pg" class="visually-hidden">{{ pg }}</label>
@@ -51,9 +48,8 @@ const { id, numOfPages = 1, activePage = 1 } = defineProps([
 ]);
 defineEmits(["prev-page", "next-page", "go-to-page"]);
 
-const pages = [...Array(numOfPages)].map((_, index) => `${id}-pg${index + 1}`);
+const pages = range(numOfPages).map((_, index) => `${id}-pg${index + 1}`);
 
-const { accentColor, secondaryColor } = useColors();
 const arrowClass = {
   "text-5xl lg:text-7xl drop-shadow-md hover:scale-105 focus-visible:scale-105": true,
 };
@@ -66,8 +62,13 @@ const arrowClass = {
   top: 40vh;
   display: flex;
   justify-content: space-between;
-  color: v-bind(secondaryColor);
+  color: var(--secondary-color);
   z-index: 20;
+
+  & .icon {
+    stroke-width: 0.5px;
+    stroke: var(--primary-color);
+  }
 }
 
 .buttons {
@@ -75,5 +76,12 @@ const arrowClass = {
   justify-content: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
+
+  & input {
+    background-color: var(--secondary-color);
+  }
+  & input.active {
+    background-color: var(--accent-color);
+  }
 }
 </style>

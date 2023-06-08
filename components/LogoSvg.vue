@@ -13,7 +13,7 @@
     :style="svgStyle"
   >
     <path
-      :fill="accentColor"
+      class="accent-fill"
       opacity="1.000000"
       stroke="none"
       d="
@@ -31,7 +31,7 @@ M108.990967,588.017334
 z"
     />
     <path
-      :fill="primaryColor"
+      class="primary-fill"
       opacity="1.000000"
       stroke="none"
       d="
@@ -48,7 +48,7 @@ M533.000061,452.999481
 z"
     />
     <path
-      :fill="secondaryColor"
+      class="secondary-fill"
       opacity="1.000000"
       stroke="none"
       d="
@@ -63,7 +63,7 @@ M697.565674,963.606689
 z"
     />
     <path
-      :fill="baseColor"
+      class="text-fill"
       opacity="1.000000"
       stroke="none"
       d="
@@ -86,8 +86,22 @@ const svgStyle = {
   height: `${svgSize}px`,
   backgroundSize: `${svgSize} ${svgSize}`,
 };
-
-const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.primary-fill {
+  fill: var(--primary-color);
+}
+
+.secondary-fill {
+  fill: var(--secondary-color);
+}
+
+.accent-fill {
+  fill: var(--accent-color);
+}
+
+.text-fill {
+  fill: var(--text-color);
+}
+</style>

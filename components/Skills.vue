@@ -5,8 +5,7 @@
   >
     <Icon
       name="solar:code-2-line-duotone"
-      class="z-[-1] text-[20vw] opacity-10 absolute top-4 right-4"
-      :style="{ color: usePrimaryColor().value }"
+      class="bg-icon z-[-1] text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Skills</h1>
     <div class="content flex flex-col gap-8">

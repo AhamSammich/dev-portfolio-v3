@@ -47,8 +47,6 @@ function handleClick() {
 
 const scrollAtTop = useState("scroll");
 
-const { secondaryColor } = useColors();
-
 watchEffect(() => {
   if (props.forceClose) closeMenu();
 });
@@ -56,8 +54,8 @@ watchEffect(() => {
 
 <style scoped lang="postcss">
 .btn-container {
-  --color1: #eee;
-  --color2: #333;
+  --color1: var(--near-white);
+  --color2: var(--near-black);
   background-color: transparent;
   cursor: pointer;
   position: relative;
@@ -65,7 +63,7 @@ watchEffect(() => {
   &.menu-open {
     & .bar {
       border: transparent;
-      background-color: v-bind(secondaryColor);
+      background-color: var(--secondary-color);
       height: 1px;
     }
 
@@ -97,7 +95,7 @@ watchEffect(() => {
   width: 80%;
   height: 2px;
   background: var(--color1);
-  border-bottom: 1px solid v-bind(secondaryColor);
+  border-bottom: 1px solid var(--secondary-color);
   position: absolute;
   top: 46%;
   left: 10%;

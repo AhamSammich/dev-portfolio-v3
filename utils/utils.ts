@@ -1,14 +1,10 @@
-export const toDegrees = (radians: number) => {
-	return Math.floor(radians * (180 / Math.PI));
-};
+export const toDegrees = (radians: number) => Math.floor(radians * (180 / Math.PI));
 
-export const sleep = (ms = 1000) => {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-};
+export const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const normalize = (n: number, max = 1, min = 0) => {
-	return (n - min) / (max - min);
-};
+export const range = (n: number) => [...Array(n)];
+
+export const normalize = (n: number, max = 1, min = 0) => (n - min) / (max - min);
 
 export const getElementCenter = (el: Element): { x: number; y: number } => {
 	const rect = el.getBoundingClientRect();

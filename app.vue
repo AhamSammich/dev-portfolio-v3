@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const { primaryColor, secondaryColor, baseColor } = useColors();
+const { primaryColor } = useColors();
 
 useServerSeoMeta({
   title: "Andre Hammons | Web Developer",
@@ -17,13 +17,15 @@ useServerSeoMeta({
 });
 
 onMounted(() => {
-  useHeadSafe({
-    meta: [
-      {
-        name: "theme-color",
-        content: primaryColor,
-      },
-    ],
+  watchEffect(() => {
+    useHeadSafe({
+      meta: [
+        {
+          name: "theme-color",
+          content: primaryColor.value,
+        },
+      ],
+    });
   });
 });
 </script>
@@ -37,6 +39,10 @@ onMounted(() => {
 }
 
 body {
+  --primary-color: #cfd9e2;
+  --secondary-color: #2966a3;
+  --accent-color: #c91dc9;
+  --text-color: #222222;
   font-family: Rubik, san-serif;
   overflow: hidden;
   color: #fcfcfc;
@@ -60,13 +66,12 @@ main {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: v-bind(primaryColor);
-  color: v-bind(baseColor);
-  /* scroll-snap-type: y proximity; */
+  background-color: var(--primary-color);
+  color: var(--text-color);
 
   &::-webkit-scrollbar {
     width: 0.3rem;
-    background: v-bind(secondaryColor);
+    background: var(--secondary-color);
   }
 
   &::-webkit-scrollbar-thumb {
@@ -85,9 +90,13 @@ main {
 
   &:nth-of-type(2n) {
     color: var(--near-white);
-    background-color: v-bind(secondaryColor);
+    background-color: var(--secondary-color);
     @apply shadow-md;
   }
+}
+
+.bg-icon {
+  color: var(--primary-color);
 }
 
 .hidden {

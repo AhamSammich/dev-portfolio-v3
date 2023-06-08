@@ -30,14 +30,13 @@
 
 <script setup lang="ts">
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
-const { accentColor } = useColors();
 const resumeUrl =
   "https://a-us.storyblok.com/f/1014509/x/67dc1a5921/andre-hammons-web-developer.pdf";
 </script>
 
 <style scoped lang="postcss">
 button {
-  background-color: v-bind(accentColor);
+  background-color: var(--accent-color);
   color: var(--near-white);
   margin: 1rem;
   padding: 1rem 1.5rem;
@@ -47,7 +46,7 @@ button {
   border-radius: 0.125rem;
 
   &:is(:hover, :focus-visible) {
-    background-color: v-bind(accentColor);
+    background-color: var(--accent-color);
     scale: 1.05;
   }
 }

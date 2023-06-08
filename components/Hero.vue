@@ -16,14 +16,12 @@
       </p>
     </div>
     <div class="w-3/4 md:basis-1/3 lg:basis-1/4">
-      <HeroSvg :fill-color="secondaryColor" :accent-color="accentColor" />
+      <HeroSvg />
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-const { secondaryColor, accentColor } = useColors();
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="postcss">
 h1 {
@@ -35,7 +33,7 @@ h1 {
     width: 120%;
     margin-top: 0.3rem;
     left: -10%;
-    background: radial-gradient(circle at 50% 50%, v-bind(accentColor), transparent);
+    background: radial-gradient(circle at 50% 50%, var(--accent-color), transparent);
     z-index: -1;
   }
 }

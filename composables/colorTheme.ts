@@ -5,6 +5,27 @@ const INITIAL_PALETTE = getColorPalette(INITIAL_HUE);
 
 export type RGB = { r: number; g: number; b: number };
 export type HSL = { h: number; s: number; l: number };
+export type ThemePalette = {
+	primary: string;
+	secondary?: string;
+	accent?: string;
+	base?: string;
+}
+
+export const usePrimaryColor = () =>
+	useState("primary", () => INITIAL_PALETTE.primary);
+export const useSecondaryColor = () =>
+	useState("secondary", () => INITIAL_PALETTE.secondary);
+export const useAccentColor = () =>
+	useState("accent", () => INITIAL_PALETTE.accent);
+export const useBaseColor = () => useState("base", () => INITIAL_PALETTE.base);
+
+export const useColors = () => ({
+	primaryColor: usePrimaryColor(),
+	secondaryColor: useSecondaryColor(),
+	accentColor: useAccentColor(),
+	baseColor: useBaseColor(),
+});
 
 function getComplement(hueValue: number): number {
 	const complementaryHue = (hueValue + 180) % 360;
@@ -64,7 +85,7 @@ export function isDarkColor(color: string) {
 	return l < 60;
 }
 
-export function getColorPalette(h: number, s?: number, l?: number) {
+export function getColorPalette(h: number, s?: number, l?: number): ThemePalette {
 	let ps = s ?? 25,
 		pl = l ?? 85;
 	let ss = (ps + 35) % 100,
@@ -90,22 +111,6 @@ export function getColorPalette(h: number, s?: number, l?: number) {
 
 	return palette;
 }
-
-export const usePrimaryColor = () =>
-	useState("primary-color", () => INITIAL_PALETTE.primary);
-export const useSecondaryColor = () =>
-	useState("secondary-color", () => INITIAL_PALETTE.secondary);
-export const useAccentColor = () =>
-	useState("accent-color", () => INITIAL_PALETTE.accent);
-export const useBaseColor = () =>
-	useState("base-color", () => INITIAL_PALETTE.base);
-
-export const useColors = () => ({
-	primaryColor: usePrimaryColor(),
-	secondaryColor: useSecondaryColor(),
-	accentColor: useAccentColor(),
-	baseColor: useBaseColor(),
-});
 
 // https://stackoverflow.com/questions/36721830/convert-hsl-to-rgb-and-hex
 function hslToHex(h: number, s: number, l: number) {

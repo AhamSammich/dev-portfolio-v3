@@ -23,8 +23,7 @@
     <Icon
       v-else
       name="mdi:github-box"
-      class="w-[48%] h-full p-[10%] mx-auto"
-      :style="{ color: primaryColor }"
+      class="img-placeholder w-[48%] h-full p-[10%] mx-auto"
     />
 
     <LazyProjectModal
@@ -93,8 +92,6 @@ defineProps<{
   tech?: string[];
   repo?: string;
 }>();
-
-const { primaryColor, accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
@@ -103,7 +100,11 @@ const { primaryColor, accentColor } = useColors();
   background-color: var(--near-black);
 }
 
+.img-placeholder {
+  color: var(--primary-color);
+}
+
 a .icon {
-  color: v-bind(accentColor);
+  color: var(--accent-color);
 }
 </style>

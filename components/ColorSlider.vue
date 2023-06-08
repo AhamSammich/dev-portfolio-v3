@@ -7,7 +7,7 @@
     <!-- click prompt -->
     <button
       :class="{
-        'absolute top-16 left-7 text-2xl flex flex-col transition-opacity duration-500 delay-700': true,
+        'absolute top-16 left-7 flex flex-col transition-opacity duration-500 delay-700': true,
         'invisible pointer-events-none opacity-0':
           hideColorSlider && !(unclicked && !scrollAtTop),
       }"
@@ -17,7 +17,7 @@
         name="solar:double-alt-arrow-up-bold-duotone"
         :class="{
           'animate-bounce': unclicked,
-          'absolute -left-4 -top-5': true,
+          'text-2xl absolute -left-4 -top-5': true,
         }"
       />
       <span
@@ -52,6 +52,8 @@
 </template>
 
 <script setup lang="ts">
+import { ThemePalette } from "~/composables/colorTheme";
+
 const scrollAtTop = useState("scrollAtTop");
 
 const hideColorSlider = ref(true);
@@ -62,18 +64,28 @@ const unclicked = ref(true);
 
 const inputHue = ref(208);
 
-const { primaryColor, secondaryColor, accentColor, baseColor } = useColors();
-
 function handleChange() {
   changeColor(inputHue.value);
 }
 
 function changeColor(h: number, s?: number, l?: number) {
-  const { primary, secondary, accent, base } = getColorPalette(h, s, l);
-  primaryColor.value = primary;
-  secondaryColor.value = secondary;
-  accentColor.value = accent;
-  baseColor.value = base;
+  const newPalette = getColorPalette(h, s, l);
+  const { primary, secondary, accent, base } = newPalette;
+  document?.body.style.setProperty("--primary-color", primary);
+  if (secondary) document?.body.style.setProperty("--secondary-color", secondary);
+  if (accent) document?.body.style.setProperty("--accent-color", accent);
+  if (base) document?.body.style.setProperty("--text-color", base);
+
+  setColors(newPalette);
+}
+
+function setColors(palette: ThemePalette) {
+  const { primaryColor, secondaryColor, accentColor } = useColors();
+  console.log({ p: primaryColor.value, s: secondaryColor.value, a: accentColor.value });
+  primaryColor.value = palette.primary;
+  secondaryColor.value = palette.secondary;
+  accentColor.value = palette.accent;
+  console.log({ p: primaryColor.value, s: secondaryColor.value, a: accentColor.value });
 }
 
 function toggleColorSlider() {
@@ -101,5 +113,14 @@ function toggleColorSlider() {
     hsl(330 50% 50%),
     hsl(360 50% 50%)
   );
+}
+
+button {
+  color: var(--text-color);
+
+  & .icon {
+    stroke: var(--primary-color);
+    stroke-width: 0.5px;
+  }
 }
 </style>

@@ -5,8 +5,7 @@
   >
     <Icon
       name="ic:round-alternate-email"
-      class="text-[20vw] opacity-10 absolute top-4 right-4"
-      :style="{ color: primaryColor }"
+      class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <div class="max-md:mx-auto max-md:w-full w-max mt-4">
       <ContactForm />
@@ -47,7 +46,3 @@
     <Footer />
   </section>
 </template>
-
-<script setup lang="ts">
-const { primaryColor } = useColors();
-</script>

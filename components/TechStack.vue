@@ -10,17 +10,15 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title?: string;
   stack: string[];
 }>();
-
-const { primaryColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
 h2 {
-  color: v-bind(primaryColor);
-  border-bottom: 1px solid v-bind(primaryColor);
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 </style>

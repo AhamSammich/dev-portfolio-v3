@@ -30,16 +30,10 @@ defineProps<{
   flexCol?: boolean;
 }>();
 
-const { accentColor, secondaryColor } = useColors();
-
 const scrollToSection = (selector: string) => {
   if (!document) return;
   document.querySelector(selector)?.scrollIntoView({ block: "start" });
 };
-
-const buttonColor = computed(() =>
-  isDarkColor(secondaryColor.value) ? "var(--near-white)" : "var(--near-black)"
-);
 </script>
 
 <style scoped lang="postcss">
@@ -49,35 +43,35 @@ const buttonColor = computed(() =>
   align-items: center;
   width: 50%;
   padding-bottom: 1em;
-  color: var(--near-black);
 
   &:not(:last-child) {
-    border-bottom: 1px solid v-bind(secondaryColor);
+    border-bottom: 1px solid var(--secondary-color);
   }
 
   &:is(:hover, :focus-visible) {
-    color: v-bind(accentColor);
-    border-color: v-bind(accentColor);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
   }
 }
 
 li {
+  color: var(--text-color);
   &:not(.flex-col li) {
     border-bottom: 1px solid transparent;
 
     &:is(:hover, :focus-visible) {
-      border-color: v-bind(accentColor);
+      border-color: var(--accent-color);
 
       &:not(:last-child) {
-        color: v-bind(accentColor);
+        color: var(--accent-color);
       }
     }
   }
 }
 
 li:last-child button {
-  background-color: v-bind(accentColor);
-  color: v-bind(buttonColor);
+  background-color: var(--accent-color);
+  color: var(--near-white);
 
   &:is(:hover, :focus-visible) {
     scale: 1.05;

@@ -84,17 +84,13 @@
   </form>
 </template>
 
-<script setup lang="ts">
-const { primaryColor, secondaryColor, accentColor } = useColors();
-</script>
-
 <style scoped lang="postcss">
 form {
   --bg-color: var(--near-white);
   --txt-color: var(--near-black);
-  --input-color: v-bind(accentColor);
+  --input-color: var(--accent-color);
   --border-w: 0.1rem;
-  background-color: v-bind(primaryColor);
+  background-color: var(--primary-color);
   width: 100%;
   max-width: 768px;
   color: var(--txt-color);
@@ -105,7 +101,7 @@ form {
 
 button {
   color: var(--near-white);
-  background-color: v-bind(accentColor);
+  background-color: var(--accent-color);
 }
 
 fieldset > div {
@@ -118,7 +114,7 @@ fieldset > div {
   align-items: center;
 
   & .icon {
-    color: v-bind(secondaryColor);
+    color: var(--secondary-color);
   }
 }
 
@@ -126,7 +122,7 @@ fieldset > div {
   outline: none;
   max-width: 100%;
   border-width: 1px;
-  border-color: v-bind(secondaryColor);
+  border-color: var(--secondary-color);
   border-radius: 0.125rem;
   background: var(--bg-color);
   color: inherit;
@@ -165,7 +161,7 @@ div:has(.input:focus)::after {
   transform: translate(0, -125%) scale(0.6);
   padding: 0 0.5rem;
   background: transparent;
-  color: v-bind(secondaryColor);
+  color: var(--secondary-color);
   opacity: 1;
   letter-spacing: 0.05rem;
   font-size: medium;

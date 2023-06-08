@@ -1,7 +1,6 @@
 <template>
   <header
     class="fixed left-0 right-0 top-0 z-[99] flex items-start justify-end px-8 py-1 pointer-events-none"
-    :style="{ color: baseColor }"
   >
     <ColorSlider
       :class="{
@@ -30,8 +29,6 @@
 
 <script setup lang="ts">
 const scrollAtTop = useState("scrollAtTop");
-
-const { baseColor } = useColors();
 </script>
 
 <style scoped lang="postcss">

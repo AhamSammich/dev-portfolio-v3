@@ -14,7 +14,6 @@
         'scroll-prompt absolute bottom-2 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
         'opacity-0': !scrollAtTop,
       }"
-      :style="{ color: secondaryColor, strokeWidth: '0.5px', stroke: primaryColor }"
     />
 
     <LazySkills />
@@ -34,7 +33,6 @@
           'absolute bottom-[2dvh] right-6 text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
           'opacity-0': scrollAtTop,
         }"
-        :style="{ color: primaryColor, stroke: secondaryColor, strokeWidth: '0.5px' }"
       />
       <span class="visually-hidden">Back To Top</span>
     </button>
@@ -44,8 +42,6 @@
 <script setup lang="ts">
 const mainRef: Ref<HTMLElement | null> = ref(null);
 const mainScroll = ref(0);
-
-const { primaryColor, secondaryColor } = useColors();
 
 const scrollAtTop = useState("scrollAtTop", () => true);
 
@@ -69,7 +65,15 @@ main {
   background-blend-mode: screen;
 }
 
+.icon {
+  /* stroke-width: 0.5px; */
+  stroke: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 .scroll-prompt {
+  stroke: var(--primary-color);
+  color: var(--secondary-color);
   animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown,
     3s Infinite linear floating;
   animation-delay: 0s, 1s;

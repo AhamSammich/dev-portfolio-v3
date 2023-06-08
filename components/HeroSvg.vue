@@ -1776,7 +1776,7 @@
 </template>
 
 <script setup lang="ts">
-const { fillColor, accentColor } = defineProps(["fillColor", "accentColor"]);
+const { secondaryColor: fillColor, accentColor } = useColors();
 const animationEnabled = ref(false);
 // onMounted(() => {
 //   animationEnabled.value = true;

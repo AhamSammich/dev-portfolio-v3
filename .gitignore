@@ -10,3 +10,5 @@ dist
 ssl/
 .prettierignore
 wip/
+tests/
+vitest*

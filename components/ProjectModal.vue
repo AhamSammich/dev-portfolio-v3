@@ -5,7 +5,7 @@
     @pointerup="() => modalRef?.showModal()"
     @keyup.enter="() => modalRef?.showModal()"
   >
-    <Icon name="system-uicons:expand" class="text-3xl" />
+    <Icon name="system-uicons:expand" class="text-2xl" />
     <span class="visually-hidden">Expand Project Card</span>
   </button>
 
@@ -102,22 +102,20 @@ defineProps<{
 }>();
 
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
-
-const { primaryColor, secondaryColor, accentColor } = useColors();
 </script>
 
 <style scoped lang="postcss">
 a .icon {
-  color: v-bind(accentColor);
+  color: var(--accent-color);
 }
 
 dialog {
   &::-webkit-scrollbar {
     width: 0.3rem;
-    background-color: v-bind(secondaryColor);
+    background-color: var(--secondary-color);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: v-bind(primaryColor);
+    background-color: var(--primary-color);
   }
 
   &::backdrop {
