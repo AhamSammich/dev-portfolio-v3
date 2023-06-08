@@ -72,7 +72,7 @@ li {
 li:last-child button {
   background-color: var(--accent-color);
   color: var(--near-white);
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s;
 
   &:is(:hover, :focus-visible) {
     scale: 1.05;

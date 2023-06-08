@@ -44,6 +44,7 @@
         type="range"
         min="0"
         max="359"
+        step="10"
         class="w-[180px] appearance-none bg-transparent cursor-pointer"
         @change="handleChange"
       />
