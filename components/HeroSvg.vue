@@ -98,7 +98,7 @@
         ></polygon>
         <polygon
           points="239.03 202.77 171.51 163.8 160.43 247.97 227.95 286.88 239.03 202.77"
-          :style="`fill: ${fillColor}; transform-origin: 199.73px 225.34px;`"
+          :style="`fill: var(--fill-color); transform-origin: 199.73px 225.34px;`"
           id="el82w16ptjub"
           class="animable"
         ></polygon>
@@ -116,13 +116,13 @@
         </g>
         <path
           d="M167.67,215.55,185,199.13c1.81-1.71,3.95-1.18,4.75,1.18l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11.05-7.78a3.79,3.79,0,0,1,5.73,1.45l13,26-4.62,35L163.5,246.13Z"
-          :style="`fill: ${fillColor}; transform-origin: 198.255px 240.828px;`"
+          :style="`fill: var(--fill-color); transform-origin: 198.255px 240.828px;`"
           id="eljspxfdak2vo"
           class="animable"
         ></path>
         <path
           d="M226.42,203c-3-1.76-5.9-.56-6.37,2.67s1.66,7.29,4.74,9.07,5.93.59,6.37-2.66S229.47,204.74,226.42,203Z"
-          :style="`fill: ${fillColor}; transform-origin: 225.601px 208.878px;`"
+          :style="`fill: var(--fill-color); transform-origin: 225.601px 208.878px;`"
           id="el66wctr0uh1l"
           class="animable"
         ></path>
@@ -158,7 +158,7 @@
         ></polygon>
         <polygon
           points="220.71 213.38 153.19 174.42 142.11 258.58 209.63 297.5 220.71 213.38"
-          :style="`fill: ${fillColor}; transform-origin: 181.41px 235.96px;`"
+          :style="`fill: var(--fill-color); transform-origin: 181.41px 235.96px;`"
           id="eli31g1xzgmy"
           class="animable"
         ></polygon>
@@ -176,13 +176,13 @@
         </g>
         <path
           d="M149.34,226.16l17.32-16.41c1.81-1.72,4-1.19,4.75,1.17l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11.05-7.77a3.8,3.8,0,0,1,5.74,1.45l13,26-4.61,35-64.9-37.43Z"
-          :style="`fill: ${fillColor}; transform-origin: 179.925px 251.445px;`"
+          :style="`fill: var(--fill-color); transform-origin: 179.925px 251.445px;`"
           id="el8evo41q7vnk"
           class="animable"
         ></path>
         <path
           d="M208.09,213.6c-3.05-1.76-5.89-.57-6.36,2.66s1.65,7.3,4.74,9.08,5.93.58,6.36-2.67S211.14,215.36,208.09,213.6Z"
-          :style="`fill: ${fillColor}; transform-origin: 207.275px 219.475px;`"
+          :style="`fill: var(--fill-color); transform-origin: 207.275px 219.475px;`"
           id="el6skbk50su2k"
           class="animable"
         ></path>
@@ -218,7 +218,7 @@
         ></polygon>
         <polygon
           points="202.38 224 134.86 185.03 123.78 269.2 191.3 308.11 202.38 224"
-          :style="`fill: ${fillColor}; transform-origin: 163.08px 246.57px;`"
+          :style="`fill: var(--fill-color); transform-origin: 163.08px 246.57px;`"
           id="elpswhfyxq1w8"
           class="animable"
         ></polygon>
@@ -236,13 +236,13 @@
         </g>
         <path
           d="M131,236.78l17.32-16.42c1.81-1.71,3.94-1.18,4.75,1.18l12.41,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11.06-7.78a3.79,3.79,0,0,1,5.73,1.45l13,26-4.61,35-64.89-37.43Z"
-          :style="`fill: ${fillColor}; transform-origin: 161.58px 262.058px;`"
+          :style="`fill: var(--fill-color); transform-origin: 161.58px 262.058px;`"
           id="el7o65tvek936"
           class="animable"
         ></path>
         <path
           d="M189.77,224.21c-3.05-1.76-5.9-.56-6.37,2.67s1.66,7.29,4.74,9.07,5.93.59,6.36-2.66S192.81,226,189.77,224.21Z"
-          :style="`fill: ${fillColor}; transform-origin: 188.945px 230.088px;`"
+          :style="`fill: var(--fill-color); transform-origin: 188.945px 230.088px;`"
           id="els9rugqacxlk"
           class="animable"
         ></path>
@@ -278,7 +278,7 @@
         ></polygon>
         <polygon
           points="184.06 234.61 116.54 195.65 105.46 279.81 172.98 318.73 184.06 234.61"
-          :style="`fill: ${fillColor}; transform-origin: 144.76px 257.19px;`"
+          :style="`fill: var(--fill-color); transform-origin: 144.76px 257.19px;`"
           id="elbkri5y4oojc"
           class="animable"
         ></polygon>
@@ -296,13 +296,13 @@
         </g>
         <path
           d="M112.69,247.39,130,231c1.81-1.71,4-1.19,4.75,1.17l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11-7.77a3.8,3.8,0,0,1,5.74,1.45l13,26-4.62,35L108.52,278Z"
-          :style="`fill: ${fillColor}; transform-origin: 143.245px 272.697px;`"
+          :style="`fill: var(--fill-color); transform-origin: 143.245px 272.697px;`"
           id="elj2n8tm18ae"
           class="animable"
         ></path>
         <path
           d="M171.44,234.83c-3.05-1.76-5.9-.57-6.36,2.66s1.65,7.3,4.73,9.08,5.94.59,6.37-2.67S174.49,236.59,171.44,234.83Z"
-          :style="`fill: ${fillColor}; transform-origin: 170.626px 240.706px;`"
+          :style="`fill: var(--fill-color); transform-origin: 170.626px 240.706px;`"
           id="elhwmc5yuxf2"
           class="animable"
         ></path>
@@ -338,7 +338,7 @@
         ></polygon>
         <polygon
           points="165.73 245.23 98.21 206.26 87.13 290.43 154.65 329.34 165.73 245.23"
-          :style="`fill: ${fillColor}; transform-origin: 126.43px 267.8px;`"
+          :style="`fill: var(--fill-color); transform-origin: 126.43px 267.8px;`"
           id="elh32wi0sxvha"
           class="animable"
         ></polygon>
@@ -356,13 +356,13 @@
         </g>
         <path
           d="M94.37,258l17.32-16.42c1.81-1.71,3.94-1.18,4.74,1.18l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71L141,263.54A3.8,3.8,0,0,1,146.7,265l13,26-4.61,35L90.2,288.6Z"
-          :style="`fill: ${fillColor}; transform-origin: 124.95px 283.288px;`"
+          :style="`fill: var(--fill-color); transform-origin: 124.95px 283.288px;`"
           id="elf0dyga3o8ee"
           class="animable"
         ></path>
         <path
           d="M153.11,245.44c-3-1.75-5.89-.56-6.36,2.67s1.66,7.29,4.74,9.07,5.93.59,6.36-2.66S156.16,247.2,153.11,245.44Z"
-          :style="`fill: ${fillColor}; transform-origin: 152.295px 251.32px;`"
+          :style="`fill: var(--fill-color); transform-origin: 152.295px 251.32px;`"
           id="el6n7jkq5v0t4"
           class="animable"
         ></path>
@@ -398,7 +398,7 @@
         ></polygon>
         <polygon
           points="147.4 255.84 79.89 216.88 68.8 301.04 136.32 339.96 147.4 255.84"
-          :style="`fill: ${fillColor}; transform-origin: 108.1px 278.42px;`"
+          :style="`fill: var(--fill-color); transform-origin: 108.1px 278.42px;`"
           id="els0p8zk3fq7j"
           class="animable"
         ></polygon>
@@ -416,13 +416,13 @@
         </g>
         <path
           d="M76,268.62l17.32-16.41c1.81-1.71,4-1.19,4.75,1.17L110.53,290a.82.82,0,0,0,1.6-.32l-.54-7.71,11-7.77a3.79,3.79,0,0,1,5.73,1.45l13,26-4.62,35L71.87,299.21Z"
-          :style="`fill: ${fillColor}; transform-origin: 106.595px 293.927px;`"
+          :style="`fill: var(--fill-color); transform-origin: 106.595px 293.927px;`"
           id="el1p00dxzqxmd"
           class="animable"
         ></path>
         <path
           d="M134.79,256.06c-3-1.76-5.9-.57-6.36,2.67s1.65,7.29,4.73,9.07,5.93.59,6.37-2.67S137.84,257.82,134.79,256.06Z"
-          :style="`fill: ${fillColor}; transform-origin: 133.977px 261.936px;`"
+          :style="`fill: var(--fill-color); transform-origin: 133.977px 261.936px;`"
           id="el7rhvj5gfbde"
           class="animable"
         ></path>
@@ -482,7 +482,7 @@
         ></polygon>
         <polygon
           points="239.03 85.66 171.51 46.7 160.43 130.86 227.95 169.78 239.03 85.66"
-          :style="`fill: ${fillColor}; transform-origin: 199.73px 108.24px;`"
+          :style="`fill: var(--fill-color); transform-origin: 199.73px 108.24px;`"
           id="el91ry21vnhh"
           class="animable"
         ></polygon>
@@ -500,13 +500,13 @@
         </g>
         <path
           d="M167.67,98.44,185,82c1.81-1.72,3.95-1.19,4.75,1.17l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71L214.27,104a3.78,3.78,0,0,1,5.73,1.44l13,26-4.62,35L163.5,129Z"
-          :style="`fill: ${fillColor}; transform-origin: 198.25px 123.715px;`"
+          :style="`fill: var(--fill-color); transform-origin: 198.25px 123.715px;`"
           id="elgzqat8zjqvf"
           class="animable"
         ></path>
         <path
           d="M226.42,85.88c-3-1.76-5.9-.57-6.37,2.66s1.66,7.3,4.74,9.08,5.93.58,6.37-2.67S229.47,87.64,226.42,85.88Z"
-          :style="`fill: ${fillColor}; transform-origin: 225.601px 91.7553px;`"
+          :style="`fill: var(--fill-color); transform-origin: 225.601px 91.7553px;`"
           id="elcq0scowgt"
           class="animable"
         ></path>
@@ -542,7 +542,7 @@
         ></polygon>
         <polygon
           points="220.71 96.28 153.19 57.31 142.11 141.47 209.63 180.39 220.71 96.28"
-          :style="`fill: ${fillColor}; transform-origin: 181.41px 118.85px;`"
+          :style="`fill: var(--fill-color); transform-origin: 181.41px 118.85px;`"
           id="eldt1y1jl8r2"
           class="animable"
         ></polygon>
@@ -560,13 +560,13 @@
         </g>
         <path
           d="M149.34,109.05l17.32-16.41c1.81-1.71,4-1.18,4.75,1.18l12.42,36.58a.82.82,0,0,0,1.6-.33l-.54-7.7,11.05-7.78a3.8,3.8,0,0,1,5.74,1.45l13,26-4.61,35-64.9-37.43Z"
-          :style="`fill: ${fillColor}; transform-origin: 179.925px 134.338px;`"
+          :style="`fill: var(--fill-color); transform-origin: 179.925px 134.338px;`"
           id="elhd94jycd6el"
           class="animable"
         ></path>
         <path
           d="M208.09,96.49c-3.05-1.76-5.89-.56-6.36,2.67s1.65,7.29,4.74,9.07,5.93.59,6.36-2.66S211.14,98.25,208.09,96.49Z"
-          :style="`fill: ${fillColor}; transform-origin: 207.275px 102.368px;`"
+          :style="`fill: var(--fill-color); transform-origin: 207.275px 102.368px;`"
           id="el4pmz7ympq7w"
           class="animable"
         ></path>
@@ -602,7 +602,7 @@
         ></polygon>
         <polygon
           points="202.38 106.89 134.86 67.92 123.78 152.09 191.3 191 202.38 106.89"
-          :style="`fill: ${fillColor}; transform-origin: 163.08px 129.46px;`"
+          :style="`fill: var(--fill-color); transform-origin: 163.08px 129.46px;`"
           id="el2fhd0wg5rgu"
           class="animable"
         ></polygon>
@@ -620,13 +620,13 @@
         </g>
         <path
           d="M131,119.67l17.32-16.41c1.81-1.72,3.94-1.19,4.75,1.17L165.5,141a.82.82,0,0,0,1.6-.32l-.54-7.71,11.06-7.77a3.78,3.78,0,0,1,5.73,1.44l13,26-4.61,35-64.89-37.43Z"
-          :style="`fill: ${fillColor}; transform-origin: 161.6px 144.945px;`"
+          :style="`fill: var(--fill-color); transform-origin: 161.6px 144.945px;`"
           id="el781l1pomcl"
           class="animable"
         ></path>
         <path
           d="M189.77,107.11c-3.05-1.76-5.9-.57-6.37,2.66s1.66,7.3,4.74,9.08,5.93.58,6.36-2.67S192.81,108.87,189.77,107.11Z"
-          :style="`fill: ${fillColor}; transform-origin: 188.945px 112.985px;`"
+          :style="`fill: var(--fill-color); transform-origin: 188.945px 112.985px;`"
           id="el0os9ktkux2vm"
           class="animable"
         ></path>
@@ -662,7 +662,7 @@
         ></polygon>
         <polygon
           points="184.06 117.5 116.54 78.54 105.46 162.7 172.98 201.62 184.06 117.5"
-          :style="`fill: ${fillColor}; transform-origin: 144.76px 140.08px;`"
+          :style="`fill: var(--fill-color); transform-origin: 144.76px 140.08px;`"
           id="ellwh4goosa1p"
           class="animable"
         ></polygon>
@@ -680,13 +680,13 @@
         </g>
         <path
           d="M112.69,130.28,130,113.87c1.81-1.71,4-1.18,4.75,1.18l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11-7.78a3.8,3.8,0,0,1,5.74,1.45l13,26-4.62,35-64.89-37.44Z"
-          :style="`fill: ${fillColor}; transform-origin: 143.215px 155.568px;`"
+          :style="`fill: var(--fill-color); transform-origin: 143.215px 155.568px;`"
           id="el7d2959dz7o7"
           class="animable"
         ></path>
         <path
           d="M171.44,117.72c-3.05-1.76-5.9-.56-6.36,2.67s1.65,7.29,4.73,9.07,5.94.59,6.37-2.66S174.49,119.48,171.44,117.72Z"
-          :style="`fill: ${fillColor}; transform-origin: 170.626px 123.598px;`"
+          :style="`fill: var(--fill-color); transform-origin: 170.626px 123.598px;`"
           id="elma9w08davgp"
           class="animable"
         ></path>
@@ -722,7 +722,7 @@
         ></polygon>
         <polygon
           points="165.73 128.12 98.21 89.16 87.13 173.32 154.65 212.24 165.73 128.12"
-          :style="`fill: ${fillColor}; transform-origin: 126.43px 150.7px;`"
+          :style="`fill: var(--fill-color); transform-origin: 126.43px 150.7px;`"
           id="elpgw0cgmsyq"
           class="animable"
         ></polygon>
@@ -740,13 +740,13 @@
         </g>
         <path
           d="M94.37,140.9l17.32-16.41c1.81-1.72,3.94-1.19,4.74,1.17l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71L141,146.44a3.79,3.79,0,0,1,5.74,1.44l13,26-4.61,35L90.2,171.49Z"
-          :style="`fill: ${fillColor}; transform-origin: 124.97px 166.18px;`"
+          :style="`fill: var(--fill-color); transform-origin: 124.97px 166.18px;`"
           id="elt5ld170839"
           class="animable"
         ></path>
         <path
           d="M153.11,128.34c-3-1.76-5.89-.57-6.36,2.66s1.66,7.3,4.74,9.08,5.93.58,6.36-2.67S156.16,130.1,153.11,128.34Z"
-          :style="`fill: ${fillColor}; transform-origin: 152.295px 134.215px;`"
+          :style="`fill: var(--fill-color); transform-origin: 152.295px 134.215px;`"
           id="el8ba0dxg510d"
           class="animable"
         ></path>
@@ -782,7 +782,7 @@
         ></polygon>
         <polygon
           points="147.4 138.74 79.89 99.77 68.8 183.93 136.32 222.85 147.4 138.74"
-          :style="`fill: ${fillColor}; transform-origin: 108.1px 161.31px;`"
+          :style="`fill: var(--fill-color); transform-origin: 108.1px 161.31px;`"
           id="elge61xn9djbp"
           class="animable"
         ></polygon>
@@ -800,13 +800,13 @@
         </g>
         <path
           d="M76,151.52,93.36,135.1c1.81-1.71,4-1.18,4.75,1.18l12.42,36.58a.82.82,0,0,0,1.6-.32l-.54-7.71,11-7.78a3.79,3.79,0,0,1,5.73,1.45l13,26-4.62,35L71.87,182.1Z"
-          :style="`fill: ${fillColor}; transform-origin: 106.595px 176.798px;`"
+          :style="`fill: var(--fill-color); transform-origin: 106.595px 176.798px;`"
           id="elo943svpwxs"
           class="animable"
         ></path>
         <path
           d="M134.79,139c-3-1.76-5.9-.56-6.36,2.67s1.65,7.29,4.73,9.07,5.93.59,6.37-2.66S137.84,140.71,134.79,139Z"
-          :style="`fill: ${fillColor}; transform-origin: 133.977px 144.878px;`"
+          :style="`fill: var(--fill-color); transform-origin: 133.977px 144.878px;`"
           id="eljlh2v5nsbsc"
           class="animable"
         ></path>
@@ -842,13 +842,13 @@
         ></path>
         <path
           d="M364.67,42.24a3.38,3.38,0,0,0-3.13.39L232.69,116.9A10.3,10.3,0,0,0,228,125V140.2l-5.95-3.49V121.59a10.27,10.27,0,0,1,4.65-8L355.59,39.27A3.27,3.27,0,0,1,359,39C359.81,39.5,363.68,41.72,364.67,42.24Z"
-          :style="`fill: ${fillColor}; transform-origin: 293.36px 89.4217px;`"
+          :style="`fill: var(--fill-color); transform-origin: 293.36px 89.4217px;`"
           id="el5vwsti3mcrd"
           class="animable"
         ></path>
         <path
           d="M366.19,45.29c0-2.94-2.09-4.13-4.65-2.65L232.69,116.9A10.32,10.32,0,0,0,228,125V140.2L366.19,60.58Z"
-          :style="`fill: ${fillColor}; transform-origin: 297.095px 91.1018px;`"
+          :style="`fill: var(--fill-color); transform-origin: 297.095px 91.1018px;`"
           id="eleqbqat8xnsg"
           class="animable"
         ></path>
@@ -900,43 +900,43 @@
         ></path>
         <path
           d="M239.47,152.85a1.85,1.85,0,0,1,.24-.87l3.35-6.93a.49.49,0,0,1,.15-.2s.07-.06.09-.06a.19.19,0,0,1,.26,0,.46.46,0,0,1,.11.34v2.32a2.81,2.81,0,0,1-.07.72,2.71,2.71,0,0,1-.24.64l-1.76,3.66,1.76,1.62a.82.82,0,0,1,.24.36,2,2,0,0,1,.07.64v2.33a1.15,1.15,0,0,1-.11.47.73.73,0,0,1-.26.32l-.09,0a.17.17,0,0,1-.15,0l-3.35-3.07a.67.67,0,0,1-.24-.59Z"
-          :style="`fill: ${fillColor}; transform-origin: 241.569px 151.483px;`"
+          :style="`fill: var(--fill-color); transform-origin: 241.569px 151.483px;`"
           id="ela4gbll3vnvw"
           class="animable"
         ></path>
         <path
           d="M251.72,135.47a3.37,3.37,0,0,1,.26-.68,1.15,1.15,0,0,1,.49-.53l1.26-.73a.2.2,0,0,1,.26,0,.48.48,0,0,1,.11.34,1.38,1.38,0,0,1,0,.26l-5.75,24.47a2.9,2.9,0,0,1-.23.66,1.32,1.32,0,0,1-.51.56l-1.21.7a.2.2,0,0,1-.26,0,.44.44,0,0,1-.11-.34,1.38,1.38,0,0,1,0-.26Z"
-          :style="`fill: ${fillColor}; transform-origin: 250.065px 147.025px;`"
+          :style="`fill: var(--fill-color); transform-origin: 250.065px 147.025px;`"
           id="eli7lfkounp9a"
           class="animable"
         ></path>
         <path
           d="M260.61,142.38a1.85,1.85,0,0,1-.24.87L257,150.18a.6.6,0,0,1-.15.2c-.05,0-.07.06-.09.06a.2.2,0,0,1-.26,0,.51.51,0,0,1-.11-.35v-2.32a2.81,2.81,0,0,1,.07-.72,2.71,2.71,0,0,1,.24-.64l1.76-3.66-1.76-1.62a.82.82,0,0,1-.24-.36,2,2,0,0,1-.07-.64v-2.33a1.15,1.15,0,0,1,.11-.47.73.73,0,0,1,.26-.32l.09,0a.21.21,0,0,1,.15,0l3.35,3.07a.67.67,0,0,1,.24.59Z"
-          :style="`fill: ${fillColor}; transform-origin: 258.499px 143.742px;`"
+          :style="`fill: var(--fill-color); transform-origin: 258.499px 143.742px;`"
           id="elqrke5zm0fs"
           class="animable"
         ></path>
         <path
           d="M269.92,140.77a.25.25,0,0,1,.32,0,.57.57,0,0,1,.14.42v2.56a1.34,1.34,0,0,1-.14.58.86.86,0,0,1-.32.39l-1.58.92a.25.25,0,0,1-.33,0,.53.53,0,0,1-.13-.41v-2.57a1.31,1.31,0,0,1,.13-.57.85.85,0,0,1,.33-.4Z"
-          :style="`fill: ${fillColor}; transform-origin: 269.129px 143.207px;`"
+          :style="`fill: var(--fill-color); transform-origin: 269.129px 143.207px;`"
           id="eltwv82km8q2"
           class="animable"
         ></path>
         <path
           d="M275.2,137.72a.24.24,0,0,1,.32,0,.53.53,0,0,1,.14.42v2.56a1.21,1.21,0,0,1-.14.58.81.81,0,0,1-.32.39l-1.58.92a.24.24,0,0,1-.32,0,.54.54,0,0,1-.14-.42V139.6a1.33,1.33,0,0,1,.14-.57.84.84,0,0,1,.32-.4Z"
-          :style="`fill: ${fillColor}; transform-origin: 274.41px 140.155px;`"
+          :style="`fill: var(--fill-color); transform-origin: 274.41px 140.155px;`"
           id="elgefvvzdrlj5"
           class="animable"
         ></path>
         <path
           d="M280.48,134.67a.25.25,0,0,1,.33,0,.57.57,0,0,1,.13.42v2.56a1.33,1.33,0,0,1-.13.58.82.82,0,0,1-.33.39l-1.58.92a.24.24,0,0,1-.32,0,.54.54,0,0,1-.13-.42v-2.56a1.31,1.31,0,0,1,.13-.57.84.84,0,0,1,.32-.4Z"
-          :style="`fill: ${fillColor}; transform-origin: 279.694px 137.104px;`"
+          :style="`fill: var(--fill-color); transform-origin: 279.694px 137.104px;`"
           id="elt6ezb5xm9yi"
           class="animable"
         ></path>
         <path
           d="M240.88,171.54l77.42-44.69c.91-.53,1.66-.16,1.66.83a3.57,3.57,0,0,1-1.66,2.75l-77.42,44.7c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,171.54Z"
-          :style="`fill: ${fillColor}; transform-origin: 279.595px 150.989px;`"
+          :style="`fill: var(--fill-color); transform-origin: 279.595px 150.989px;`"
           id="el04wpbk06ave3"
           class="animable"
         ></path>
@@ -954,43 +954,43 @@
         ></path>
         <path
           d="M324.72,123.14l30.84-17.87c.91-.53,1.65-.15,1.65.84a3.53,3.53,0,0,1-1.65,2.74l-30.84,17.88c-.92.53-1.66.15-1.66-.84A3.55,3.55,0,0,1,324.72,123.14Z"
-          :style="`fill: ${fillColor}; transform-origin: 340.135px 116px;`"
+          :style="`fill: var(--fill-color); transform-origin: 340.135px 116px;`"
           id="eltjdywgmlnla"
           class="animable"
         ></path>
         <path
           d="M240.88,329.28l77.42-44.7c.91-.52,1.66-.15,1.66.84a3.57,3.57,0,0,1-1.66,2.75l-77.42,44.7c-.91.52-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,329.28Z"
-          :style="`fill: ${fillColor}; transform-origin: 279.595px 308.725px;`"
+          :style="`fill: var(--fill-color); transform-origin: 279.595px 308.725px;`"
           id="elzzvggh3ewd"
           class="animable"
         ></path>
         <path
           d="M324.72,280.88,355.56,263c.91-.53,1.65-.16,1.65.83a3.56,3.56,0,0,1-1.65,2.75l-30.84,17.87c-.92.53-1.66.16-1.66-.83A3.55,3.55,0,0,1,324.72,280.88Z"
-          :style="`fill: ${fillColor}; transform-origin: 340.135px 273.725px;`"
+          :style="`fill: var(--fill-color); transform-origin: 340.135px 273.725px;`"
           id="elhfm7h0jg6sh"
           class="animable"
         ></path>
         <path
           d="M324.72,237.93l30.84-17.87c.91-.53,1.65-.15,1.65.84a3.56,3.56,0,0,1-1.65,2.75l-30.84,17.87c-.92.53-1.66.15-1.66-.84A3.55,3.55,0,0,1,324.72,237.93Z"
-          :style="`fill: ${fillColor}; transform-origin: 340.135px 230.79px;`"
+          :style="`fill: var(--fill-color); transform-origin: 340.135px 230.79px;`"
           id="eldymw3isam3b"
           class="animable"
         ></path>
         <path
           d="M324.72,252.27l30.84-17.87c.91-.53,1.65-.16,1.65.83a3.56,3.56,0,0,1-1.65,2.75l-30.84,17.88c-.92.52-1.66.15-1.66-.84A3.55,3.55,0,0,1,324.72,252.27Z"
-          :style="`fill: ${fillColor}; transform-origin: 340.135px 245.127px;`"
+          :style="`fill: var(--fill-color); transform-origin: 340.135px 245.127px;`"
           id="el0srtvpylzuo"
           class="animable"
         ></path>
         <path
           d="M298.42,253.07l17.32-10c.92-.53,1.66-.15,1.66.84a3.55,3.55,0,0,1-1.66,2.75l-17.32,10c-.92.53-1.66.15-1.66-.84A3.55,3.55,0,0,1,298.42,253.07Z"
-          :style="`fill: ${fillColor}; transform-origin: 307.08px 249.865px;`"
+          :style="`fill: var(--fill-color); transform-origin: 307.08px 249.865px;`"
           id="el0vl0n4vdf6rn"
           class="animable"
         ></path>
         <path
           d="M240.88,185.92,286,159.83c.91-.53,1.65-.15,1.65.83a3.55,3.55,0,0,1-1.65,2.75L240.88,189.5c-.91.53-1.65.16-1.65-.83A3.56,3.56,0,0,1,240.88,185.92Z"
-          :style="`fill: ${fillColor}; transform-origin: 263.44px 174.666px;`"
+          :style="`fill: var(--fill-color); transform-origin: 263.44px 174.666px;`"
           id="el9nb44k01koc"
           class="animable"
         ></path>
@@ -1008,7 +1008,7 @@
         </g>
         <path
           d="M240.88,200.23l15.32-8.85c.92-.53,1.66-.16,1.66.83A3.55,3.55,0,0,1,256.2,195l-15.32,8.86c-.91.52-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,200.23Z"
-          :style="`fill: ${fillColor}; transform-origin: 248.545px 197.617px;`"
+          :style="`fill: var(--fill-color); transform-origin: 248.545px 197.617px;`"
           id="el5leo1ozigu3"
           class="animable"
         ></path>
@@ -1026,7 +1026,7 @@
         </g>
         <path
           d="M240.88,214.57l15.32-8.85c.92-.53,1.66-.16,1.66.83a3.55,3.55,0,0,1-1.66,2.75l-15.32,8.86c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,214.57Z"
-          :style="`fill: ${fillColor}; transform-origin: 248.545px 211.939px;`"
+          :style="`fill: var(--fill-color); transform-origin: 248.545px 211.939px;`"
           id="elxh8i41vniuh"
           class="animable"
         ></path>
@@ -1044,7 +1044,7 @@
         </g>
         <path
           d="M240.88,228.91l15.32-8.85c.92-.53,1.66-.16,1.66.83a3.55,3.55,0,0,1-1.66,2.75l-15.32,8.86c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,228.91Z"
-          :style="`fill: ${fillColor}; transform-origin: 248.545px 226.279px;`"
+          :style="`fill: var(--fill-color); transform-origin: 248.545px 226.279px;`"
           id="elkwglky8x7w"
           class="animable"
         ></path>
@@ -1062,19 +1062,19 @@
         </g>
         <path
           d="M265.72,214.57l45.16-26.09c.91-.53,1.65-.16,1.65.83a3.56,3.56,0,0,1-1.65,2.75l-45.16,26.09c-.91.53-1.65.16-1.65-.83A3.55,3.55,0,0,1,265.72,214.57Z"
-          :style="`fill: ${fillColor}; transform-origin: 288.3px 203.315px;`"
+          :style="`fill: var(--fill-color); transform-origin: 288.3px 203.315px;`"
           id="elkn8qb3t5yma"
           class="animable"
         ></path>
         <path
           d="M317.29,184.77l19.64-11.3c.91-.53,1.65-.15,1.65.84a3.56,3.56,0,0,1-1.65,2.75l-19.64,11.3c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,317.29,184.77Z"
-          :style="`fill: ${fillColor}; transform-origin: 327.11px 180.915px;`"
+          :style="`fill: var(--fill-color); transform-origin: 327.11px 180.915px;`"
           id="el2v6oth8lgdp"
           class="animable"
         ></path>
         <path
           d="M240.88,243.25l15.32-8.85c.92-.53,1.66-.16,1.66.83A3.55,3.55,0,0,1,256.2,238l-15.32,8.86c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,240.88,243.25Z"
-          :style="`fill: ${fillColor}; transform-origin: 248.545px 240.629px;`"
+          :style="`fill: var(--fill-color); transform-origin: 248.545px 240.629px;`"
           id="el4c2lgci8km9"
           class="animable"
         ></path>
@@ -1092,7 +1092,7 @@
         </g>
         <path
           d="M292.45,156.12l19.64-11.3c.91-.52,1.66-.15,1.66.84a3.57,3.57,0,0,1-1.66,2.75l-19.64,11.3c-.91.53-1.65.15-1.65-.84A3.56,3.56,0,0,1,292.45,156.12Z"
-          :style="`fill: ${fillColor}; transform-origin: 302.275px 152.267px;`"
+          :style="`fill: var(--fill-color); transform-origin: 302.275px 152.267px;`"
           id="elg1sjzr6w4td"
           class="animable"
         ></path>
@@ -1134,7 +1134,7 @@
         ></path>
         <path
           d="M265.72,185.89l45.16-26.09c.91-.53,1.65-.15,1.65.84a3.56,3.56,0,0,1-1.65,2.75l-45.16,26.09c-.91.52-1.65.15-1.65-.84A3.56,3.56,0,0,1,265.72,185.89Z"
-          :style="`fill: ${fillColor}; transform-origin: 288.3px 174.638px;`"
+          :style="`fill: var(--fill-color); transform-origin: 288.3px 174.638px;`"
           id="elhsezwpsnz37"
           class="animable"
         ></path>
@@ -1152,7 +1152,7 @@
         </g>
         <path
           d="M317.29,156.1l19.64-11.3c.91-.53,1.65-.16,1.65.83a3.56,3.56,0,0,1-1.65,2.75l-19.64,11.3c-.91.53-1.65.16-1.65-.83A3.53,3.53,0,0,1,317.29,156.1Z"
-          :style="`fill: ${fillColor}; transform-origin: 327.11px 152.24px;`"
+          :style="`fill: var(--fill-color); transform-origin: 327.11px 152.24px;`"
           id="elsm4nbw6mpto"
           class="animable"
         ></path>
@@ -1206,7 +1206,7 @@
       >
         <path
           d="M419.89,64l-10.77,6.17-10.83-1a.76.76,0,0,0-.37.06c.87-.51,10.31-5.91,10.7-6.12a.68.68,0,0,1,.45-.09Z"
-          :style="`fill: ${fillColor}; transform-origin: 408.905px 66.5913px;`"
+          :style="`fill: var(--fill-color); transform-origin: 408.905px 66.5913px;`"
           id="elf38va1no8ch"
           class="animable"
         ></path>
@@ -1224,7 +1224,7 @@
         </g>
         <polygon
           points="453.36 66.16 414.42 43.67 406.68 48.17 409.53 105.95 426.15 125.63 442.77 125.14 450.51 120.64 453.36 66.16"
-          :style="`fill: ${fillColor}; transform-origin: 430.02px 84.65px;`"
+          :style="`fill: var(--fill-color); transform-origin: 430.02px 84.65px;`"
           id="el4ihahgpmuom"
           class="animable"
         ></polygon>
@@ -1250,7 +1250,7 @@
         </g>
         <path
           d="M406.68,48.17l1.08,21.88-9.46-.83a.8.8,0,0,0-.66,1.33l10.72,11.61L409.53,106l16.62,19.68,16.62-.49,2.86-54.48Z"
-          :style="`fill: ${fillColor}; transform-origin: 421.534px 86.925px;`"
+          :style="`fill: var(--fill-color); transform-origin: 421.534px 86.925px;`"
           id="elwuekrgp6ku"
           class="animable"
         ></path>
@@ -1280,13 +1280,13 @@
       >
         <path
           d="M419.89,156.26l-10.77,6.17-10.83-1a.9.9,0,0,0-.37.05c.87-.51,10.31-5.91,10.7-6.12a.75.75,0,0,1,.45-.09Z"
-          :style="`fill: ${fillColor}; transform-origin: 408.905px 158.848px;`"
+          :style="`fill: var(--fill-color); transform-origin: 408.905px 158.848px;`"
           id="eltt1fqzta7xl"
           class="animable"
         ></path>
         <polygon
           points="453.36 158.42 414.42 135.93 406.68 140.43 409.53 198.21 426.15 217.89 442.77 217.4 450.51 212.9 453.36 158.42"
-          :style="`fill: ${fillColor}; transform-origin: 430.02px 176.91px;`"
+          :style="`fill: var(--fill-color); transform-origin: 430.02px 176.91px;`"
           id="el4u0fgdii2eu"
           class="animable"
         ></polygon>
@@ -1300,7 +1300,7 @@
         </g>
         <path
           d="M406.68,140.43l1.08,21.87-9.46-.82a.8.8,0,0,0-.66,1.33l10.72,11.61,1.17,23.79,16.62,19.68,16.62-.49,2.86-54.49Z"
-          :style="`fill: ${fillColor}; transform-origin: 421.533px 179.16px;`"
+          :style="`fill: var(--fill-color); transform-origin: 421.533px 179.16px;`"
           id="elkyu2nahp1j"
           class="animable"
         ></path>
@@ -1315,7 +1315,7 @@
         <g id="el2td5gi4jcl3">
           <polygon
             points="426.15 157.3 441.63 166.24 439.35 211.05 426.15 212.04 426.15 157.3"
-            :style="`fill: ${fillColor}; opacity: 0.7; transform-origin: 433.89px 184.67px;`"
+            :style="`fill: var(--fill-color); opacity: 0.7; transform-origin: 433.89px 184.67px;`"
             class="animable"
             id="elyscm43ot46"
           ></polygon>
@@ -1334,7 +1334,7 @@
       >
         <polygon
           points="453.36 250.66 414.42 228.18 406.68 232.67 409.53 290.45 426.15 310.13 442.77 309.64 450.51 305.14 453.36 250.66"
-          :style="`fill: ${fillColor}; transform-origin: 430.02px 269.155px;`"
+          :style="`fill: var(--fill-color); transform-origin: 430.02px 269.155px;`"
           id="elmkayd6bhlxb"
           class="animable"
         ></polygon>
@@ -1356,7 +1356,7 @@
         </g>
         <path
           d="M419.89,248.5l-10.77,6.17-10.83-.95a.76.76,0,0,0-.37.06c.87-.51,10.31-5.92,10.7-6.13a.83.83,0,0,1,.45-.09Z"
-          :style="`fill: ${fillColor}; transform-origin: 408.905px 251.114px;`"
+          :style="`fill: var(--fill-color); transform-origin: 408.905px 251.114px;`"
           id="el3ci1eren6dk"
           class="animable"
         ></path>
@@ -1370,7 +1370,7 @@
         </g>
         <path
           d="M406.68,232.67l1.08,21.88-9.46-.83a.8.8,0,0,0-.66,1.33l10.72,11.61,1.17,23.79,16.62,19.68,16.62-.49,2.86-54.48Z"
-          :style="`fill: ${fillColor}; transform-origin: 421.534px 271.4px;`"
+          :style="`fill: var(--fill-color); transform-origin: 421.534px 271.4px;`"
           id="el01noc2k9332p"
           class="animable"
         ></path>
@@ -1385,7 +1385,7 @@
         <g id="elnev3iovmbea">
           <polygon
             points="426.15 249.55 441.63 258.48 439.35 303.3 426.15 304.28 426.15 249.55"
-            :style="`fill: ${fillColor}; opacity: 0.5; transform-origin: 433.89px 276.915px;`"
+            :style="`fill: var(--fill-color); opacity: 0.5; transform-origin: 433.89px 276.915px;`"
             class="animable"
             id="ela9b9m0saaxh"
           ></polygon>
@@ -1440,7 +1440,7 @@
         ></path>
         <path
           d="M300.52,416.47c-.35,1.8-1.83,2.26-3.42,2.89-2.17.86-4.23,3.1-6.19,5.6-1.33,1.7-2.43,3.4-3.64,5.18s-2.23,4.35-3.53,5.71c-1.91,2-5.77,1.62-6.83-1.21-.92-2.44-1.31-8.5,1.47-14.3,1.52-3.17,5.72-6.24,6.82-10.55.73-2.88,1.74-6.31,3.86-8.5,1.26-1.3,2.41-1,4-.54a51.32,51.32,0,0,0,6.36,1.33,9.66,9.66,0,0,1-1.55,5,4.17,4.17,0,0,0-.8,1.62,3.36,3.36,0,0,0,.11,1.22c.12.56.32,1.21.87,1.37a5.34,5.34,0,0,0,.69.05c.86.11,1.28,1.1,1.5,1.94a8,8,0,0,1,.35,2.79A3.58,3.58,0,0,1,300.52,416.47Z"
-          :style="`fill: ${accentColor}; transform-origin: 288.414px 418.731px;`"
+          :style="`fill: var(--accent-color); transform-origin: 288.414px 418.731px;`"
           id="elepadrs0ofjb"
           class="animable"
         ></path>
@@ -1490,7 +1490,7 @@
         ></path>
         <path
           d="M315.21,409.4c1.45,1.12,2.87.49,4.48-.08,2.2-.78,5.23-.46,8.35.13,2.12.4,4.07,1,6.15,1.5s4.54,1.8,6.42,2c2.74.23,5.4-2.59,4.34-5.41-.92-2.44-4.62-7.26-10.54-9.79-3.22-1.38-8.4-.93-12.07-3.44-2.45-1.68-5.47-3.61-8.51-3.85-1.8-.15-2.46.85-3.36,2.22a51.83,51.83,0,0,1-3.9,5.2,9.74,9.74,0,0,0,4.48,2.76,4.4,4.4,0,0,1,1.67.68,3.59,3.59,0,0,1,.72,1c.28.49.55,1.12.24,1.6a5.55,5.55,0,0,1-.48.49c-.57.66-.23,1.67.15,2.45a8.13,8.13,0,0,0,1.58,2.33A3,3,0,0,0,315.21,409.4Z"
-          :style="`fill: ${accentColor}; transform-origin: 325.879px 401.704px;`"
+          :style="`fill: var(--accent-color); transform-origin: 325.879px 401.704px;`"
           id="elz2xws1jilo"
           class="animable"
         ></path>
@@ -1534,7 +1534,7 @@
         ></path>
         <path
           d="M283.39,292.26c7.21.08,13.79,2.7,16.52,8.35S311,331.93,311,331.93,304.14,340,294,339.35Z"
-          :style="`fill: ${accentColor}; transform-origin: 297.195px 315.824px;`"
+          :style="`fill: var(--accent-color); transform-origin: 297.195px 315.824px;`"
           id="elrpogkbaqgxp"
           class="animable"
         ></path>
@@ -1638,7 +1638,7 @@
         ></path>
         <path
           d="M258.45,295c-8.71,1-12.4,4.52-15.54,13.93S234.25,340,234.25,340s7.31,7.92,17.56,7.09l8.54-28.3S266.36,298.21,258.45,295Z"
-          :style="`fill: ${accentColor}; transform-origin: 248.393px 321.075px;`"
+          :style="`fill: var(--accent-color); transform-origin: 248.393px 321.075px;`"
           id="eleraolcabzg"
           class="animable"
         ></path>
@@ -1700,7 +1700,7 @@
         ></path>
         <path
           d="M287.35,410.55a3.37,3.37,0,0,0,2.92-.22l49.78-28.75a3.37,3.37,0,0,0,1.65-2.36l5.45-32.5a3.52,3.52,0,0,0,0-.56,3.37,3.37,0,0,0-1-2.4l-51.73,29.87a2.5,2.5,0,0,0-1.22,1.75Z"
-          :style="`fill: ${fillColor}; transform-origin: 317.256px 377.272px;`"
+          :style="`fill: var(--fill-color); transform-origin: 317.256px 377.272px;`"
           id="el2ar41peh6y4"
           class="animable"
         ></path>
@@ -1726,7 +1726,7 @@
         ></path>
         <path
           d="M315.39,380.55c.36-2.18,2.61-5.07,5-6.46s4.06-.75,3.69,1.43-2.61,5.06-5,6.45S315,382.73,315.39,380.55Z"
-          :style="`fill: ${fillColor}; transform-origin: 319.733px 378.031px;`"
+          :style="`fill: var(--fill-color); transform-origin: 319.733px 378.031px;`"
           id="elp1m91aitwip"
           class="animable"
         ></path>
@@ -1776,55 +1776,20 @@
 </template>
 
 <script setup lang="ts">
-const { secondaryColor: fillColor, accentColor } = useColors();
 const animationEnabled = ref(false);
-// onMounted(() => {
-//   animationEnabled.value = true;
-// });
+onMounted(() => {
+  animationEnabled.value = true;
+});
 </script>
 
 <style scoped lang="postcss">
-/* svg#freepik_stories-static-assets:not(.animated) .animable {
-  opacity: 0;
-} */
-
-svg#freepik_stories-static-assets.animated #freepik--Photos--inject-13 {
-  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft;
-  animation-delay: 0s;
+svg {
+  --fill-color: var(--secondary-color);
 }
 
-svg#freepik_stories-static-assets.animated #freepik--Window--inject-13 {
-  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown;
-  animation-delay: 0s;
-}
-
-/* svg#freepik_stories-static-assets.animated #freepik--Icons--inject-13 {
-  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown,
-    3s Infinite linear floating;
-  animation-delay: 0s, 1s;
-} */
-
-@keyframes slideLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+@media (prefers-reduced-motion: no-preference) {
+  svg#freepik_stories-static-assets.animated #freepik--Icons--inject-13 {
+    animation: 3s Infinite linear floating;
   }
 }
 </style>
