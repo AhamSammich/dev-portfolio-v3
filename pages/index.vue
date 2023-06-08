@@ -8,13 +8,15 @@
   >
     <Hero />
 
-    <Icon
-      name="solar:double-alt-arrow-down-bold-duotone"
-      :class="{
-        'scroll-prompt absolute bottom-2 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
-        'opacity-0': !scrollAtTop,
-      }"
-    />
+    <button @pointerup="scrollDown" @keyup.enter="scrollDown">
+      <Icon
+        name="solar:double-alt-arrow-down-bold-duotone"
+        :class="{
+          'scroll-prompt absolute bottom-2 inset-x-0 mx-auto text-4xl lg:text-6xl drop-shadow-sm transition-opacity': true,
+          'opacity-0': !scrollAtTop,
+        }"
+      />
+    </button>
 
     <LazySkills />
 
@@ -26,7 +28,7 @@
 
     <LazyConnect />
 
-    <button ref="toTop" @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
+    <button @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
       <Icon
         name="solar:double-alt-arrow-up-bold-duotone"
         :class="{
@@ -51,6 +53,10 @@ function handleScroll() {
   if (!mainRef.value) return;
   mainScroll.value = mainRef.value.scrollTop;
   scrollAtTop.value = mainScroll.value === 0;
+}
+
+function scrollDown() {
+  document?.querySelector("#services")?.scrollIntoView();
 }
 
 onMounted(() => {
