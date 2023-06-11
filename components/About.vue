@@ -14,7 +14,7 @@
         headline="Professional"
         icon-name="mdi:certificate"
         :body-text="`I served as a submarine electronics technician in the United States Navy for 8 years, where I grew into a seasoned problem solver and an adept learner of new technologies and systems.
-          I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuous developing new skills!`"
+          I get inspired by the ingenuity and forward momentum found in the ever-growing tech industry, where I look forward to contributing and continuously developing new skills!`"
       />
       <LazyInfoBlock
         v-show="page === 2"
