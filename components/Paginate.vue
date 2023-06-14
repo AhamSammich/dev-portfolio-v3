@@ -1,5 +1,7 @@
 <template>
-  <div class="group content relative flex flex-col items-center w-full md:w-3/4 mx-auto">
+  <div
+    class="group content relative flex flex-col items-center w-full md:w-3/4 mx-auto max-w-[1280px]"
+  >
     <div class="buttons">
       <div v-for="(pg, index) in pages" :key="pg">
         <input

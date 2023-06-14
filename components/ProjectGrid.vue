@@ -5,7 +5,7 @@
       class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Projects</h1>
-    <div class="flex flex-wrap items-center justify-center gap-1 h-max">
+    <div class="flex flex-wrap items-center justify-center gap-1 h-max max-w-[1280px]">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"

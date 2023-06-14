@@ -46,6 +46,7 @@ body {
   font-family: Rubik, sans-serif;
   overflow: hidden;
   color: #fcfcfc;
+  background-color: var(--primary-color);
 }
 
 h1,

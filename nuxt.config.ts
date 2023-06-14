@@ -32,10 +32,6 @@ export default defineNuxtConfig({
 					href: "/alh-logo-1000.svg",
 					type: "image/svg+xml",
 				},
-				{
-					rel: "preconnect",
-					href: "https://a-us.storyblok.com",
-				},
 			],
 		},
 	},

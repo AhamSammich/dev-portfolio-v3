@@ -1,6 +1,6 @@
 <template>
   <div
-    class="project-card group relative w-full overflow-hidden rounded-sm shadow-md gap-4 basis-full flex flex-col sm:basis-[48%]"
+    class="project-card group relative w-full max-w-[640px] overflow-hidden rounded-sm shadow-md gap-4 basis-full flex flex-col lg:basis-[48%]"
   >
     <!-- project image -->
     <NuxtImg
@@ -9,7 +9,7 @@
       :alt="title"
       width="1800"
       height="860"
-      sizes="xs:100vw sm:50vw md:50vw lg:50vw xl:50vw"
+      sizes="xs:100vw sm:50vw md:100vw lg:50vw xl:50vw"
       class="object-cover"
       preset="screenshot"
       loading="lazy"
