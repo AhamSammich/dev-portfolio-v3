@@ -71,7 +71,7 @@ function handleChange() {
   storeValue();
 }
 
-async function changeColor(h: number, s?: number, l?: number) {
+function changeColor(h: number, s?: number, l?: number) {
   console.info("Applying new theme...");
   const newPalette = getColorPalette(h, s, l, { rel: "analagous" });
   const { primary, secondary, accent, base } = newPalette;

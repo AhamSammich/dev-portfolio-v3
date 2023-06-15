@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute w-full text-xs font-thin text-center bottom-2">
+  <div class="w-full text-xs font-thin text-center my-4">
     <p class="text-sm">&copy; {{ new Date().getFullYear() }} Andre L. Hammons</p>
     <p>
       <a href="https://storyset.com/data">Data illustrations by Storyset</a> |

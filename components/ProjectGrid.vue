@@ -5,24 +5,26 @@
       class="bg-icon text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Projects</h1>
-    <div class="flex flex-wrap items-center justify-center gap-1 h-max">
+    <div class="flex flex-wrap items-center justify-center gap-1 h-max max-w-[1280px]">
       <ProjectCard
         v-for="project in projects"
         :key="project.title"
-        :title="project.title"
-        :description="project.description"
-        :long-description="project.longDescription"
-        :image="project.image"
-        :link="project.link?.url"
-        :tech="project.tech"
-        :repo="project.repo"
+        v-bind="project"
+        @open-details="(title) => openProjectModal(title)"
       />
     </div>
+
+    <LazyProjectModal
+      v-if="activeProject"
+      v-bind="activeProject"
+      :show-modal="showDetails"
+      @close-modal="() => (showDetails = false)"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-const projects = [
+const projects: Project[] = [
   {
     title: "Shop Lindsay Nicole",
     description: "A custom website made for a local reseller.",
@@ -33,6 +35,7 @@ const projects = [
     ],
     link: {
       url: "https://lindsaynicolepm.com",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/3QZeBJ.svg",
     },
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x884/6557c81d02/lindsaynicolepm.png",
@@ -43,12 +46,12 @@ const projects = [
     title: "Let's Play Koi-Koi",
     description: "An interactive card game featuring designs by various artists.",
     longDescription: [
-      "My small passion project!",
       "Play against an automated opponent in a game of Koi-Koi, a Japanese game using hanafuda (lit. 'flower cards').",
       "Browse the gallery and choose from multiple hanafuda designs created by artists around the globe!",
     ],
     link: {
       url: "https://lets-play-koikoi.vercel.app",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/4fvdME.svg",
     },
     image: {
       url:
@@ -61,12 +64,12 @@ const projects = [
     title: "Let's Play Battleship",
     description: "Invite a friend for a quick real-time game of Battleship.",
     longDescription: [
-      "An early solo project to learn Vue and Express.js.",
       "Play against a friend (or a stranger) in a quick round of Battleship.",
       "Chat with your opponent over a real-time connection using the Socket.io library.",
     ],
     link: {
       url: "https://play.battleship.up.railway.app",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/7RX2y6.svg",
     },
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x885/fd64aeeebe/2023-06-03.png",
@@ -81,4 +84,16 @@ const projects = [
     repo: "https://www.github.com/ahamsammich/dev-portfolio-v3",
   },
 ];
+
+const activeProject: Ref<Project | undefined> = ref(undefined);
+const showDetails = ref(false);
+
+function setActiveProject(projectTitle: string) {
+  activeProject.value = projects.find((project) => project.title === projectTitle);
+}
+
+function openProjectModal(projectTitle: string) {
+  setActiveProject(projectTitle);
+  showDetails.value = true;
+}
 </script>

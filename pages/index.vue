@@ -29,6 +29,8 @@
 
     <LazyConnect />
 
+    <LazyFooter class="content" />
+
     <button @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
       <Icon
         name="solar:double-alt-arrow-up-bold-duotone"
@@ -60,7 +62,7 @@ function scrollDown() {
   document?.querySelector("#services")?.scrollIntoView();
 }
 
-onMounted(() => {
+onMounted(async () => {
   useObserver({ root: mainRef.value, unobserve: true });
 });
 </script>
@@ -73,7 +75,7 @@ main {
 }
 
 .icon {
-  /* stroke-width: 0.5px; */
+  stroke-width: 0.5px;
   stroke: var(--secondary-color);
   color: var(--primary-color);
 }
