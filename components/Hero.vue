@@ -4,18 +4,18 @@
     class="flex items-center justify-center page max-md:flex-col max-md:gap-8"
   >
     <div class="z-[1] px-8">
-      <p class="text-xl font-normal sm:text-2xl lg:text-3xl xl:text-4xl">My name is</p>
+      <p class="font-normal text-2xl lg:text-3xl xl:text-4xl">My name is</p>
       <h1
         class="mb-4 text-4xl font-bold md:text-5xl xl:text-6xl whitespace-nowrap drop-shadow-sm"
       >
         Andre Hammons
       </h1>
-      <p class="text-xl text-right sm:text-2xl lg:text-3xl xl:text-4xl">
+      <p class="text-right text-2xl lg:text-3xl xl:text-4xl">
         and I am a
         <span class="font-bold">Web Developer</span>
       </p>
     </div>
-    <div class="w-3/4 max-w-[400px] lg:max-w-[500px]">
+    <div class="w-3/4 max-w-[300px] lg:max-w-[400px] xl:max-w-[500px]">
       <HeroSvg />
     </div>
   </section>
