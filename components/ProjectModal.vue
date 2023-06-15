@@ -14,14 +14,21 @@
     class="relative w-full p-8 overflow-x-hidden overflow-y-auto rounded-sm shadow-md sm:w-3/4 h-max"
   >
     <!-- QR code -->
-    <SideDrawer v-if="link?.qrCode" class="max-lg:hidden">
+    <LazySideDrawer v-if="link?.qrCode" class="max-lg:hidden">
       <Icon
         name="ic:twotone-qr-code"
         class="mb-1 text-white text-5xl absolute inset-y-0 my-auto h-full"
       />
       <p class="text-2xl text-center mt-4">Try it out on mobile!</p>
-      <img :src="link?.qrCode" class="w-2/3 max-w-[500px] m-auto" />
-    </SideDrawer>
+      <img
+        :src="link.qrCode"
+        :alt="`QR code link to ${link.url}`"
+        class="w-2/3 max-w-[500px] m-auto"
+        width="500"
+        height="500"
+        loading="lazy"
+      />
+    </LazySideDrawer>
 
     <button
       class="absolute top-2 right-2"
