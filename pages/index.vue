@@ -29,6 +29,8 @@
 
     <LazyConnect />
 
+    <LazyFooter class="content" />
+
     <button @pointerup="resetMainScroll" @keyup.enter="resetMainScroll">
       <Icon
         name="solar:double-alt-arrow-up-bold-duotone"

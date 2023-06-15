@@ -43,6 +43,5 @@
         </li>
       </ul>
     </div>
-    <Footer />
   </section>
 </template>
