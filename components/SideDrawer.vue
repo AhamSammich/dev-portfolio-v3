@@ -14,7 +14,7 @@
       @pointerup="() => (isOpen = !isOpen)"
       @keyup.enter="() => (isOpen = !isOpen)"
     >
-      <Icon name="system-uicons:close" class="text-2xl lg:text-4xl xl:text-5xl" />
+      <Icon name="system-uicons:close" class="text-5xl" />
       <span class="visually-hidden">Toggle Side Drawer</span>
     </button>
   </div>
@@ -31,7 +31,8 @@ onMounted(() => {
 
 <style scoped lang="postcss">
 .slot-wrapper {
-  height: 75%;
+  height: calc(100% - 8rem);
+  min-height: 300px;
   width: 75%;
   max-width: 500px;
   position: absolute;
@@ -40,8 +41,9 @@ onMounted(() => {
   z-index: 999;
   background-color: var(--accent-color);
   border-radius: 0.25rem 0 0 0.25rem;
-  transform: translateX(90%);
+  transform: translateX(calc(100% - 3rem));
   animation: peekOut 1s 2s ease-in;
+  pointer-events: all;
 }
 
 @keyframes peekOut {
@@ -56,6 +58,11 @@ onMounted(() => {
 
 button .icon {
   opacity: 0;
+}
+
+.drawer:not(.isOpen) {
+  /* prevent overlay from blocking pointer events */
+  z-index: -1;
 }
 
 .drawer.isOpen {

@@ -8,7 +8,7 @@
       class="bg-icon z-[-1] text-[20vw] opacity-10 absolute top-4 right-4"
     />
     <h1>Skills</h1>
-    <div class="flex flex-col gap-8 content">
+    <div class="flex flex-col gap-8 px-12 content">
       <TechStack title="Languages" :stack="['javascript', 'typescript', 'html', 'css']" />
       <TechStack title="Frameworks" :stack="['vue', 'nuxt', 'astro', 'tailwind']" />
       <TechStack title="Tools" :stack="['git', 'vscode', 'storyblok']" />

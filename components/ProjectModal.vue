@@ -1,85 +1,74 @@
 <template>
-  <!-- expand toggle button -->
-  <button
-    class="absolute z-20 opacity-0 top-2 right-2 text-near-black group-hover:opacity-100"
-    @pointerup="() => modalRef?.showModal()"
-    @keyup.enter="() => modalRef?.showModal()"
-  >
-    <Icon name="system-uicons:expand" class="text-2xl" />
-    <span class="visually-hidden">Expand Project Card</span>
-  </button>
-
   <dialog
     ref="modalRef"
-    class="relative w-full p-8 overflow-x-hidden overflow-y-auto rounded-sm shadow-md sm:w-3/4 h-max"
+    class="relative w-full p-12 overflow-x-hidden overflow-y-auto rounded-sm shadow-md sm:w-2/3 h-max"
   >
     <!-- QR code -->
-    <LazySideDrawer v-if="link?.qrCode" class="max-lg:hidden">
+    <LazySideDrawer v-if="link?.qrCode">
       <Icon
         name="ic:twotone-qr-code"
-        class="mb-1 text-white text-5xl absolute inset-y-0 my-auto h-full"
+        class="absolute inset-y-0 h-full my-auto text-5xl text-white"
       />
-      <p class="text-2xl text-center mt-4">Try it out on mobile!</p>
+      <p class="my-4 text-2xl text-center">Try it out on mobile!</p>
       <img
         :src="link.qrCode"
         :alt="`QR code link to ${link.url}`"
-        class="w-2/3 max-w-[500px] m-auto"
+        class="h-2/3 aspect-square"
         width="500"
         height="500"
         loading="lazy"
       />
     </LazySideDrawer>
 
+    <!-- close button -->
     <button
-      class="absolute top-2 right-2"
-      @pointerup="() => modalRef?.close()"
-      @keyup.enter="() => modalRef?.close()"
+      class="absolute top-0 right-0"
+      @pointerup="closeModal"
+      @keyup.enter="closeModal"
     >
-      <Icon name="system-uicons:close" class="text-3xl" />
+      <Icon name="system-uicons:close" class="text-5xl" />
       <span class="visually-hidden">Expand Project Card</span>
     </button>
-    <div class="flex flex-col items-center justify-center gap-4">
-      <h2 class="z-20 text-center">
+    <div class="flex flex-col items-start max-w-[600px] mx-auto justify-center gap-2">
+      <h2 class="mb-4">
         {{ title }}
       </h2>
 
       <!-- project links -->
-      <div class="flex gap-8 project-links max-sm:gap-4">
-        <!-- live site -->
-        <a v-if="link" :href="link.url" target="_blank" title="Visit site" autofocus>
-          <Icon
-            name="solar:link-bold-duotone"
-            class="mb-1 text-2xl lg:text-4xl xl:text-5xl"
-          />
-          <span> Visit site </span>
-        </a>
+      <!-- live site -->
+      <a v-if="link" :href="link.url" target="_blank" title="Visit site" autofocus>
+        <Icon
+          name="solar:link-bold-duotone"
+          class="mb-1 text-2xl lg:text-4xl xl:text-5xl"
+        />
+        <span> Visit site </span>
+      </a>
 
-        <!-- github repository -->
-        <a v-if="repo" :href="repo" target="_blank" title="View source code">
-          <Icon name="mdi:github" class="mb-1 text-2xl lg:text-4xl xl:text-5xl" />
-          <span> View source code </span>
-        </a>
-      </div>
+      <!-- github repository -->
+      <a v-if="repo" :href="repo" target="_blank" title="View source code">
+        <Icon name="mdi:github" class="mb-1 text-2xl lg:text-4xl xl:text-5xl" />
+        <span> View source code </span>
+      </a>
 
       <!-- project description -->
-      <div v-if="longDescription">
+      <div v-if="longDescription" class="my-2">
         <!-- show full description while expanded -->
         <p
           v-for="(line, index) in longDescription"
           :key="index"
-          class="my-4 mx-auto max-w-[48ch] lg:text-lg xl:text-xl"
+          class="my-1 mx-auto max-w-[48ch] lg:text-lg xl:text-xl"
         >
           {{ line }}
         </p>
       </div>
 
       <!-- show single-line description normally -->
-      <p v-else class="mx-auto max-w-[48ch] px-4 text-center lg:text-lg xl:text-xl">
+      <p v-else class="mx-auto max-w-[48ch] px-4 lg:text-lg xl:text-xl">
         {{ description }}
       </p>
 
       <!-- show applicable skill icons when expanded -->
-      <div class="py-4 origin-top scale-75">
+      <div class="origin-left scale-75">
         <TechStack v-if="tech" :stack="tech" />
       </div>
     </div>
@@ -87,23 +76,34 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  title: string;
-  description: string;
-  longDescription?: string[];
-  link?: {
-    url: string;
-    qrCode?: string;
-  };
-  image?: {
-    url: string;
-    alt?: string;
-  };
-  tech?: string[];
-  repo?: string;
-}>();
+interface ProjectModal extends Project {
+  showModal: boolean;
+}
+const props = defineProps([
+  "showModal",
+  "title",
+  "description",
+  "longDescription",
+  "link",
+  "repo",
+  "tech",
+]) as ProjectModal;
+
+const emits = defineEmits(["close-modal"]);
 
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
+
+function closeModal() {
+  modalRef.value?.close();
+  emits("close-modal");
+}
+
+onMounted(() => {
+  console.log("modal mounted");
+  watchEffect(() => {
+    props.showModal ? modalRef.value?.showModal() : modalRef.value?.close();
+  });
+});
 </script>
 
 <style scoped lang="postcss">
@@ -142,6 +142,13 @@ dialog {
     to {
       opacity: 1;
     }
+  }
+}
+
+/* hide QR code drawer on mobile devices */
+@media (width < 1024px) or (height < 500px) {
+  .drawer {
+    display: none;
   }
 }
 </style>

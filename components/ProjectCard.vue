@@ -9,7 +9,7 @@
       :alt="title"
       width="1800"
       height="860"
-      sizes="xs:100vw sm:50vw md:100vw lg:50vw xl:50vw"
+      sizes="xs:100vw sm:100vw md:640px lg:640px xl:640px"
       class="object-cover"
       preset="screenshot"
       loading="lazy"
@@ -23,20 +23,20 @@
       class="img-placeholder w-[48%] h-full p-[10%] mx-auto"
     />
 
-    <LazyProjectModal
-      :title="title"
-      :description="description"
-      :long-description="longDescription"
-      :image="image"
-      :link="link"
-      :tech="tech"
-      :repo="repo"
-    />
-
     <!-- project info overlay -->
     <div
       class="absolute z-10 flex flex-col items-center justify-center w-full h-full transition-opacity opacity-0 pointer-events-none bg-near-white bg-opacity-95 text-near-black group-hover:pointer-events-auto group-hover:opacity-100 focus-within:opacity-100"
     >
+      <!-- open project details button -->
+      <button
+        class="absolute z-20 opacity-0 top-2 right-2 text-near-black group-hover:opacity-100 group-focus-within:opacity-100"
+        @pointerup="() => $emit('open-details', title)"
+        @keyup.enter="() => $emit('open-details', title)"
+      >
+        <Icon name="system-uicons:expand" class="text-2xl" />
+        <span class="visually-hidden">Expand Project Card</span>
+      </button>
+
       <!-- project details -->
       <div class="flex flex-col items-center justify-center gap-4">
         <h2 class="z-20 text-center">
@@ -71,26 +71,13 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  title: string;
-  description: string;
-  longDescription?: string[];
-  link?: {
-    url: string;
-    qrCode?: string;
-  };
-  image?: {
-    url: string;
-    alt?: string;
-  };
-  tech?: string[];
-  repo?: string;
-}>();
+defineProps(["title", "description", "image", "link", "repo"]) as Project;
+
+defineEmits(["open-details"]);
 </script>
 
 <style scoped lang="postcss">
 .project-card:not(:has(img)) {
-  box-shadow: none;
   background-color: var(--near-black);
 }
 
