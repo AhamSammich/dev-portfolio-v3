@@ -13,7 +13,7 @@
         :description="project.description"
         :long-description="project.longDescription"
         :image="project.image"
-        :link="project.link?.url"
+        :link="project.link"
         :tech="project.tech"
         :repo="project.repo"
       />
@@ -33,6 +33,7 @@ const projects = [
     ],
     link: {
       url: "https://lindsaynicolepm.com",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/3QZeBJ.svg",
     },
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x884/6557c81d02/lindsaynicolepm.png",
@@ -49,6 +50,7 @@ const projects = [
     ],
     link: {
       url: "https://lets-play-koikoi.vercel.app",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/4fvdME.svg",
     },
     image: {
       url:
@@ -67,6 +69,7 @@ const projects = [
     ],
     link: {
       url: "https://play.battleship.up.railway.app",
+      qrCode: "https://qr-codes-svg.s3.amazonaws.com/7RX2y6.svg",
     },
     image: {
       url: "https://a-us.storyblok.com/f/1014509/1851x885/fd64aeeebe/2023-06-03.png",

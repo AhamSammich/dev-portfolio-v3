@@ -46,7 +46,7 @@
         <!-- project links -->
         <div class="flex gap-8 project-links max-sm:gap-4">
           <!-- live site -->
-          <a v-if="link" :href="link" target="_blank" title="Visit site">
+          <a v-if="link" :href="link.url" target="_blank" title="Visit site">
             <Icon
               name="solar:link-bold-duotone"
               class="mb-1 text-2xl lg:text-4xl xl:text-5xl"
@@ -75,7 +75,10 @@ defineProps<{
   title: string;
   description: string;
   longDescription?: string[];
-  link?: string;
+  link?: {
+    url: string;
+    qrCode?: string;
+  };
   image?: {
     url: string;
     alt?: string;
