@@ -56,16 +56,18 @@
         <p
           v-for="(line, index) in longDescription"
           :key="index"
-          class="my-1 mx-auto max-w-[48ch] lg:text-lg xl:text-xl"
+          class="my-2 mx-auto max-w-[48ch] lg:text-lg xl:text-xl"
         >
           {{ line }}
         </p>
       </div>
 
       <!-- show single-line description normally -->
-      <p v-else class="mx-auto max-w-[48ch] px-4 lg:text-lg xl:text-xl">
-        {{ description }}
-      </p>
+      <div v-else class="w-full">
+        <p class="max-w-[48ch] lg:text-lg xl:text-xl">
+          {{ description }}
+        </p>
+      </div>
 
       <!-- show applicable skill icons when expanded -->
       <div class="origin-left scale-75">
