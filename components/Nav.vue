@@ -16,7 +16,7 @@
     </li>
     <li>
       <button
-        class="rounded-sm px-2 py-1 shadow-md font-bold"
+        class="rounded-sm px-4 py-2 shadow-md font-bold"
         @click="() => scrollToSection('#connect')"
       >
         Connect

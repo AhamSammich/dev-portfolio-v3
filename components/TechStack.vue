@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-max">
-    <h2 v-if="title" class="my-2 text-xl font-bold lg:text-2xl">
+    <h2 v-if="title" class="my-2 text-lg font-bold lg:text-xl">
       {{ title }}
     </h2>
     <div class="grid grid-cols-2 gap-8 min-[400px]:grid-cols-4">

@@ -43,5 +43,6 @@
         </li>
       </ul>
     </div>
+    <LazyFooter class="absolute bottom-0" />
   </section>
 </template>

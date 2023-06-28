@@ -50,4 +50,8 @@ button {
     scale: 1.05;
   }
 }
+
+dialog[open] > * {
+  animation: fadeIn 500ms ease-out;
+}
 </style>

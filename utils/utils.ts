@@ -2,7 +2,7 @@ export const toDegrees = (radians: number) => Math.floor(radians * (180 / Math.P
 
 export const sleep = (ms = 1000) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const range = (n: number) => [...Array(n)];
+export const range = (n: number) => [...Array(n).keys()];
 
 export const normalize = (n: number, max = 1, min = 0) => (n - min) / (max - min);
 

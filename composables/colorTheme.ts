@@ -123,9 +123,5 @@ export function getColorPalette(
 		base: palette.base,
 	};
 
-	for (let color in hexPalette) {
-		console.log(color, { hex: hexPalette[color], hsl: palette[color] });
-	}
-
 	return hexPalette;
 }

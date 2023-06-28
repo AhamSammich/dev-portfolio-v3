@@ -52,6 +52,10 @@ export default defineNuxtConfig({
 				storyblok: "simple-icons:storyblok",
 				'socket.io': "devicon:socketio",
 				express: "devicon:express",
+				node: "mdi:nodejs",
+				python: "mdi:language-python",
+				'google cloud': "mdi:google-cloud",
+				kubernetes: "mdi:kubernetes",
 			},
 		},
 	},
@@ -89,6 +93,7 @@ export default defineNuxtConfig({
 		"nuxt-simple-robots",
 		"nuxt-simple-sitemap",
 		"@nuxt/image-edge",
+		"nuxt-vitest",
 	],
 	nitro: {
 		prerender: {

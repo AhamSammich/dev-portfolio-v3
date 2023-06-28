@@ -72,7 +72,6 @@ function handleChange() {
 }
 
 function changeColor(h: number, s?: number, l?: number) {
-  console.info("Applying new theme...");
   const newPalette = getColorPalette(h, s, l, { rel: "analagous" });
   const { primary, secondary, accent, base } = newPalette;
   document?.body.style.setProperty("--primary-color", primary);

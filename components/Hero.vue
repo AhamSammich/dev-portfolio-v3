@@ -1,7 +1,7 @@
 <template>
   <section
     id="hero"
-    class="flex items-center justify-center page max-md:flex-col max-md:gap-8"
+    class="flex items-center justify-center page max-sm:flex-col max-sm:gap-8"
   >
     <div class="z-[1] px-8">
       <p class="font-normal text-2xl lg:text-3xl xl:text-4xl">My name is</p>
