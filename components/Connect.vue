@@ -15,13 +15,6 @@
       <ul class="flex flex-col gap-4 w-max xl:text-xl">
         <li>
           <ContactLink
-            url="mailto:connect@ahammons.me"
-            icon-name="mdi:email"
-            label="connect@ahammons.me"
-          />
-        </li>
-        <li>
-          <ContactLink
             url="https://linkedin.com/in/mynameisandre"
             icon-name="mdi:linkedin"
             label="mynameisandre"
