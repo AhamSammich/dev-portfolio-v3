@@ -31,7 +31,7 @@
 <script setup lang="ts">
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
 const resumeUrl =
-  "https://a-us.storyblok.com/f/1014509/x/67dc1a5921/andre-hammons-web-developer.pdf";
+  "https://a-us.storyblok.com/f/1014509/x/c0492bc700/andre_hammons_resume.docx";
 </script>
 
 <style scoped lang="postcss">
