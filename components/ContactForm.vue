@@ -78,7 +78,7 @@
       Send
       <Icon
         name="mdi:send"
-        class="w-6 pb-1 transition-transform h-max group-hover:translate-x-1 group-hover:scale-105"
+        class="w-6 h-6 pb-1 transition-transform group-hover:translate-x-1 group-hover:scale-105"
       />
     </button>
   </form>

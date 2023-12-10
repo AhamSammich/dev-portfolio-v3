@@ -15,7 +15,7 @@
         <span class="font-bold">Web Developer</span>
       </p>
     </div>
-    <div class="w-3/4 max-w-[300px] lg:max-w-[400px] xl:max-w-[500px]">
+    <div class="z-10 w-3/4 max-w-[300px] lg:max-w-[400px] xl:max-w-[500px]">
       <HeroSvg />
     </div>
   </section>

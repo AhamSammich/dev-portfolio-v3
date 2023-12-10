@@ -20,7 +20,7 @@
     <Icon
       v-else
       name="mdi:github-box"
-      class="img-placeholder w-[48%] h-full p-[10%] mx-auto"
+      class="img-placeholder w-[40%] h-max px-[10%] py-[4%] mx-auto"
     />
 
     <!-- project info overlay -->
