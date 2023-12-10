@@ -31,7 +31,8 @@
 <script setup lang="ts">
 const modalRef: Ref<HTMLDialogElement | null> = ref(null);
 const resumeUrl =
-  "https://a-us.storyblok.com/f/1014509/x/2a8128b09d/andre_hammons_resume.pdf";
+  // "https://a-us.storyblok.com/f/1014509/x/2a8128b09d/andre_hammons_resume.pdf";
+  "https://docs.google.com/document/d/e/2PACX-1vQlWJNrh0jhrZagXv1oG9Sr73nUrzXzag04_806IvDkKNJH9FJvHCOsuLdp6vgGGQ/pub?embedded=true";
 </script>
 
 <style scoped lang="postcss">
