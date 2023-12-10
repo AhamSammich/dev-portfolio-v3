@@ -56,6 +56,8 @@ export default defineNuxtConfig({
 				python: "mdi:language-python",
 				'google cloud': "mdi:google-cloud",
 				kubernetes: "mdi:kubernetes",
+				postgresql: "devicon-plain:postgresql",
+				next: "devicon:nextjs",
 			},
 		},
 	},
