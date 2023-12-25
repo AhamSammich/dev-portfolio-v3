@@ -6,17 +6,11 @@
     />
     <h1 class="self-center">Skills</h1>
     <div class="flex flex-col max-w-full w-max mx-auto gap-16 h-max px-12 content">
+      <TechStack title="Languages" :stack="['typescript', 'javascript', 'python']" />
+      <TechStack title="Frontend" :stack="['vue', 'react', 'tailwind', 'nuxt', 'next']" />
       <TechStack
-        title="Preferred Stack"
-        :stack="['vue', 'typescript', 'nuxt', 'tailwind']"
-      />
-      <TechStack
-        title="Other Tech I Have Worked With"
-        :stack="['node', 'react', 'next', 'postgresql']"
-      />
-      <TechStack
-        title="Currently Exploring"
-        :stack="['astro', 'google cloud', 'python']"
+        title="Backend"
+        :stack="['supabase', 'postgresql', 'firebase', 'node', 'express']"
       />
     </div>
   </section>
