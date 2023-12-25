@@ -13,10 +13,11 @@
       <img
         :src="link.qrCode"
         :alt="`QR code link to ${link.url}`"
-        class="h-2/3 aspect-square"
+        class="w-2/3 aspect-square mx-auto"
         width="500"
         height="500"
         loading="lazy"
+        object-fit="contain"
       />
     </LazySideDrawer>
 

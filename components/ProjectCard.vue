@@ -12,8 +12,8 @@
       sizes="xs:100vw sm:100vw md:640px lg:640px xl:640px"
       class="object-cover"
       preset="screenshot"
+      :provider="(image.url as string).includes('storyblok') ? 'storyblok' : undefined"
       loading="lazy"
-      placeholder
     />
 
     <!-- no project image -->
