@@ -12,7 +12,7 @@
       </h1>
       <p class="text-right text-2xl lg:text-3xl xl:text-4xl">
         and I am a
-        <span class="font-bold">Software Developer</span>
+        <span class="font-bold whitespace-nowrap">Software Developer</span>
       </p>
     </div>
     <div class="z-10 w-3/4 max-w-[300px] lg:max-w-[400px] xl:max-w-[500px]">

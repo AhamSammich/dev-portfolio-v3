@@ -58,6 +58,7 @@ export default defineNuxtConfig({
 				kubernetes: "mdi:kubernetes",
 				postgresql: "devicon-plain:postgresql",
 				next: "devicon:nextjs",
+				firebase: "simple-icons:firebase",
 			},
 		},
 	},
@@ -83,7 +84,6 @@ export default defineNuxtConfig({
 				},
 			},
 		},
-		provider: "storyblok",
 		storyblok: {
 			baseURL: "https://a-us.storyblok.com",
 		},
