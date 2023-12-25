@@ -59,6 +59,8 @@ export default defineNuxtConfig({
 				postgresql: "devicon-plain:postgresql",
 				next: "devicon:nextjs",
 				firebase: "simple-icons:firebase",
+				"c++": "devicon-plain:cplusplus",
+				supabase: "simple-icons:supabase"
 			},
 		},
 	},

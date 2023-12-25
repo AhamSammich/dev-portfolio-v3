@@ -3,8 +3,13 @@
     <h2 v-if="title" class="my-2 text-lg font-bold lg:text-xl">
       {{ title }}
     </h2>
-    <div class="grid grid-cols-2 gap-8 min-[400px]:grid-cols-4">
-      <TechIcon v-for="tech in stack" :key="tech" :iconName="tech" />
+    <div class="flex gap-8 flex-wrap justify-center">
+      <TechIcon
+        v-for="tech in stack"
+        :key="tech"
+        :iconName="tech"
+        class="flex-shrink-0"
+      />
     </div>
   </div>
 </template>
