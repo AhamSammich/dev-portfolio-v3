@@ -7,30 +7,42 @@
   >
     <li>
       <button @click="() => scrollToSection('#skills')">
-        <Icon v-show="!flexCol" name="solar:code-2-line-duotone" class="w-5 h-5 mx-1" />
-        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Skills</span>
+        <span class="sm:hidden">
+          <Icon v-show="!flexCol" name="solar:code-2-line-duotone" class="w-5 h-5 mx-1" />
+        </span>
+        <span :class="{ 'max-sm:sr-only block': !flexCol }">Skills</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#experience')">
-        <Icon v-show="!flexCol" name="mdi:briefcase-variant" class="w-5 h-5 mx-1" />
-        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Experience</span>
+        <span class="sm:hidden">
+          <Icon v-show="!flexCol" name="mdi:briefcase-variant" class="w-5 h-5 mx-1" />
+        </span>
+        <span :class="{ 'max-sm:sr-only block': !flexCol }">Experience</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#projects')">
-        <Icon
-          v-show="!flexCol"
-          name="icon-park-outline:folder-code-one"
-          class="w-5 h-5 mx-1"
-        />
-        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Projects</span>
+        <span class="sm:hidden">
+          <Icon
+            v-show="!flexCol"
+            name="icon-park-outline:folder-code-one"
+            class="w-5 h-5 mx-1"
+          />
+        </span>
+        <span :class="{ 'max-sm:sr-only block': !flexCol }">Projects</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#about')">
-        <Icon v-show="!flexCol" name="mdi:account-circle-outline" class="w-5 h-5 mx-1" />
-        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">About</span>
+        <span class="sm:hidden">
+          <Icon
+            v-show="!flexCol"
+            name="mdi:account-circle-outline"
+            class="w-5 h-5 mx-1"
+          />
+        </span>
+        <span :class="{ 'max-sm:sr-only block': !flexCol }">About</span>
       </button>
     </li>
     <li>
