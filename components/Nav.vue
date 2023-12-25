@@ -6,13 +6,28 @@
     }"
   >
     <li>
-      <button @click="() => scrollToSection('#skills')">Skills</button>
+      <button @click="() => scrollToSection('#skills')">
+        <Icon name="solar:code-2-line-duotone" class="w-5 h-5" />
+        <span class="max-[400px]:sr-only">Skills</span>
+      </button>
     </li>
     <li>
-      <button @click="() => scrollToSection('#projects')">Projects</button>
+      <button @click="() => scrollToSection('#experience')">
+        <Icon name="mdi:briefcase-variant" class="w-5 h-5" />
+        <span class="max-[400px]:sr-only">Experience</span>
+      </button>
     </li>
     <li>
-      <button @click="() => scrollToSection('#about')">About</button>
+      <button @click="() => scrollToSection('#projects')">
+        <Icon name="icon-park-outline:folder-code-one" class="w-5 h-5" />
+        <span class="max-[400px]:sr-only">Projects</span>
+      </button>
+    </li>
+    <li>
+      <button @click="() => scrollToSection('#about')">
+        <Icon name="mdi:account-circle-outline" class="w-5 h-5" />
+        <span class="max-[400px]:sr-only">About</span>
+      </button>
     </li>
     <li>
       <button
@@ -56,6 +71,7 @@ const scrollToSection = (selector: string) => {
 
 li {
   color: var(--text-color);
+
   &:not(.flex-col li) {
     border-bottom: 1px solid transparent;
 
