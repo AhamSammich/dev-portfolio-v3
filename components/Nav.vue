@@ -1,32 +1,36 @@
 <template>
   <ul
     :class="{
-      'flex w-full items-center justify-end gap-3 sm:gap-[1.5em] py-[0.5em] font-thin text-sm sm:text-lg md:text-xl lg:text-2xl': true,
+      'flex w-full items-center justify-end gap-y-3 gap-x-5 sm:gap-[1.5em] py-[0.5em] font-thin text-sm sm:text-lg md:text-xl lg:text-2xl': true,
       'h-max flex-col pb-4': flexCol,
     }"
   >
     <li>
       <button @click="() => scrollToSection('#skills')">
-        <Icon name="solar:code-2-line-duotone" class="w-5 h-5" />
-        <span class="max-[400px]:sr-only">Skills</span>
+        <Icon v-show="!flexCol" name="solar:code-2-line-duotone" class="w-5 h-5 mx-1" />
+        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Skills</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#experience')">
-        <Icon name="mdi:briefcase-variant" class="w-5 h-5" />
-        <span class="max-[400px]:sr-only">Experience</span>
+        <Icon v-show="!flexCol" name="mdi:briefcase-variant" class="w-5 h-5 mx-1" />
+        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Experience</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#projects')">
-        <Icon name="icon-park-outline:folder-code-one" class="w-5 h-5" />
-        <span class="max-[400px]:sr-only">Projects</span>
+        <Icon
+          v-show="!flexCol"
+          name="icon-park-outline:folder-code-one"
+          class="w-5 h-5 mx-1"
+        />
+        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">Projects</span>
       </button>
     </li>
     <li>
       <button @click="() => scrollToSection('#about')">
-        <Icon name="mdi:account-circle-outline" class="w-5 h-5" />
-        <span class="max-[400px]:sr-only">About</span>
+        <Icon v-show="!flexCol" name="mdi:account-circle-outline" class="w-5 h-5 mx-1" />
+        <span :class="{ 'max-[400px]:sr-only block': !flexCol }">About</span>
       </button>
     </li>
     <li>
