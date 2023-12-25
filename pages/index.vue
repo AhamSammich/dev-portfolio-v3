@@ -21,7 +21,7 @@
 
     <LazySkills />
 
-    <LazyServices />
+    <LazyExperience />
 
     <LazyProjectGrid />
 
